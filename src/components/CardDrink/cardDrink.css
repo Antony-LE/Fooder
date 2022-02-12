@@ -1,0 +1,11 @@
+.card-drink img {
+    display: inline-block;
+    width: 500px; 
+    height: 500px; 
+    overflow: hidden; 
+    border-radius: 50%
+}
+
+.card-drink span {
+    display:block;
+}
