@@ -5,7 +5,7 @@ import './buttonDessert.css';
 
 function ButtonDessert({ className, handleRandomDessert }) {
   return (
-    <button className={className} type="button" onClick={handleRandomDessert}>Get a dessert!</button>
+    <button className={className} type="button" onClick={handleRandomDessert}>Get a random dessert!</button>
   );
 }
 

@@ -5,7 +5,7 @@ import './buttonStarter.css';
 
 function ButtonStarter({ className, handleRandomStarter }) {
   return (
-    <button className={className} type="button" onClick={handleRandomStarter}>Get a starter!</button>
+    <button className={className} type="button" onClick={handleRandomStarter}>Get a random starter!</button>
   );
 }
 

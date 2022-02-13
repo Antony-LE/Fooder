@@ -1,11 +1,31 @@
 .card-drink img {
     display: inline-block;
-    width: 500px; 
-    height: 500px; 
+    width: 200px; 
+    height: 200px; 
     overflow: hidden; 
     border-radius: 50%
 }
 
+.card-drink h2 {
+    font-family: 'Pinyon Script', sans-serif ;
+    font-size: 2em;
+    color:#D2A500;
+    font-weight: lighter;
+    margin-top: 1em;
+    margin-bottom: 0.5em;
+}
+
+.card-drink h3 {
+    font-family: 'Roboto', sans-serif ;
+    font-size: 1em;
+    margin: 0;
+}
+
 .card-drink span {
-    display:block;
+    display: inline-block;
+    font-family:'Pinyon Script', sans-serif;
+    font-size: 1em;
+    margin-top: 1em;
+    color:#D2A500;
+    width: 55vw;
 }

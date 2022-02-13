@@ -4,7 +4,7 @@ import './buttonMainCourse.css';
 
 function buttonMainCourse({ className, handleRandomMainCourse }) {
   return (
-    <button className={className} onClick={handleRandomMainCourse} type="button">Get a main course!</button>
+    <button className={className} onClick={handleRandomMainCourse} type="button">Get a random main course!</button>
   );
 }
 
