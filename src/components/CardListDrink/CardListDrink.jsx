@@ -4,11 +4,11 @@ import CardDrink from '../CardDrink/CardDrink';
 import './cardListDrink.css';
 
 function cardListDrink({
-  className, handleDrinkImage, handleDrinkTitle, handleDrinkSummary,
+  className, handleDrinkImage, handleDrinkTitle, handleDrinkSummary, handleDrinkPrice,
 }) {
   return (
     <div className={className}>
-      <CardDrink className="card-drink" sourcePix={handleDrinkImage} title={handleDrinkTitle} summary={handleDrinkSummary} />
+      <CardDrink className="card-drink" sourcePix={handleDrinkImage} title={handleDrinkTitle} summary={handleDrinkSummary} drinkPrice={handleDrinkPrice} />
     </div>
   );
 }
@@ -18,6 +18,7 @@ cardListDrink.propTypes = {
   handleDrinkImage: PropTypes.func,
   handleDrinkTitle: PropTypes.func,
   handleDrinkSummary: PropTypes.func,
+  handleDrinkPrice: PropTypes.number,
 };
 
 cardListDrink.defaultProps = {
@@ -25,6 +26,7 @@ cardListDrink.defaultProps = {
   handleDrinkImage: '',
   handleDrinkTitle: '',
   handleDrinkSummary: '',
+  handleDrinkPrice: 0,
 };
 
 export default React.memo(cardListDrink);

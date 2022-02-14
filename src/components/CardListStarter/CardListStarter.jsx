@@ -4,20 +4,21 @@ import CardStarter from '../CardStarter/CardStarter';
 import './cardListStarter.css';
 
 function CardListStarter({
-  className, handleStarterImage, handleStarterTitle, handleStarterSummary,
+  className, handleStarterImage, handleStarterTitle, handleStarterSummary, handleStarterPrice,
 }) {
   return (
     <div className={className}>
-      <CardStarter className="card-starter" sourcePix={handleStarterImage} title={handleStarterTitle} summary={handleStarterSummary} />
+      <CardStarter className="card-starter" sourcePix={handleStarterImage} title={handleStarterTitle} summary={handleStarterSummary} starterPrice={handleStarterPrice} />
     </div>
   );
 }
 
 CardListStarter.propTypes = {
   className: PropTypes.string,
-  handleStarterImage: PropTypes.func,
-  handleStarterTitle: PropTypes.func,
-  handleStarterSummary: PropTypes.func,
+  handleStarterImage: PropTypes.string,
+  handleStarterTitle: PropTypes.string,
+  handleStarterSummary: PropTypes.string,
+  handleStarterPrice: PropTypes.number,
 };
 
 CardListStarter.defaultProps = {
@@ -25,6 +26,7 @@ CardListStarter.defaultProps = {
   handleStarterImage: '',
   handleStarterTitle: '',
   handleStarterSummary: '',
+  handleStarterPrice: 0,
 };
 
 export default React.memo(CardListStarter);

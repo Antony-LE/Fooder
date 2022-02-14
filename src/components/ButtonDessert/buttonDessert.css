@@ -1,0 +1,9 @@
+.button-dessert {
+    color: #D2A500;
+    border: 1px solid #D2A500;
+}
+
+.button-dessert:hover {
+    background-color: #D2A500;
+    color: white;
+}

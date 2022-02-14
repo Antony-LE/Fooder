@@ -1,0 +1,9 @@
+.button-main-course {
+    color: #D2A500;
+    border: 1px solid #D2A500;
+}
+
+.button-main-course:hover {
+    background-color: #D2A500;
+    color: white;
+}
