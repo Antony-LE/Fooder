@@ -1,11 +1,19 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
 import './buttonMainCourse.css';
 
 function buttonMainCourse({ className, handleRandomMainCourse }) {
-  return (
-    <button className={className} onClick={handleRandomMainCourse} type="button">Get a random main course</button>
+  const [show, setShow] = useState(false);
+  // timer pour display différé du composant au chargement de la page uniquement
+  useEffect(
+    () => {
+      setTimeout(() => setShow(true), 4600);
+    },
+    [],
   );
+  return show ? (
+    <button className={className} onClick={handleRandomMainCourse} type="button">Get a main course</button>
+  ) : '';
 }
 
 buttonMainCourse.propTypes = {

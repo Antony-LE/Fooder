@@ -13,6 +13,7 @@ import ButtonDrink from '../ButtonDrink/ButtonDrink';
 import CardListDrink from '../CardListDrink/CardListDrink';
 import Footer from '../Footer/Footer';
 import Chatbox from '../Chatbox/Chatbox';
+import Bill from '../Bill/Bill';
 
 function Main({ className }) {
   const [starterTitle, setStarterTitle] = useState('');
@@ -40,6 +41,7 @@ function Main({ className }) {
   const [displayDrinkCardList, setDisplayDrinkCardList] = useState(false);
 
   const [chatboxSentence, setChatboxSentence] = useState('What would you like to eat Madam/Sir?');
+  // const [chatboxSentenceState, setChatboxSentenceState ] = useState(true);
 
   const apiKey = 'c0d15de7e0bd47eeb023b186b7c521a1';
   const baseUrlStarter = `https://api.spoonacular.com/recipes/random?number=1&type=soup,salad&apiKey=${apiKey}`;
@@ -55,8 +57,8 @@ function Main({ className }) {
       setStarterPrice(response.data.recipes[0].pricePerServing);
       setDisplayStarterCardList(!displayStarterCardList);
       setDisplayStarterCardList(true);
-      setChatboxSentence('Excellent choice Sir ! May I suggest a main course to go along with your Starter ?');
       setChatboxSentence('I had the same yesterday it was wonderful...');
+      setChatboxSentence('Excellent choice Sir ! May I suggest a main course to go along with your Starter ?');
     });
   };
 
@@ -70,6 +72,7 @@ function Main({ className }) {
       setDisplayMainCourseCardList(true);
       setChatboxSentence(`${mainCourseTitle} : the best dish ever !`);
       setChatboxSentence('A moment on the lips, forever on the hips !');
+      setChatboxSentence('You\'ll never forget the taste of it... !');
     });
   };
 
@@ -81,8 +84,8 @@ function Main({ className }) {
       setDessertPrice(response.data.recipes[0].pricePerServing);
       setDisplayDessertCardList(!displayDessertCardList);
       setDisplayDessertCardList(true);
-      setChatboxSentence('Are you sure ? I thought you were on a diet?');
       setChatboxSentence('Too much sugar is not good for your health...');
+      setChatboxSentence('Are you sure ? I thought you were on a diet?');
     });
   };
 
@@ -96,6 +99,7 @@ function Main({ className }) {
       setDisplayDrinkCardList(true);
       setChatboxSentence('Be careful you have to drive back home !');
       setChatboxSentence('Nop I won\'t drive you home sorry!');
+      setChatboxSentence('Only one glass ok??');
     });
   };
 
@@ -110,8 +114,8 @@ function Main({ className }) {
       {displayMainCourseCardList ? <CardListMainCourse className="cardlist-main-course" handleMainCourseImage={mainCourseImage} handleMainCourseTitle={mainCourseTitle} handleMainCourseSummary={mainCourseSummary} handleMainCoursePrice={mainCoursePrice} /> : '' }
       {displayDessertCardList ? <CardListDessert className="cardlist-dessert" handleDessertImage={dessertImage} handleDessertTitle={dessertTitle} handleDessertSummary={dessertSummary} handleDessertPrice={dessertPrice} /> : '' }
       {displayDrinkCardList ? <CardListDrink className="cardlist-drink" handleDrinkImage={drinkImage} handleDrinkTitle={drinkTitle} handleDrinkSummary={drinkSummary} handleDrinkPrice={drinkPrice} /> : '' }
+      <Bill className="bill" handleStarterTitle={starterTitle} handleStarterPrice={starterPrice} handleMainCourseTitle={mainCourseTitle} handleMainCoursePrice={mainCoursePrice} handleDessertTitle={dessertTitle} handleDessertPrice={dessertPrice} handleDrinkTitle={drinkTitle} handleDrinkPrice={drinkPrice} />
       {displayStarterCardList ? <Footer className="footer" /> : displayMainCourseCardList ? <Footer className="footer" /> : displayDessertCardList ? <Footer className="footer" /> : ''}
-
     </main>
   );
 }

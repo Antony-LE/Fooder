@@ -1,3 +1,13 @@
+#citation {
+    font-family: 'Pinyon Script', sans-serif;
+    font-size: 1.5em;
+    display: block;
+    margin: 1em;
+    color: #D2A500;
+    font-weight: lighter,
+}
+
+
 .header h1 {
     font-family: 'Pinyon Script', sans-serif;
     font-size: 4em;

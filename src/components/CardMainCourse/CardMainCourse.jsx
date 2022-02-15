@@ -17,7 +17,7 @@ function CardMainCourse({
       <span dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(purifiedSummary) }} />
       <span id="main-course-price">
         $
-        {mainCoursePrice}
+        {(mainCoursePrice / 100).toFixed(2)}
       </span>
       <hr />
     </div>

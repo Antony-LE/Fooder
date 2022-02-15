@@ -1,7 +1,38 @@
 .button-starter {
     color: #D2A500;
     border: 1px solid #D2A500;
+     /* Animation Fade-in */
+     animation: fadeIn 5s;
+     -webkit-animation: fadeIn 5s;
+     -moz-animation: fadeIn 5s;
+     -o-animation: fadeIn 5s;
+     -ms-animation: fadeIn 5s;
 }
+
+@keyframes fadeIn {
+    0% {opacity:0;}
+    100% {opacity:1;}
+  }
+  
+  @-moz-keyframes fadeIn {
+    0% {opacity:0;}
+    100% {opacity:1;}
+  }
+  
+  @-webkit-keyframes fadeIn {
+    0% {opacity:0;}
+    100% {opacity:1;}
+  }
+  
+  @-o-keyframes fadeIn {
+    0% {opacity:0;}
+    100% {opacity:1;}
+  }
+  
+  @-ms-keyframes fadeIn {
+    0% {opacity:0;}
+    100% {opacity:1;}
+  }
 
 .button-starter:hover {
     background-color: #D2A500;

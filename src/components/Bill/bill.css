@@ -1,0 +1,31 @@
+.bill {
+    font-family: 'Roboto', sans-serif ;
+    font-size: 1em;
+    margin: 0;
+}
+
+.bill ul {
+    text-decoration: none;
+    list-style-type: none;
+}
+
+.bill ul li .title {
+    text-align: left;
+    width: 25vw;
+    display: inline-block;
+    margin-right: 2em;
+    font-style: italic;
+}
+
+.bill ul li .price {
+    text-align: right;
+    width: 10vw;
+    display: inline-block; 
+}
+
+.bill .total-price {
+    display: inline-block;
+    margin-top: 2em;
+    font-weight: bold;
+    text-decoration: underline;
+}

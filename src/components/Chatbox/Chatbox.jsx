@@ -1,11 +1,20 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
 import './chatbox.css';
 
 function Chatbox({ className, sentence }) {
-  return (
-    <span className={className}>{sentence}</span>
+  const [show, setShow] = useState(false);
+  // timer pour display différé du composant au chargement de la page uniquement
+  useEffect(
+    () => {
+      setTimeout(() => setShow(true), 4400);
+    },
+    [],
   );
+
+  return show ? (
+    <span className={className}>{sentence}</span>
+  ) : '';
 }
 
 Chatbox.propTypes = {

@@ -18,7 +18,7 @@ function CardStarter({
       <span dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(purifiedSummary) }} />
       <span id="starterPrice">
         $
-        {starterPrice}
+        {(starterPrice / 100).toFixed(2)}
       </span>
       <hr />
     </div>

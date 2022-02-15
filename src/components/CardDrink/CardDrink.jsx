@@ -17,8 +17,9 @@ function CardDrink({
       <span dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(purifiedSummary) }} />
       <span id="drinkPrice">
         $
-        {drinkPrice}
+        {(drinkPrice / 100).toFixed(2)}
       </span>
+      <hr />
     </div>
   );
 }

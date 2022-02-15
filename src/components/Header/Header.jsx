@@ -10,6 +10,10 @@ function Header({ className }) {
       <h1>
         Today's Special
       </h1>
+      <span id="citation">
+        "For those who don't have money but still wanna look classy". Antony LE
+      </span>
+      <hr />
     </div>
   );
 }

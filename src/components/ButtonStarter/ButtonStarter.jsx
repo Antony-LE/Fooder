@@ -1,12 +1,20 @@
 /* eslint-disable react/no-unescaped-entities */
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
 import './buttonStarter.css';
 
 function ButtonStarter({ className, handleRandomStarter }) {
-  return (
-    <button className={className} type="button" onClick={handleRandomStarter}>Get a random starter</button>
+  const [show, setShow] = useState(false);
+  // timer pour display différé du composant au chargement de la page uniquement
+  useEffect(
+    () => {
+      setTimeout(() => setShow(true), 4400);
+    },
+    [],
   );
+  return show ? (
+    <button className={className} type="button" onClick={handleRandomStarter}>Get a starter</button>
+  ) : '';
 }
 
 ButtonStarter.propTypes = {
