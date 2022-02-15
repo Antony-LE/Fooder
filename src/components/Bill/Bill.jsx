@@ -16,7 +16,7 @@ function Bill({
 }) {
   const totalPrice = ((handleStarterPrice + handleMainCoursePrice + handleDessertPrice + handleDrinkPrice) / 100).toFixed(2);
   return (
-    <div className={className}>
+    <div id="bill-ancre" className={className}>
       <ul>
         <li>
           <span className="title">{handleStarterTitle}</span>

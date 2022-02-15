@@ -1,4 +1,9 @@
-.cardlist-main-course {
+.button-bill {
+    color: #4d4d4d;
+    border: 1px solid #4d4d4d;
+    padding: 0.7em;
+    border-radius: 20px;
+    text-decoration: none;
     /* Animation Fade-in */
     animation: fadeIn 5s;
     -webkit-animation: fadeIn 5s;
@@ -31,3 +36,8 @@
     0% {opacity:0;}
     100% {opacity:1;}
   }
+
+.button-bill:hover {
+    background-color: #4d4d4d;
+    color: white;
+}

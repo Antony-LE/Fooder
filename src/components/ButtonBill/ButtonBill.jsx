@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
-import './buttonDrink.css';
+import './buttonBill.css';
 
-function ButtonDrink({ className, handleRandomDrink }) {
+function ButtonBill({ className, handleDisplayBill }) {
   const [show, setShow] = useState(false);
   // timer pour display différé du composant au chargement de la page uniquement
   useEffect(
@@ -12,18 +12,18 @@ function ButtonDrink({ className, handleRandomDrink }) {
     [],
   );
   return show ? (
-    <button className={className} onClick={handleRandomDrink} type="button">Get Drink</button>
+    <a href="#bill-ancre" className={className} type="button" onClick={handleDisplayBill}>Get the bill !</a>
   ) : '';
 }
 
-ButtonDrink.propTypes = {
+ButtonBill.propTypes = {
   className: PropTypes.string,
-  handleRandomDrink: PropTypes.func,
+  handleDisplayBill: PropTypes.func,
 };
 
-ButtonDrink.defaultProps = {
+ButtonBill.defaultProps = {
   className: '',
-  handleRandomDrink: '',
+  handleDisplayBill: false,
 };
 
-export default React.memo(ButtonDrink);
+export default React.memo(ButtonBill);

@@ -14,6 +14,7 @@ import CardListDrink from '../CardListDrink/CardListDrink';
 import Footer from '../Footer/Footer';
 import Chatbox from '../Chatbox/Chatbox';
 import Bill from '../Bill/Bill';
+import ButtonBill from '../ButtonBill/ButtonBill';
 
 function Main({ className }) {
   const [starterTitle, setStarterTitle] = useState('');
@@ -41,7 +42,8 @@ function Main({ className }) {
   const [displayDrinkCardList, setDisplayDrinkCardList] = useState(false);
 
   const [chatboxSentence, setChatboxSentence] = useState('What would you like to eat Madam/Sir?');
-  // const [chatboxSentenceState, setChatboxSentenceState ] = useState(true);
+  const [displayBill, setDisplayBill] = useState(false);
+  const [footerTextContent, setFooterTextContent] = useState('Bon appétit !');
 
   const apiKey = 'c0d15de7e0bd47eeb023b186b7c521a1';
   const baseUrlStarter = `https://api.spoonacular.com/recipes/random?number=1&type=soup,salad&apiKey=${apiKey}`;
@@ -59,6 +61,8 @@ function Main({ className }) {
       setDisplayStarterCardList(true);
       setChatboxSentence('I had the same yesterday it was wonderful...');
       setChatboxSentence('Excellent choice Sir ! May I suggest a main course to go along with your Starter ?');
+      setDisplayBill(false);
+      setFooterTextContent('Bon Appétit !');
     });
   };
 
@@ -73,6 +77,8 @@ function Main({ className }) {
       setChatboxSentence(`${mainCourseTitle} : the best dish ever !`);
       setChatboxSentence('A moment on the lips, forever on the hips !');
       setChatboxSentence('You\'ll never forget the taste of it... !');
+      setDisplayBill(false);
+      setFooterTextContent('Bon Appétit !');
     });
   };
 
@@ -86,7 +92,15 @@ function Main({ className }) {
       setDisplayDessertCardList(true);
       setChatboxSentence('Too much sugar is not good for your health...');
       setChatboxSentence('Are you sure ? I thought you were on a diet?');
+      setDisplayBill(false);
+      setFooterTextContent('Bon Appétit !');
     });
+  };
+
+  const handleDisplayButtonBill = () => {
+    setDisplayBill(!displayBill);
+    setChatboxSentence('We hope that you enjoyed your meal and hope to see you soon!');
+    setFooterTextContent('Thank you, hope to see you soon !');
   };
 
   const handleClickButtonDrink = async () => {
@@ -99,7 +113,9 @@ function Main({ className }) {
       setDisplayDrinkCardList(true);
       setChatboxSentence('Be careful you have to drive back home !');
       setChatboxSentence('Nop I won\'t drive you home sorry!');
-      setChatboxSentence('Only one glass ok??');
+      setChatboxSentence('Sure but only one glass ok??');
+      setDisplayBill(false);
+      setFooterTextContent('Bon Appétit !');
     });
   };
 
@@ -110,12 +126,13 @@ function Main({ className }) {
       <ButtonMainCourse className="button-main-course" handleRandomMainCourse={handleClickButtonMainCourse} />
       <ButtonDessert className="button-dessert" handleRandomDessert={handleClickButtonDessert} />
       <ButtonDrink className="button-drink" handleRandomDrink={handleClickButtonDrink} />
+      <ButtonBill className="button-bill" handleDisplayBill={handleDisplayButtonBill} />
       {displayStarterCardList ? <CardListStarter className="cardlist-starter" handleStarterImage={starterImage} handleStarterTitle={starterTitle} handleStarterSummary={starterSummary} handleStarterPrice={starterPrice} /> : '' }
       {displayMainCourseCardList ? <CardListMainCourse className="cardlist-main-course" handleMainCourseImage={mainCourseImage} handleMainCourseTitle={mainCourseTitle} handleMainCourseSummary={mainCourseSummary} handleMainCoursePrice={mainCoursePrice} /> : '' }
       {displayDessertCardList ? <CardListDessert className="cardlist-dessert" handleDessertImage={dessertImage} handleDessertTitle={dessertTitle} handleDessertSummary={dessertSummary} handleDessertPrice={dessertPrice} /> : '' }
       {displayDrinkCardList ? <CardListDrink className="cardlist-drink" handleDrinkImage={drinkImage} handleDrinkTitle={drinkTitle} handleDrinkSummary={drinkSummary} handleDrinkPrice={drinkPrice} /> : '' }
-      <Bill className="bill" handleStarterTitle={starterTitle} handleStarterPrice={starterPrice} handleMainCourseTitle={mainCourseTitle} handleMainCoursePrice={mainCoursePrice} handleDessertTitle={dessertTitle} handleDessertPrice={dessertPrice} handleDrinkTitle={drinkTitle} handleDrinkPrice={drinkPrice} />
-      {displayStarterCardList ? <Footer className="footer" /> : displayMainCourseCardList ? <Footer className="footer" /> : displayDessertCardList ? <Footer className="footer" /> : ''}
+      {displayBill ? <Bill className="bill" handleStarterTitle={starterTitle} handleStarterPrice={starterPrice} handleMainCourseTitle={mainCourseTitle} handleMainCoursePrice={mainCoursePrice} handleDessertTitle={dessertTitle} handleDessertPrice={dessertPrice} handleDrinkTitle={drinkTitle} handleDrinkPrice={drinkPrice} /> : '' }
+      {displayStarterCardList ? <Footer className="footer" textContent={footerTextContent} /> : displayMainCourseCardList ? <Footer className="footer" textContent={footerTextContent} /> : displayDessertCardList ? <Footer className="footer" textContent={footerTextContent} /> : ''}
     </main>
   );
 }

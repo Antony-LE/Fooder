@@ -1,11 +1,19 @@
 /* eslint-disable react/no-unescaped-entities */
 /* eslint-disable max-len */
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
 import './header.css';
 
 function Header({ className }) {
-  return (
+  const [show, setShow] = useState(true);
+  // timer pour display différé du composant au chargement de la page uniquement
+  useEffect(
+    () => {
+      setTimeout(() => setShow(false), 4600);
+    },
+    [],
+  );
+  return show ? (
     <div className={className}>
       <h1>
         Today's Special
@@ -13,9 +21,8 @@ function Header({ className }) {
       <span id="citation">
         "For those who don't have money but still wanna look classy". Antony LE
       </span>
-      <hr />
     </div>
-  );
+  ) : '';
 }
 
 Header.propTypes = {
