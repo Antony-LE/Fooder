@@ -8,6 +8,7 @@ function CardListStarter({
 }) {
   return (
     <div className={className}>
+      <span id="starter-ancre" />
       <CardStarter className="card-starter" sourcePix={handleStarterImage} title={handleStarterTitle} summary={handleStarterSummary} starterPrice={handleStarterPrice} />
     </div>
   );

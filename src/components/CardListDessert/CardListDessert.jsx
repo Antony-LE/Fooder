@@ -8,6 +8,7 @@ function CardListDessert({
 }) {
   return (
     <div className={className}>
+      <span id="dessert-ancre" />
       <CardDessert className="card-dessert" sourcePix={handleDessertImage} title={handleDessertTitle} summary={handleDessertSummary} dessertPrice={handleDessertPrice} />
     </div>
   );

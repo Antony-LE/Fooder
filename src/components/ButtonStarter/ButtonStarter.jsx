@@ -13,7 +13,7 @@ function ButtonStarter({ className, handleRandomStarter }) {
     [],
   );
   return show ? (
-    <button className={className} type="button" onClick={handleRandomStarter}>Get a starter</button>
+    <a href="#starter-ancre" className={className} type="button" onClick={handleRandomStarter}>Get a starter</a>
   ) : '';
 }
 

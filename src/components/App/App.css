@@ -8,3 +8,7 @@ html {
   scroll-behavior:smooth;
 }
 
+#root {
+  margin: 2em;
+}
+

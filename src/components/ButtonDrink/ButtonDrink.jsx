@@ -12,7 +12,7 @@ function ButtonDrink({ className, handleRandomDrink }) {
     [],
   );
   return show ? (
-    <button className={className} onClick={handleRandomDrink} type="button">Get Drink</button>
+    <a href="#drink-ancre" className={className} onClick={handleRandomDrink} type="button">Get Drink</a>
   ) : '';
 }
 

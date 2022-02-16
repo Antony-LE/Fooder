@@ -9,6 +9,7 @@ function cardListMainCourse({
 }) {
   return (
     <div className={className}>
+      <span id="maincourse-ancre" />
       <CardMainCourse className="card-main-course" sourcePix={handleMainCourseImage} title={handleMainCourseTitle} summary={handleMainCourseSummary} mainCoursePrice={handleMainCoursePrice} />
     </div>
   );

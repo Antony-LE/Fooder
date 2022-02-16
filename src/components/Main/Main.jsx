@@ -3,54 +3,73 @@ import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import './main.css';
 import axios from 'axios';
-import ButtonStarter from '../ButtonStarter/ButtonStarter';
-import CardListStarter from '../CardListStarter/CardListStarter';
-import CardListMainCourse from '../CardListMainCourse/CardListMainCourse';
+
+// Import des boutons
 import ButtonMainCourse from '../ButtonMainCourse/ButtonMainCourse';
 import ButtonDessert from '../ButtonDessert/ButtonDessert';
-import CardListDessert from '../CardListDessert/CardListDessert';
+import ButtonStarter from '../ButtonStarter/ButtonStarter';
 import ButtonDrink from '../ButtonDrink/ButtonDrink';
+import ButtonBill from '../ButtonBill/ButtonBill';
+
+// Import des listes
+import CardListStarter from '../CardListStarter/CardListStarter';
+import CardListMainCourse from '../CardListMainCourse/CardListMainCourse';
+import CardListDessert from '../CardListDessert/CardListDessert';
 import CardListDrink from '../CardListDrink/CardListDrink';
+
+// Import des éléments annexes
 import Footer from '../Footer/Footer';
 import Chatbox from '../Chatbox/Chatbox';
 import Bill from '../Bill/Bill';
-import ButtonBill from '../ButtonBill/ButtonBill';
+
+// Import des datas en dur pour la génération aléatoires des phrases de la chatbox
+import dataStarter from '../Datas/datas-starter-sentences';
+import dataMainCourse from '../Datas/datas-mainCourse-sentences';
+import dataDessert from '../Datas/datas-dessert-sentences';
+import dataDrink from '../Datas/datas-drink-sentences';
 
 function Main({ className }) {
+  // Hook pour la gestion des données de la card Starter
   const [starterTitle, setStarterTitle] = useState('');
   const [starterImage, setStarterImage] = useState('');
   const [starterSummary, setStarterSummary] = useState('');
   const [starterPrice, setStarterPrice] = useState('');
   const [displayStarterCardList, setDisplayStarterCardList] = useState(false);
 
+  // Hook pour la gestion des données de la card MainCourse
   const [mainCourseTitle, setMainCourseTitle] = useState('');
   const [mainCourseImage, setMainCourseImage] = useState('');
   const [mainCourseSummary, setMainCourseSummary] = useState('');
   const [mainCoursePrice, setMainCoursePrice] = useState('');
   const [displayMainCourseCardList, setDisplayMainCourseCardList] = useState(false);
 
+  // Hook pour la gestion des données de la card Dessert
   const [dessertTitle, setDessertTitle] = useState('');
   const [dessertImage, setDessertImage] = useState('');
   const [dessertSummary, setDessertSummary] = useState('');
   const [dessertPrice, setDessertPrice] = useState('');
   const [displayDessertCardList, setDisplayDessertCardList] = useState(false);
 
+  // Hook pour la gestion des données de la card Drink
   const [drinkTitle, setDrinkTitle] = useState('');
   const [drinkImage, setDrinkImage] = useState('');
   const [drinkSummary, setDrinkSummary] = useState('');
   const [drinkPrice, setDrinkPrice] = useState('');
   const [displayDrinkCardList, setDisplayDrinkCardList] = useState(false);
 
-  const [chatboxSentence, setChatboxSentence] = useState('What would you like to eat Madam/Sir?');
+  // Hook pour la gestion des données des élements annexes
+  const [chatboxSentence, setChatboxSentence] = useState('What would you like to eat Madam / Sir?');
   const [displayBill, setDisplayBill] = useState(false);
   const [footerTextContent, setFooterTextContent] = useState('Bon appétit !');
 
-  const apiKey = 'c0d15de7e0bd47eeb023b186b7c521a1';
+  // Paramètres des requêtes Axios
+  const apiKey = `${process.env.REACT_APP_API_KEY}`;
   const baseUrlStarter = `https://api.spoonacular.com/recipes/random?number=1&type=soup,salad&apiKey=${apiKey}`;
   const baseUrlMainCourse = `https://api.spoonacular.com/recipes/random?number=1&tags=main%20course&apiKey=${apiKey}`;
   const baseUrlDessert = `https://api.spoonacular.com/recipes/random?number=1&tags=dessert&apiKey=${apiKey}`;
   const baseUrlDrink = `https://api.spoonacular.com/recipes/random?number=1&tags=drink&apiKey=${apiKey}`;
 
+  // Gestion des datas liées aux composants CardStarter et ButtonCardStarter
   const handleClickButtonStarter = async () => {
     await axios.get(baseUrlStarter).then((response) => {
       setStarterTitle(response.data.recipes[0].title);
@@ -59,13 +78,13 @@ function Main({ className }) {
       setStarterPrice(response.data.recipes[0].pricePerServing);
       setDisplayStarterCardList(!displayStarterCardList);
       setDisplayStarterCardList(true);
-      setChatboxSentence('I had the same yesterday it was wonderful...');
-      setChatboxSentence('Excellent choice Sir ! May I suggest a main course to go along with your Starter ?');
+      setChatboxSentence(dataStarter[Math.floor(Math.random() * dataStarter.length)]);
       setDisplayBill(false);
       setFooterTextContent('Bon Appétit !');
     });
   };
 
+  // Gestion des datas liées aux composantss CardMainCourse et ButtonCardMainCourse
   const handleClickButtonMainCourse = async () => {
     await axios.get(baseUrlMainCourse).then((response) => {
       setMainCourseTitle(response.data.recipes[0].title);
@@ -74,14 +93,13 @@ function Main({ className }) {
       setMainCoursePrice(response.data.recipes[0].pricePerServing);
       setDisplayMainCourseCardList(!displayMainCourseCardList);
       setDisplayMainCourseCardList(true);
-      setChatboxSentence(`${mainCourseTitle} : the best dish ever !`);
-      setChatboxSentence('A moment on the lips, forever on the hips !');
-      setChatboxSentence('You\'ll never forget the taste of it... !');
+      setChatboxSentence(dataMainCourse[Math.floor(Math.random() * dataMainCourse.length)]);
       setDisplayBill(false);
       setFooterTextContent('Bon Appétit !');
     });
   };
 
+  // Gestion des datas liées aux composants CardDessert et ButtonCardDessert
   const handleClickButtonDessert = async () => {
     await axios.get(baseUrlDessert).then((response) => {
       setDessertTitle(response.data.recipes[0].title);
@@ -90,19 +108,13 @@ function Main({ className }) {
       setDessertPrice(response.data.recipes[0].pricePerServing);
       setDisplayDessertCardList(!displayDessertCardList);
       setDisplayDessertCardList(true);
-      setChatboxSentence('Too much sugar is not good for your health...');
-      setChatboxSentence('Are you sure ? I thought you were on a diet?');
+      setChatboxSentence(dataDessert[Math.floor(Math.random() * dataDessert.length)]);
       setDisplayBill(false);
       setFooterTextContent('Bon Appétit !');
     });
   };
 
-  const handleDisplayButtonBill = () => {
-    setDisplayBill(!displayBill);
-    setChatboxSentence('We hope that you enjoyed your meal and hope to see you soon!');
-    setFooterTextContent('Thank you, hope to see you soon !');
-  };
-
+  // Gestion des datas liées aux composants CardDrink et ButtonCardDrink
   const handleClickButtonDrink = async () => {
     await axios.get(baseUrlDrink).then((response) => {
       setDrinkTitle(response.data.recipes[0].title);
@@ -111,12 +123,17 @@ function Main({ className }) {
       setDrinkPrice(response.data.recipes[0].pricePerServing);
       setDisplayDrinkCardList(!displayDrinkCardList);
       setDisplayDrinkCardList(true);
-      setChatboxSentence('Be careful you have to drive back home !');
-      setChatboxSentence('Nop I won\'t drive you home sorry!');
-      setChatboxSentence('Sure but only one glass ok??');
+      setChatboxSentence(dataDrink[Math.floor(Math.random() * dataDrink.length)]);
       setDisplayBill(false);
       setFooterTextContent('Bon Appétit !');
     });
+  };
+
+  // Gestion des datas liées au composant Bill et ButtonBill
+  const handleDisplayButtonBill = () => {
+    setDisplayBill(!displayBill);
+    setChatboxSentence('We hope that you enjoyed your meal!');
+    setFooterTextContent('Thank you, hope to see you soon !');
   };
 
   return (

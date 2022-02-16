@@ -4,7 +4,7 @@
     display: block;
     color: #D2A500;
     font-weight: lighter;
-    margin-bottom: 3em;
+    margin-bottom: 2em;
 }
 
 
@@ -27,13 +27,14 @@
     font-weight: lighter;
 }
 
-button {
+a {
     display: inline block;
     margin-right: 1em;
     margin-bottom: 3em;
     border-radius: 20px;
     border: black solid 2px;
-    padding: 1em;
+    padding: 0.6em;
     background-color: white;
-
+    text-decoration: none;
+    display: inline-block;
 }
