@@ -9,7 +9,7 @@ function Header({ className }) {
   // timer pour display différé du composant au chargement de la page uniquement
   useEffect(
     () => {
-      setTimeout(() => setShow(false), 4600);
+      setTimeout(() => setShow(false), 4000);
     },
     [],
   );

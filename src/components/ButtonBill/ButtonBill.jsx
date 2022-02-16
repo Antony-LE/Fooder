@@ -7,7 +7,7 @@ function ButtonBill({ className, handleDisplayBill }) {
   // timer pour display différé du composant au chargement de la page uniquement
   useEffect(
     () => {
-      setTimeout(() => setShow(true), 4800);
+      setTimeout(() => setShow(true), 4100);
     },
     [],
   );

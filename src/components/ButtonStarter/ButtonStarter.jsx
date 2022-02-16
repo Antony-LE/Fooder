@@ -8,7 +8,7 @@ function ButtonStarter({ className, handleRandomStarter }) {
   // timer pour display différé du composant au chargement de la page uniquement
   useEffect(
     () => {
-      setTimeout(() => setShow(true), 4400);
+      setTimeout(() => setShow(true), 4000);
     },
     [],
   );

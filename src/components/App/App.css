@@ -1,14 +1,9 @@
 .App {
   text-align: center;
   border: solid 1px #D2A500;
-  margin:2em;
+  margin:3.7em;
 }
 
 html {
   scroll-behavior:smooth;
 }
-
-#root {
-  margin: 2em;
-}
-
