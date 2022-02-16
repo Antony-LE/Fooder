@@ -8,7 +8,7 @@
     height: 200px; 
     overflow: hidden; 
     border-radius: 50%;
-    margin-right: 1em;
+    margin-bottom: 1em;
     border:#D2A500 1px solid;
      /* Animation Fade-in */
      animation: fadeIn 5s;
@@ -55,7 +55,7 @@
 .card-drink h3 {
     font-family: 'Roboto', sans-serif ;
     font-size: 1.2em;
-    margin: 0;
+    margin: 1em;
     color: #4d4d4d;
 }
 
@@ -64,14 +64,13 @@
   font-family:'Pinyon Script', sans-serif;
   font-size: 1.5em;
   color:#D2A500;
-  width: 60vw;
-  height: 77px;
-  text-align: left;
+  width: 25vw;
+  height: 92px;
+  text-align: center;
   vertical-align: 2.5em;
   overflow: hidden;
   white-space: normal;
   text-overflow: ellipsis;
-  padding: 0.36em;
 }
 
 .card-drink a {

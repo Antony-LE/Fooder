@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import CardStarter from '../CardStarter/CardStarter';
 import './cardListStarter.css';
@@ -6,19 +6,11 @@ import './cardListStarter.css';
 function CardListStarter({
   className, handleStarterImage, handleStarterTitle, handleStarterSummary, handleStarterPrice,
 }) {
-  const [show, setShow] = useState(false);
-  // timer pour display différé du composant au chargement de la page uniquement
-  useEffect(
-    () => {
-      setTimeout(() => setShow(true), 200);
-    },
-    [],
-  );
-  return show ? (
+  return (
     <div className={className}>
       <CardStarter className="card-starter" sourcePix={handleStarterImage} title={handleStarterTitle} summary={handleStarterSummary} starterPrice={handleStarterPrice} />
     </div>
-  ) : '';
+  );
 }
 
 CardListStarter.propTypes = {

@@ -9,7 +9,7 @@ function Chatbox({ className, sentence }) {
     () => {
       setTimeout(() => setShow(true), 4400);
     },
-    [sentence],
+    [],
   );
 
   return show ? (
