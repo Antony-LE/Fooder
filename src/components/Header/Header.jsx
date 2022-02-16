@@ -9,7 +9,7 @@ function Header({ className }) {
   // timer pour display différé du composant au chargement de la page uniquement
   useEffect(
     () => {
-      setTimeout(() => setShow(false), 4000);
+      setTimeout(() => setShow(false), 3500);
     },
     [],
   );
@@ -19,7 +19,7 @@ function Header({ className }) {
         Today's Special
       </h1>
       <span id="citation">
-        "For those who want a fancy homemade meal !". Antony LE
+        "For those who want a fancy homemade meal !" .Antony LE
       </span>
     </div>
   ) : '';

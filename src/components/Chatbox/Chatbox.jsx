@@ -7,7 +7,7 @@ function Chatbox({ className, sentence }) {
   // timer pour display différé du composant au chargement de la page uniquement
   useEffect(
     () => {
-      setTimeout(() => setShow(true), 4000);
+      setTimeout(() => setShow(true), 3500);
     },
     [],
   );
