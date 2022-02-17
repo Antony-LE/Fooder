@@ -148,7 +148,7 @@ function Main({ className }) {
       {displayMainCourseCardList ? <CardListMainCourse className="cardlist-main-course" handleMainCourseImage={mainCourseImage} handleMainCourseTitle={mainCourseTitle} handleMainCourseSummary={mainCourseSummary} handleMainCoursePrice={mainCoursePrice} /> : '' }
       {displayDessertCardList ? <CardListDessert className="cardlist-dessert" handleDessertImage={dessertImage} handleDessertTitle={dessertTitle} handleDessertSummary={dessertSummary} handleDessertPrice={dessertPrice} /> : '' }
       {displayDrinkCardList ? <CardListDrink className="cardlist-drink" handleDrinkImage={drinkImage} handleDrinkTitle={drinkTitle} handleDrinkSummary={drinkSummary} handleDrinkPrice={drinkPrice} /> : '' }
-      {displayBill ? <Bill className="bill" handleStarterTitle={starterTitle} handleStarterPrice={starterPrice} handleMainCourseTitle={mainCourseTitle} handleMainCoursePrice={mainCoursePrice} handleDessertTitle={dessertTitle} handleDessertPrice={dessertPrice} handleDrinkTitle={drinkTitle} handleDrinkPrice={drinkPrice} /> : '' }
+      {displayBill ? <Bill className="bill" handleStarterTitle={starterTitle} handleStarterPrice={starterPrice} handleMainCourseTitle={mainCourseTitle} handleMainCoursePrice={mainCoursePrice} handleDessertTitle={dessertTitle} handleDessertPrice={dessertPrice} handleDrinkTitle={drinkTitle} handleDrinkPrice={drinkPrice} /> : ''}
       {displayStarterCardList ? <Footer className="footer" textContent={footerTextContent} /> : displayMainCourseCardList ? <Footer className="footer" textContent={footerTextContent} /> : displayDessertCardList ? <Footer className="footer" textContent={footerTextContent} /> : ''}
     </main>
   );

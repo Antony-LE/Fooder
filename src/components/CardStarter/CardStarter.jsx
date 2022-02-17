@@ -12,6 +12,7 @@ function CardStarter({
   const purifiedSummary = summary;
   return (
     <div className={className} style={fadeOut}>
+      <hr />
       <h2>Your Starter :</h2>
       <h3>{title}</h3>
       <img src={sourcePix} alt="food dishes" />
