@@ -59,20 +59,6 @@
   color: #4d4d4d;
 }
 
-.card-main-course span {
-  display: inline-block;
-  font-family: 'Roboto', sans-serif;
-  font-size: 1.5em;
-  color:#D2A500;
-  width: 25vw;
-  height: 92px;
-  text-align: center;
-  vertical-align: 2.5em;
-  overflow: hidden;
-  white-space: normal;
-  text-overflow: ellipsis;
-}
-
 .card-main-course a {
   text-decoration: none;
   color : #D2A500;
@@ -91,4 +77,49 @@ hr {
   height: 1.5em;
   color:#D2A500;
   text-align: center;
+}
+
+/* handle readmore style on card */
+
+.card-main-course-readLess{
+  display: inline-block;
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.5em;
+  color:#D2A500;
+  width: 25vw;
+  height: 3.6em;
+  text-align: justify;
+  vertical-align: 2.5em;
+  padding-right: 2em;
+  overflow: hidden;
+}
+
+.card-main-course-readMore {
+  display: inline-block;
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.2em;
+  color:#D2A500;
+  width: 25vw;
+  height: 6em;
+  text-align: justify;
+  vertical-align: 2.5em;
+  padding-right: 2em;
+}
+
+.card-main-course button {
+  color: #D2A500;
+  border: 1px solid #D2A500;
+  padding: 0.6em;
+  border-radius: 20px;
+  text-decoration: none;
+  display: block;
+  margin-bottom: 3em;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.card-main-course button:hover {
+  background-color: #D2A500;
+  color: white;
+  
 }

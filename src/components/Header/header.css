@@ -27,7 +27,7 @@
     font-weight: lighter;
 }
 
-a {
+.header a {
     display: inline block;
     margin-right: 1em;
     margin-bottom: 3em;

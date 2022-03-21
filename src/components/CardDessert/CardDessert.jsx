@@ -1,5 +1,5 @@
 /* eslint-disable react/no-danger */
-import React from 'react';
+import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import './cardDessert.css';
 import DOMPurify from 'dompurify';
@@ -7,6 +7,12 @@ import DOMPurify from 'dompurify';
 function CardDessert({
   className, sourcePix, title, summary, dessertPrice,
 }) {
+  const [readMore, setReadMore] = useState(false);
+
+  function handleReadMore() {
+    setReadMore(!readMore);
+    console.log(readMore);
+  }
   // Purification de la props summary avec domPurify
   const purifiedSummary = summary;
   return (
@@ -14,10 +20,17 @@ function CardDessert({
       <h2>Your Dessert :</h2>
       <h3>{title}</h3>
       <img src={sourcePix} alt="food dishes" />
-      <span dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(purifiedSummary) }} />
+      {readMore === false ? <span className="card-dessert-readLess" dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(purifiedSummary) }} />
+        : <span className="card-dessert-readMore" dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(purifiedSummary) }} /> }
+      <button type="button" className="readmore" onClick={handleReadMore}>
+        {' '}
+        {readMore === false ? 'Read more...' : 'Read less' }
+      </button>
       <span id="dessertPrice">
         $
         {(dessertPrice / 100).toFixed(2)}
+        {' '}
+        / serving
       </span>
       <hr />
     </div>

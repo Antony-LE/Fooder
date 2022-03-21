@@ -3,6 +3,8 @@
   border: solid 1px #D2A500;
   margin:3.7em;
   font-family: 'Roboto', sans-serif;
+  padding-bottom: 2em;
+  margin-top: none;
 }
 
 html {
