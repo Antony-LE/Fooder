@@ -44,7 +44,7 @@
   }
 
   .card-main-course h2 {
-    font-family: 'Pinyon Script', sans-serif ;
+    font-family: 'Roboto', sans-serif;
     font-size: 2.5em;
     color:#D2A500;
     font-weight: lighter;
@@ -61,7 +61,7 @@
 
 .card-main-course span {
   display: inline-block;
-  font-family:'Pinyon Script', sans-serif;
+  font-family: 'Roboto', sans-serif;
   font-size: 1.5em;
   color:#D2A500;
   width: 25vw;
@@ -86,7 +86,7 @@ hr {
 
 #main-course-price {
   display: inline-block;
-  font-family:'Pinyon Script', sans-serif;
+  font-family: 'Roboto', sans-serif;
   font-size: 1.7em;
   height: 1.5em;
   color:#D2A500;

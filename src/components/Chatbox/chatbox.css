@@ -1,6 +1,7 @@
 .chatbox {
-    font-family: 'Pinyon Script', sans-serif;
-    font-size: 3.6em;
+    font-family: 'Roboto', sans-serif;
+    font-style: italic;
+    font-size: 2em;
     display: block;
     margin: 1em;
     color: #4d4d4d;
