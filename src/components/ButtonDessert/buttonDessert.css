@@ -1,6 +1,6 @@
 .button-dessert {
-  color: #D2A500;
-  border: 1px solid #D2A500;
+  color: #D2AA74;
+  border: 1px solid #D2AA74;
   padding: 0.6em;
   border-radius: 20px;
   text-decoration: none;
@@ -39,6 +39,6 @@
   }
 
 .button-dessert:hover {
-    background-color: #D2A500;
+    background-color: #D2AA74;
     color: white;
 }

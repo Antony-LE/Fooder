@@ -2,7 +2,7 @@
     font-family: 'Roboto', sans-serif;
     font-size: 2em;
     display: block;
-    color: #D2A500;
+    color: #D2AA74;
     font-weight: lighter;
     margin-bottom: 2em;
 }
@@ -14,7 +14,7 @@
     display: inline-block;
     margin-top: 1em;
     margin-bottom: 0;
-    color: #D2A500;
+    color: #D2AA74;
     font-weight: lighter;
 }
 
@@ -23,18 +23,6 @@
     font-size: 2.5em;
     display: block;
     margin: 1em;
-    color: #4d4d4d;
+    color: white;
     font-weight: lighter;
-}
-
-.header a {
-    display: inline block;
-    margin-right: 1em;
-    margin-bottom: 3em;
-    border-radius: 20px;
-    border: black solid 2px;
-    padding: 0.6em;
-    background-color: white;
-    text-decoration: none;
-    display: inline-block;
 }

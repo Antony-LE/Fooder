@@ -1,6 +1,6 @@
 .button-bill {
-    color: #4d4d4d;
-    border: 1px solid #4d4d4d;
+    color: white;
+    border: 1px solid white;
     padding: 0.6em;
     border-radius: 20px;
     text-decoration: none;
@@ -38,6 +38,6 @@
   }
 
 .button-bill:hover {
-    background-color: #4d4d4d;
-    color: white;
+  background-color: #D2AA74;
+  color: white;
 }

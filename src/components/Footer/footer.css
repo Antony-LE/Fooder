@@ -32,16 +32,11 @@
     100% {opacity:1;}
   }
 
-.button-bill:hover {
-    background-color: #4d4d4d;
-    color: white;
-}
-
 .footer h4 {
   font-family: 'Roboto', sans-serif;
     font-size: 4em;
     display: inline-block;
     margin: 1em;
-    color: #D2A500;
+    color: #D2AA74;
     font-weight: lighter;
 }

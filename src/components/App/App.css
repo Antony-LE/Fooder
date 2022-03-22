@@ -1,6 +1,6 @@
 .App {
   text-align: center;
-  border: solid 1px #D2A500;
+  border: solid 1px #D2AA74;
   margin:3.7em;
   font-family: 'Roboto', sans-serif;
   padding-bottom: 2em;
@@ -9,4 +9,5 @@
 
 html {
   scroll-behavior:smooth;
+  background-color: #211D17;
 }
