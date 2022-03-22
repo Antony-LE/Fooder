@@ -5,6 +5,7 @@ import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import './main.css';
 import axios from 'axios';
+import Swal from 'sweetalert2';
 
 // Import des boutons
 import ButtonMainCourse from '../ButtonMainCourse/ButtonMainCourse';
@@ -12,6 +13,7 @@ import ButtonDessert from '../ButtonDessert/ButtonDessert';
 import ButtonStarter from '../ButtonStarter/ButtonStarter';
 import ButtonDrink from '../ButtonDrink/ButtonDrink';
 import ButtonBill from '../ButtonBill/ButtonBill';
+import ButtonJoke from '../ButtonJoke/ButtonJoke';
 
 // Import des listes
 import CardListStarter from '../CardListStarter/CardListStarter';
@@ -66,14 +68,20 @@ function Main({ className }) {
 
   // Paramètres des requêtes Axios
   const apiKey = `${process.env.REACT_APP_API_KEY}`;
+  // Endpoint pour une entrée aléatoire
   const baseUrlStarter = `https://api.spoonacular.com/recipes/random?number=1&type=soup,salad&apiKey=${apiKey}`;
+  // Endpoint pour un plat principal aléatoire
   const baseUrlMainCourse = `https://api.spoonacular.com/recipes/random?number=1&tags=main%20course&apiKey=${apiKey}`;
+  // Endpoint pour un dessert aléatoire
   const baseUrlDessert = `https://api.spoonacular.com/recipes/random?number=1&tags=dessert&apiKey=${apiKey}`;
+  // Endpoint pour une boisson aléatoire
   const baseUrlDrink = `https://api.spoonacular.com/recipes/random?number=1&tags=drink&apiKey=${apiKey}`;
+  // Endpoint pour une blague aléatoire
+  const baseUrlJoke = `https://api.spoonacular.com/food/jokes/random?&apiKey=${apiKey}`;
 
   // Gestion des datas liées aux composants CardStarter et ButtonCardStarter
-  const handleClickButtonStarter = async () => {
-    await axios.get(baseUrlStarter).then((response) => {
+  const handleClickButtonStarter = () => {
+    axios.get(baseUrlStarter).then((response) => {
       setStarterTitle(response.data.recipes[0].title);
       setStarterImage(response.data.recipes[0].image);
       setStarterSummary(response.data.recipes[0].summary);
@@ -87,8 +95,8 @@ function Main({ className }) {
   };
 
   // Gestion des datas liées aux composantss CardMainCourse et ButtonCardMainCourse
-  const handleClickButtonMainCourse = async () => {
-    await axios.get(baseUrlMainCourse).then((response) => {
+  const handleClickButtonMainCourse = () => {
+    axios.get(baseUrlMainCourse).then((response) => {
       setMainCourseTitle(response.data.recipes[0].title);
       setMainCourseImage(response.data.recipes[0].image);
       setMainCourseSummary(response.data.recipes[0].summary);
@@ -102,8 +110,8 @@ function Main({ className }) {
   };
 
   // Gestion des datas liées aux composants CardDessert et ButtonCardDessert
-  const handleClickButtonDessert = async () => {
-    await axios.get(baseUrlDessert).then((response) => {
+  const handleClickButtonDessert = () => {
+    axios.get(baseUrlDessert).then((response) => {
       setDessertTitle(response.data.recipes[0].title);
       setDessertImage(response.data.recipes[0].image);
       setDessertSummary(response.data.recipes[0].summary);
@@ -117,8 +125,8 @@ function Main({ className }) {
   };
 
   // Gestion des datas liées aux composants CardDrink et ButtonCardDrink
-  const handleClickButtonDrink = async () => {
-    await axios.get(baseUrlDrink).then((response) => {
+  const handleClickButtonDrink = () => {
+    axios.get(baseUrlDrink).then((response) => {
       setDrinkTitle(response.data.recipes[0].title);
       setDrinkImage(response.data.recipes[0].image);
       setDrinkSummary(response.data.recipes[0].summary);
@@ -131,10 +139,10 @@ function Main({ className }) {
     });
   };
 
-  // Gestion des datas liées au composant Bill et ButtonBill
+  // Gestion des datas liées aux composants Bill et ButtonBill
   const handleDisplayButtonBill = () => {
     if (starterPrice === '' && mainCoursePrice === '' && dessertPrice === '' && drinkPrice === '') {
-      setChatboxSentence('You must order something first !');
+      setChatboxSentence('You must choose a dish first !');
       setDisplayBill(false);
     } else {
       setDisplayBill(!displayBill);
@@ -142,6 +150,25 @@ function Main({ className }) {
       setFooterTextContent('Thank you, hope to see you soon !');
       console.log(starterPrice);
     }
+  };
+
+  // Gestion des datas liées au composant ButtonJoke
+  const handleClickButtonJoke = () => {
+    axios.get(baseUrlJoke).then((response) => {
+      Swal.fire({
+        title: response.data.text,
+        width: 600,
+        padding: '3em',
+        color: '#fff',
+        background: '#D2AA74',
+        backdrop: `
+          rgba(0,0,123,0.4)
+          url("https://tenor.com/view/hahahaha-you-suck-happy-fun-excited-hooray-gif-14146663")
+          left top
+          no-repeat
+        `,
+      });
+    });
   };
 
   return (
@@ -152,6 +179,8 @@ function Main({ className }) {
       <ButtonDessert className="button-dessert" handleRandomDessert={handleClickButtonDessert} />
       <ButtonDrink className="button-drink" handleRandomDrink={handleClickButtonDrink} />
       <ButtonBill className="button-bill" handleDisplayBill={handleDisplayButtonBill} />
+      <br />
+      <ButtonJoke className="button-joke" handleRandomJoke={handleClickButtonJoke} />
       {displayStarterCardList ? <CardListStarter className="cardlist-starter" handleStarterImage={starterImage} handleStarterTitle={starterTitle} handleStarterSummary={starterSummary} handleStarterPrice={starterPrice} /> : '' }
       {displayMainCourseCardList ? <CardListMainCourse className="cardlist-main-course" handleMainCourseImage={mainCourseImage} handleMainCourseTitle={mainCourseTitle} handleMainCourseSummary={mainCourseSummary} handleMainCoursePrice={mainCoursePrice} /> : '' }
       {displayDessertCardList ? <CardListDessert className="cardlist-dessert" handleDessertImage={dessertImage} handleDessertTitle={dessertTitle} handleDessertSummary={dessertSummary} handleDessertPrice={dessertPrice} /> : '' }
