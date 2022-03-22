@@ -1,13 +1,13 @@
 # Fooder
 
-Vous ne savez pas quoi manger ce midi ? Laissez le site Fooder décider pour vous  !
-Le majordome est inclus 😉
+Don't know what to eat ? Let the fooder website help you find delicious recipes !
+The butler is included 😉
 
-Ce projet a été créé avec les technologies suivantes :
-- REACT et notamment CREATE REACT app (https://github.com/facebook/create-react-app)
-- AXIOS pour les requêtes API
-- L'API spoonacular (https://spoonacular.com/food-api)
+This project has been maad with the following technologies :
+- REACT 
+- vanilla CSS
+- spoonacular API (https://spoonacular.com/food-api)
 
-## Comment lancez le portfolio ?
+## How to launch this project ?
 
-Executez la commande `yarn start` ou `npm start` dans votre terminal à la racine du projet.
+Type `yarn start` or `npm start` on your CLI or simply reach the following URL : https://fooder-ce9c0.web.app/

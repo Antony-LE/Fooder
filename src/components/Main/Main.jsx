@@ -58,7 +58,7 @@ function Main({ className }) {
   const [displayDrinkCardList, setDisplayDrinkCardList] = useState(false);
 
   // Hook pour la gestion des données des élements annexes
-  const [chatboxSentence, setChatboxSentence] = useState('What would you like to eat Madam / Sir?');
+  const [chatboxSentence, setChatboxSentence] = useState('What would you like to eat today?');
   const [displayBill, setDisplayBill] = useState(false);
   const [footerTextContent, setFooterTextContent] = useState('Bon appétit !');
 
