@@ -107,8 +107,9 @@ hr {
 }
 
 .card-dessert button {
-  color: #D2AA74;
+  color: white;
   border: 1px solid #D2AA74;
+  background-color: #D2AA74;
   padding: 0.6em;
   border-radius: 20px;
   text-decoration: none;
@@ -119,7 +120,6 @@ hr {
 }
 
 .card-dessert button:hover {
-  background-color: #D2AA74;
-  color: white;
-  
+  background-color: white ;
+  color: #D2AA74;
 }

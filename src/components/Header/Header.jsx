@@ -19,7 +19,7 @@ function Header({ className }) {
         Today's Special
       </h1>
       <span id="citation">
-        "Don't know what to eat ?? Please follow the guide !"
+        Don't know what to eat ? Please follow the guide !
       </span>
     </div>
   ) : '';

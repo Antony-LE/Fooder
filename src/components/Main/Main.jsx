@@ -1,3 +1,5 @@
+/* eslint-disable max-len */
+/* eslint-disable no-empty */
 /* eslint-disable no-nested-ternary */
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
@@ -131,9 +133,15 @@ function Main({ className }) {
 
   // Gestion des datas liées au composant Bill et ButtonBill
   const handleDisplayButtonBill = () => {
-    setDisplayBill(!displayBill);
-    setChatboxSentence('We hope that you enjoyed your meal!');
-    setFooterTextContent('Thank you, hope to see you soon !');
+    if (starterPrice === '' && mainCoursePrice === '' && dessertPrice === '' && drinkPrice === '') {
+      setChatboxSentence('You must order something first !');
+      setDisplayBill(false);
+    } else {
+      setDisplayBill(!displayBill);
+      setChatboxSentence('We hope that you enjoyed your meal!');
+      setFooterTextContent('Thank you, hope to see you soon !');
+      console.log(starterPrice);
+    }
   };
 
   return (
