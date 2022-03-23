@@ -86,21 +86,21 @@ function CardStarter({
         {seeInstructions === false ? 'Cook it !' : 'Hide instructions' }
       </button>
       {seeIngredients === true ? (
-        <ul>
+        <ul className="ingredients-list">
           {ingredients.map((ingredient) => (
-            <>
-              <li>{ingredient.original}</li>
+            <li>
               <img src={`https://spoonacular.com/cdn/ingredients_100x100/${ingredient.image}`} alt={ingredient.name} className="ingredient-image" />
-            </>
+              {ingredient.original}
+            </li>
           ))}
         </ul>
       ) : ''}
       {/* Gestion du bouton instructions */}
       {seeInstructions === true ? (
-        <ul>
+        <ul className="instructions-list">
           {instructions.map((instruction) => (
             <li>
-              {instruction.number}
+              {`Step ${instruction.number} :`}
               {' '}
               {instruction.step}
             </li>
