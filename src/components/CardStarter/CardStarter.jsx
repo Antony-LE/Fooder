@@ -61,7 +61,7 @@ function CardStarter({
         servings
       </span>
       <span className="healthscore">
-        🥗
+        {healthscore < 50 ? '☹️' : '😀' }
         {' '}
         Healthscore
         {' '}
@@ -128,6 +128,8 @@ CardStarter.propTypes = {
   ingredients: PropTypes.array,
   instructions: PropTypes.array,
   cookingTime: PropTypes.number,
+  servings: PropTypes.number,
+  healthscore: PropTypes.number,
 };
 
 CardStarter.defaultProps = {
@@ -139,6 +141,8 @@ CardStarter.defaultProps = {
   ingredients: [],
   instructions: [],
   cookingTime: 0,
+  servings: 0,
+  healthscore: 0,
 };
 
 export default React.memo(CardStarter);

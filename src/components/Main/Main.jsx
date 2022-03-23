@@ -50,21 +50,36 @@ function Main({ className }) {
   const [mainCourseImage, setMainCourseImage] = useState('');
   const [mainCourseSummary, setMainCourseSummary] = useState('');
   const [mainCoursePrice, setMainCoursePrice] = useState('');
+  const [mainCourseCookingTime, setMainCourseCookingTime] = useState(0);
+  const [mainCourseServings, setMainCourseServings] = useState(0);
+  const [mainCourseHealthscore, setMainCourseHealthscore] = useState(0);
   const [displayMainCourseCardList, setDisplayMainCourseCardList] = useState(false);
+  const [seeMainCourseIngredients, setSeeMainCourseIngredients] = useState({});
+  const [seeMainCourseInstructions, setSeeMainCourseInstructions] = useState({});
 
   // Hook pour la gestion des données de la card Dessert
   const [dessertTitle, setDessertTitle] = useState('');
   const [dessertImage, setDessertImage] = useState('');
   const [dessertSummary, setDessertSummary] = useState('');
   const [dessertPrice, setDessertPrice] = useState('');
+  const [dessertCookingTime, setDessertCookingTime] = useState(0);
+  const [dessertServings, setDessertServings] = useState(0);
+  const [dessertHealthscore, setDessertHealthscore] = useState(0);
   const [displayDessertCardList, setDisplayDessertCardList] = useState(false);
+  const [seeDessertIngredients, setSeeDessertIngredients] = useState({});
+  const [seeDessertInstructions, setSeeDessertInstructions] = useState({});
 
   // Hook pour la gestion des données de la card Drink
   const [drinkTitle, setDrinkTitle] = useState('');
   const [drinkImage, setDrinkImage] = useState('');
   const [drinkSummary, setDrinkSummary] = useState('');
   const [drinkPrice, setDrinkPrice] = useState('');
+  const [drinkCookingTime, setDrinkCookingTime] = useState(0);
+  const [drinkServings, setDrinkServings] = useState(0);
+  const [drinkHealthscore, setDrinkHealthscore] = useState(0);
   const [displayDrinkCardList, setDisplayDrinkCardList] = useState(false);
+  const [seeDrinkIngredients, setSeeDrinkIngredients] = useState({});
+  const [seeDrinkInstructions, setSeeDrinkInstructions] = useState({});
 
   // Hook pour la gestion des données des élements annexes
   const [chatboxSentence, setChatboxSentence] = useState('What would you like to eat today?');
@@ -111,6 +126,11 @@ function Main({ className }) {
       setMainCourseImage(response.data.recipes[0].image);
       setMainCourseSummary(response.data.recipes[0].summary);
       setMainCoursePrice(response.data.recipes[0].pricePerServing);
+      setMainCourseCookingTime(response.data.recipes[0].readyInMinutes);
+      setMainCourseServings(response.data.recipes[0].servings);
+      setMainCourseHealthscore(response.data.recipes[0].healthScore);
+      setSeeMainCourseIngredients(response.data.recipes[0].extendedIngredients);
+      setSeeMainCourseInstructions(response.data.recipes[0].analyzedInstructions[0].steps);
       setDisplayMainCourseCardList(!displayMainCourseCardList);
       setDisplayMainCourseCardList(true);
       setChatboxSentence(dataMainCourse[Math.floor(Math.random() * dataMainCourse.length)]);
@@ -126,6 +146,11 @@ function Main({ className }) {
       setDessertImage(response.data.recipes[0].image);
       setDessertSummary(response.data.recipes[0].summary);
       setDessertPrice(response.data.recipes[0].pricePerServing);
+      setDessertCookingTime(response.data.recipes[0].readyInMinutes);
+      setDessertServings(response.data.recipes[0].servings);
+      setDessertHealthscore(response.data.recipes[0].healthScore);
+      setSeeDessertIngredients(response.data.recipes[0].extendedIngredients);
+      setSeeDessertInstructions(response.data.recipes[0].analyzedInstructions[0].steps);
       setDisplayDessertCardList(!displayDessertCardList);
       setDisplayDessertCardList(true);
       setChatboxSentence(dataDessert[Math.floor(Math.random() * dataDessert.length)]);
@@ -141,6 +166,11 @@ function Main({ className }) {
       setDrinkImage(response.data.recipes[0].image);
       setDrinkSummary(response.data.recipes[0].summary);
       setDrinkPrice(response.data.recipes[0].pricePerServing);
+      setDrinkCookingTime(response.data.recipes[0].readyInMinutes);
+      setDrinkServings(response.data.recipes[0].servings);
+      setDrinkHealthscore(response.data.recipes[0].healthScore);
+      setSeeDrinkIngredients(response.data.recipes[0].extendedIngredients);
+      setSeeDrinkInstructions(response.data.recipes[0].analyzedInstructions[0].steps);
       setDisplayDrinkCardList(!displayDrinkCardList);
       setDisplayDrinkCardList(true);
       setChatboxSentence(dataDrink[Math.floor(Math.random() * dataDrink.length)]);
@@ -190,12 +220,16 @@ function Main({ className }) {
       <ButtonDrink className="button-drink" handleRandomDrink={handleClickButtonDrink} />
       <ButtonBill className="button-bill" handleDisplayBill={handleDisplayButtonBill} />
       <br />
-      <ButtonJoke className="button-joke" handleRandomJoke={handleClickButtonJoke} />
       {displayStarterCardList ? <CardListStarter className="cardlist-starter" handleStarterImage={starterImage} handleStarterTitle={starterTitle} handleStarterSummary={starterSummary} handleStarterPrice={starterPrice} handleStarterIngredients={seeStarterIngredients} handleStarterInstructions={seeStarterInstructions} handleStarterCookingTime={starterCookingTime} handleStarterServings={starterServings} handleStarterHealthscore={starterHealthscore} /> : '' }
-      {displayMainCourseCardList ? <CardListMainCourse className="cardlist-main-course" handleMainCourseImage={mainCourseImage} handleMainCourseTitle={mainCourseTitle} handleMainCourseSummary={mainCourseSummary} handleMainCoursePrice={mainCoursePrice} /> : '' }
-      {displayDessertCardList ? <CardListDessert className="cardlist-dessert" handleDessertImage={dessertImage} handleDessertTitle={dessertTitle} handleDessertSummary={dessertSummary} handleDessertPrice={dessertPrice} /> : '' }
-      {displayDrinkCardList ? <CardListDrink className="cardlist-drink" handleDrinkImage={drinkImage} handleDrinkTitle={drinkTitle} handleDrinkSummary={drinkSummary} handleDrinkPrice={drinkPrice} /> : '' }
-      {displayBill ? <Bill className="bill" handleStarterTitle={starterTitle} handleStarterPrice={starterPrice} handleMainCourseTitle={mainCourseTitle} handleMainCoursePrice={mainCoursePrice} handleDessertTitle={dessertTitle} handleDessertPrice={dessertPrice} handleDrinkTitle={drinkTitle} handleDrinkPrice={drinkPrice} /> : ''}
+      {displayMainCourseCardList ? <CardListMainCourse className="cardlist-main-course" handleMainCourseImage={mainCourseImage} handleMainCourseTitle={mainCourseTitle} handleMainCourseSummary={mainCourseSummary} handleMainCoursePrice={mainCoursePrice} handleMainCourseIngredients={seeMainCourseIngredients} handleMainCourseInstructions={seeMainCourseInstructions} handleMainCourseCookingTime={mainCourseCookingTime} handleMainCourseServings={mainCourseServings} handleMainCourseHealthscore={mainCourseHealthscore} /> : '' }
+      {displayDessertCardList ? <CardListDessert className="cardlist-dessert" handleDessertImage={dessertImage} handleDessertTitle={dessertTitle} handleDessertSummary={dessertSummary} handleDessertPrice={dessertPrice} handleDessertIngredients={seeDessertIngredients} handleDessertInstructions={seeDessertInstructions} handleDessertCookingTime={dessertCookingTime} handleDessertServings={dessertServings} handleDessertHealthscore={dessertHealthscore} /> : '' }
+      {displayDrinkCardList ? <CardListDrink className="cardlist-drink" handleDrinkImage={drinkImage} handleDrinkTitle={drinkTitle} handleDrinkSummary={drinkSummary} handleDrinkPrice={drinkPrice} handleDrinkIngredients={seeDrinkIngredients} handleDrinkInstructions={seeDrinkInstructions} handleDrinkCookingTime={drinkCookingTime} handleDrinkServings={drinkServings} handleDrinkHealthscore={drinkHealthscore} /> : '' }
+      {displayBill ? (
+        <>
+          <Bill className="bill" handleStarterTitle={starterTitle} handleStarterPrice={starterPrice} handleMainCourseTitle={mainCourseTitle} handleMainCoursePrice={mainCoursePrice} handleDessertTitle={dessertTitle} handleDessertPrice={dessertPrice} handleDrinkTitle={drinkTitle} handleDrinkPrice={drinkPrice} />
+          <ButtonJoke className="button-joke" handleRandomJoke={handleClickButtonJoke} />
+        </>
+      ) : ''}
       {displayStarterCardList ? <Footer className="footer" textContent={footerTextContent} /> : displayMainCourseCardList ? <Footer className="footer" textContent={footerTextContent} /> : displayDessertCardList ? <Footer className="footer" textContent={footerTextContent} /> : ''}
     </main>
   );

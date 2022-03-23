@@ -5,12 +5,21 @@ import CardMainCourse from '../CardMainCourse/CardMainCourse';
 import './cardListMainCourse.css';
 
 function cardListMainCourse({
-  className, handleMainCourseImage, handleMainCourseTitle, handleMainCourseSummary, handleMainCoursePrice,
+  className,
+  handleMainCourseImage,
+  handleMainCourseTitle,
+  handleMainCourseSummary,
+  handleMainCoursePrice,
+  handleMainCourseIngredients,
+  handleMainCourseInstructions,
+  handleMainCourseCookingTime,
+  handleMainCourseServings,
+  handleMainCourseHealthscore,
 }) {
   return (
     <div className={className}>
       <span id="maincourse-ancre" />
-      <CardMainCourse className="card-main-course" sourcePix={handleMainCourseImage} title={handleMainCourseTitle} summary={handleMainCourseSummary} mainCoursePrice={handleMainCoursePrice} />
+      <CardMainCourse className="card-main-course" sourcePix={handleMainCourseImage} title={handleMainCourseTitle} summary={handleMainCourseSummary} mainCoursePrice={handleMainCoursePrice} ingredients={handleMainCourseIngredients} instructions={handleMainCourseInstructions} cookingTime={handleMainCourseCookingTime} servings={handleMainCourseServings} healthscore={handleMainCourseHealthscore} />
     </div>
   );
 }

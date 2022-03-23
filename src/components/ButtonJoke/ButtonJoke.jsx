@@ -13,7 +13,7 @@ function ButtonJoke({ className, handleRandomJoke }) {
     [],
   );
   return show ? (
-    <a href="#joke-ancre" className={className} type="button" onClick={handleRandomJoke}>Tell me a joke instead !</a>
+    <a href="#joke-ancre" className={className} type="button" onClick={handleRandomJoke}>Food joke !</a>
   ) : '';
 }
 
