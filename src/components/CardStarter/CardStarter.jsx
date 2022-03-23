@@ -9,7 +9,7 @@ import { fadeOut } from 'react-animations';
 import DOMPurify from 'dompurify';
 
 function CardStarter({
-  className, sourcePix, title, summary, starterPrice, ingredients, instructions,
+  className, sourcePix, title, summary, starterPrice, ingredients, instructions, cookingTime,
 }) {
   const [readMore, setReadMore] = useState(false);
   const [seeIngredients, setSeeIngredients] = useState(false);
@@ -35,8 +35,17 @@ function CardStarter({
       <h2>Your Starter :</h2>
       <h3>{title}</h3>
       <img className="main-picture" src={sourcePix} alt="food dishes" />
+      <span className="cooking-time">
+        Ready in :
+        {' '}
+        {cookingTime}
+        {' '}
+        mins
+      </span>
       {/* Gestion du bouton readmore */}
-      {readMore === false ? <span className="card-starter-readLess" dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(purifiedSummary) }} />
+      {readMore === false ? (
+        <span className="card-starter-readLess" dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(purifiedSummary) }} />
+      )
         : <span className="card-starter-readMore" dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(purifiedSummary) }} /> }
       <button type="button" className="readmore" onClick={handleReadMore}>
         {' '}
@@ -46,6 +55,10 @@ function CardStarter({
       <button type="button" className="ingredients" onClick={handleReadIngredients}>
         {' '}
         {seeIngredients === false ? 'See Ingredients...' : 'Hide ingredients' }
+      </button>
+      <button type="button" className="instructions" onClick={handleReadInstructions}>
+        {' '}
+        {seeInstructions === false ? 'Cook it !' : 'Hide instructions' }
       </button>
       {seeIngredients === true ? (
         <ul>
@@ -58,10 +71,6 @@ function CardStarter({
         </ul>
       ) : ''}
       {/* Gestion du bouton instructions */}
-      <button type="button" className="instructions" onClick={handleReadInstructions}>
-        {' '}
-        {seeInstructions === false ? 'Cook it !' : 'Hide instructions' }
-      </button>
       {seeInstructions === true ? (
         <ul>
           {instructions.map((instruction) => (
@@ -93,6 +102,7 @@ CardStarter.propTypes = {
   starterPrice: PropTypes.number,
   ingredients: PropTypes.array,
   instructions: PropTypes.array,
+  cookingTime: PropTypes.number,
 };
 
 CardStarter.defaultProps = {
@@ -103,6 +113,7 @@ CardStarter.defaultProps = {
   starterPrice: 0,
   ingredients: [],
   instructions: [],
+  cookingTime: 0,
 };
 
 export default React.memo(CardStarter);

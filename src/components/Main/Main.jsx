@@ -38,6 +38,7 @@ function Main({ className }) {
   const [starterImage, setStarterImage] = useState('');
   const [starterSummary, setStarterSummary] = useState('');
   const [starterPrice, setStarterPrice] = useState('');
+  const [starterCookingTime, setStarterCookingTime] = useState(0);
   const [displayStarterCardList, setDisplayStarterCardList] = useState(false);
   const [seeStarterIngredients, setSeeStarterIngredients] = useState({});
   const [seeStarterInstructions, setSeeStarterInstructions] = useState({});
@@ -88,6 +89,7 @@ function Main({ className }) {
       setStarterImage(response.data.recipes[0].image);
       setStarterSummary(response.data.recipes[0].summary);
       setStarterPrice(response.data.recipes[0].pricePerServing);
+      setStarterCookingTime(response.data.recipes[0].readyInMinutes);
       setSeeStarterIngredients(response.data.recipes[0].extendedIngredients);
       setSeeStarterInstructions(response.data.recipes[0].analyzedInstructions[0].steps);
       setDisplayStarterCardList(!displayStarterCardList);
@@ -95,7 +97,6 @@ function Main({ className }) {
       setChatboxSentence(dataStarter[Math.floor(Math.random() * dataStarter.length)]);
       setDisplayBill(false);
       setFooterTextContent('Bon Appétit !');
-      console.log(response.data.recipes[0].analyzedInstructions[0].steps);
     });
   };
 
@@ -186,7 +187,7 @@ function Main({ className }) {
       <ButtonBill className="button-bill" handleDisplayBill={handleDisplayButtonBill} />
       <br />
       <ButtonJoke className="button-joke" handleRandomJoke={handleClickButtonJoke} />
-      {displayStarterCardList ? <CardListStarter className="cardlist-starter" handleStarterImage={starterImage} handleStarterTitle={starterTitle} handleStarterSummary={starterSummary} handleStarterPrice={starterPrice} handleStarterIngredients={seeStarterIngredients} handleStarterInstructions={seeStarterInstructions} /> : '' }
+      {displayStarterCardList ? <CardListStarter className="cardlist-starter" handleStarterImage={starterImage} handleStarterTitle={starterTitle} handleStarterSummary={starterSummary} handleStarterPrice={starterPrice} handleStarterIngredients={seeStarterIngredients} handleStarterInstructions={seeStarterInstructions} handleStarterCookingTime={starterCookingTime} /> : '' }
       {displayMainCourseCardList ? <CardListMainCourse className="cardlist-main-course" handleMainCourseImage={mainCourseImage} handleMainCourseTitle={mainCourseTitle} handleMainCourseSummary={mainCourseSummary} handleMainCoursePrice={mainCoursePrice} /> : '' }
       {displayDessertCardList ? <CardListDessert className="cardlist-dessert" handleDessertImage={dessertImage} handleDessertTitle={dessertTitle} handleDessertSummary={dessertSummary} handleDessertPrice={dessertPrice} /> : '' }
       {displayDrinkCardList ? <CardListDrink className="cardlist-drink" handleDrinkImage={drinkImage} handleDrinkTitle={drinkTitle} handleDrinkSummary={drinkSummary} handleDrinkPrice={drinkPrice} /> : '' }

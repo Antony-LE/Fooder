@@ -76,7 +76,7 @@ hr {
 }
 
 #starterPrice {
-  display: inline-block;
+  display: block;
   font-family: 'Roboto', sans-serif;
   font-size: 1.7em;
   height: 1.5em;
@@ -84,25 +84,30 @@ hr {
   text-align: center;
 }
 
+.cooking-time {
+  display: block;
+  color: #D2AA74;
+  margin-bottom: 2em;
+}
+
 /* handle readmore style on card */
 
 .card-starter-readLess{
   display: inline-block;
   font-family: 'Roboto', sans-serif;
-  font-size: 1.5em;
+  font-size: 1em;
   color:#D2AA74;
-  width: 25vw;
+  width: 25.5vw;
   height: 3.6em;
   text-align: justify;
   vertical-align: 2.5em;
-  padding-right: 2em;
   overflow: hidden;
 }
 
 .card-starter-readMore {
   display: inline-block;
   font-family: 'Roboto', sans-serif;
-  font-size: 1.2em;
+  font-size: 0.7em;
   color:#D2AA74;
   width: 25vw;
   height: 6em;
@@ -118,13 +123,16 @@ hr {
   padding: 0.6em;
   border-radius: 20px;
   text-decoration: none;
-  display: block;
+  display: inline-block;
   margin-bottom: 3em;
-  margin-left: auto;
-  margin-right: auto;
+  margin-left: 1em;
 }
 
 .card-starter button:hover {
   background-color: white ;
   color: #D2AA74;
+}
+
+.readmore button {
+  display: block;
 }
