@@ -88,6 +88,22 @@ hr {
   display: block;
   color: #D2AA74;
   margin-bottom: 2em;
+  font-size: 0.9em;
+}
+
+.serving {
+  display: inline-block;
+  color: #D2AA74;
+  margin-bottom: 2em;
+  font-size: 0.9em;
+  margin-right: 1em;
+}
+
+.healthscore {
+  display: inline-block;
+  color: #D2AA74;
+  margin-bottom: 2em;
+  font-size: 0.9em;
 }
 
 /* handle readmore style on card */

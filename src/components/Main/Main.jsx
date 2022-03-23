@@ -39,6 +39,8 @@ function Main({ className }) {
   const [starterSummary, setStarterSummary] = useState('');
   const [starterPrice, setStarterPrice] = useState('');
   const [starterCookingTime, setStarterCookingTime] = useState(0);
+  const [starterServings, setStarterServings] = useState(0);
+  const [starterHealthscore, setStarterHealthscore] = useState(0);
   const [displayStarterCardList, setDisplayStarterCardList] = useState(false);
   const [seeStarterIngredients, setSeeStarterIngredients] = useState({});
   const [seeStarterInstructions, setSeeStarterInstructions] = useState({});
@@ -90,6 +92,8 @@ function Main({ className }) {
       setStarterSummary(response.data.recipes[0].summary);
       setStarterPrice(response.data.recipes[0].pricePerServing);
       setStarterCookingTime(response.data.recipes[0].readyInMinutes);
+      setStarterServings(response.data.recipes[0].servings);
+      setStarterHealthscore(response.data.recipes[0].healthScore);
       setSeeStarterIngredients(response.data.recipes[0].extendedIngredients);
       setSeeStarterInstructions(response.data.recipes[0].analyzedInstructions[0].steps);
       setDisplayStarterCardList(!displayStarterCardList);
@@ -187,7 +191,7 @@ function Main({ className }) {
       <ButtonBill className="button-bill" handleDisplayBill={handleDisplayButtonBill} />
       <br />
       <ButtonJoke className="button-joke" handleRandomJoke={handleClickButtonJoke} />
-      {displayStarterCardList ? <CardListStarter className="cardlist-starter" handleStarterImage={starterImage} handleStarterTitle={starterTitle} handleStarterSummary={starterSummary} handleStarterPrice={starterPrice} handleStarterIngredients={seeStarterIngredients} handleStarterInstructions={seeStarterInstructions} handleStarterCookingTime={starterCookingTime} /> : '' }
+      {displayStarterCardList ? <CardListStarter className="cardlist-starter" handleStarterImage={starterImage} handleStarterTitle={starterTitle} handleStarterSummary={starterSummary} handleStarterPrice={starterPrice} handleStarterIngredients={seeStarterIngredients} handleStarterInstructions={seeStarterInstructions} handleStarterCookingTime={starterCookingTime} handleStarterServings={starterServings} handleStarterHealthscore={starterHealthscore} /> : '' }
       {displayMainCourseCardList ? <CardListMainCourse className="cardlist-main-course" handleMainCourseImage={mainCourseImage} handleMainCourseTitle={mainCourseTitle} handleMainCourseSummary={mainCourseSummary} handleMainCoursePrice={mainCoursePrice} /> : '' }
       {displayDessertCardList ? <CardListDessert className="cardlist-dessert" handleDessertImage={dessertImage} handleDessertTitle={dessertTitle} handleDessertSummary={dessertSummary} handleDessertPrice={dessertPrice} /> : '' }
       {displayDrinkCardList ? <CardListDrink className="cardlist-drink" handleDrinkImage={drinkImage} handleDrinkTitle={drinkTitle} handleDrinkSummary={drinkSummary} handleDrinkPrice={drinkPrice} /> : '' }

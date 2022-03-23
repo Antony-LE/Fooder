@@ -13,11 +13,13 @@ function CardListStarter({
   handleStarterIngredients,
   handleStarterInstructions,
   handleStarterCookingTime,
+  handleStarterServings,
+  handleStarterHealthscore,
 }) {
   return (
     <div className={className}>
       <span id="starter-ancre" />
-      <CardStarter className="card-starter" sourcePix={handleStarterImage} title={handleStarterTitle} summary={handleStarterSummary} starterPrice={handleStarterPrice} ingredients={handleStarterIngredients} instructions={handleStarterInstructions} cookingTime={handleStarterCookingTime} />
+      <CardStarter className="card-starter" sourcePix={handleStarterImage} title={handleStarterTitle} summary={handleStarterSummary} starterPrice={handleStarterPrice} ingredients={handleStarterIngredients} instructions={handleStarterInstructions} cookingTime={handleStarterCookingTime} servings={handleStarterServings} healthscore={handleStarterHealthscore} />
     </div>
   );
 }
@@ -31,6 +33,8 @@ CardListStarter.propTypes = {
   handleStarterIngredients: PropTypes.array,
   handleStarterInstructions: PropTypes.array,
   handleStarterCookingTime: PropTypes.number,
+  handleStarterServings: PropTypes.number,
+  handleStarterHealthscore: PropTypes.number,
 };
 
 CardListStarter.defaultProps = {
@@ -42,6 +46,8 @@ CardListStarter.defaultProps = {
   handleStarterIngredients: [],
   handleStarterInstructions: [],
   handleStarterCookingTime: 0,
+  handleStarterServings: 0,
+  handleStarterHealthscore: 0,
 };
 
 export default React.memo(CardListStarter);

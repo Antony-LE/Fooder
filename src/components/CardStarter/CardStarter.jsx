@@ -1,3 +1,5 @@
+/* eslint-disable max-len */
+/* eslint-disable react/prop-types */
 /* eslint-disable react/forbid-prop-types */
 /* eslint-disable jsx-a11y/click-events-have-key-events */
 /* eslint-disable jsx-a11y/no-static-element-interactions */
@@ -9,7 +11,16 @@ import { fadeOut } from 'react-animations';
 import DOMPurify from 'dompurify';
 
 function CardStarter({
-  className, sourcePix, title, summary, starterPrice, ingredients, instructions, cookingTime,
+  className,
+  sourcePix,
+  title,
+  summary,
+  starterPrice,
+  ingredients,
+  instructions,
+  cookingTime,
+  servings,
+  healthscore,
 }) {
   const [readMore, setReadMore] = useState(false);
   const [seeIngredients, setSeeIngredients] = useState(false);
@@ -36,11 +47,25 @@ function CardStarter({
       <h3>{title}</h3>
       <img className="main-picture" src={sourcePix} alt="food dishes" />
       <span className="cooking-time">
-        Ready in :
+        🕐
         {' '}
         {cookingTime}
         {' '}
         mins
+      </span>
+      <span className="serving">
+        🍽️
+        {' '}
+        {servings}
+        {' '}
+        servings
+      </span>
+      <span className="healthscore">
+        🥗
+        {' '}
+        Healthscore
+        {' '}
+        {healthscore}
       </span>
       {/* Gestion du bouton readmore */}
       {readMore === false ? (
