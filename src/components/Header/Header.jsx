@@ -16,7 +16,7 @@ function Header({ className }) {
   return show ? (
     <div className={className}>
       <h1>
-        Today's Special
+        FOODER
       </h1>
       <span id="citation">
         Don't know what to eat ? Build your own menu !

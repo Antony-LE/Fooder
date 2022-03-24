@@ -5,7 +5,38 @@
     flex-wrap: wrap;
     margin-left: auto;
     margin-right: auto;
+    margin-top: 1em;
+    animation: fadeIn 5s;
+    -webkit-animation: fadeIn 5s;
+    -moz-animation: fadeIn 5s;
+    -o-animation: fadeIn 5s;
+    -ms-animation: fadeIn 5s;
 }
+
+@keyframes fadeIn {
+    0% {opacity:0;}
+    100% {opacity:1;}
+  }
+  
+  @-moz-keyframes fadeIn {
+    0% {opacity:0;}
+    100% {opacity:1;}
+  }
+  
+  @-webkit-keyframes fadeIn {
+    0% {opacity:0;}
+    100% {opacity:1;}
+  }
+  
+  @-o-keyframes fadeIn {
+    0% {opacity:0;}
+    100% {opacity:1;}
+  }
+  
+  @-ms-keyframes fadeIn {
+    0% {opacity:0;}
+    100% {opacity:1;}
+  }
 
 .cuisine-card {
     margin:1em;
@@ -14,6 +45,11 @@
 .cuisine-card span {
    color: white;
    display: block;
+   animation: fadeIn 7s;
+    -webkit-animation: fadeIn 5s;
+    -moz-animation: fadeIn 5s;
+    -o-animation: fadeIn 5s;
+    -ms-animation: fadeIn 5s;
 }
 
 .cuisine-card img {
@@ -21,4 +57,13 @@
     width: 6em;
     overflow: hidden; 
     border-radius: 50%;
+    animation: fadeIn 8s;
+    -webkit-animation: fadeIn 5s;
+    -moz-animation: fadeIn 5s;
+    -o-animation: fadeIn 5s;
+    -ms-animation: fadeIn 5s;
+}
+
+.cuisine-card-focus{
+   box-shadow:2px 12px 22px 1px #D2AA74;
 }

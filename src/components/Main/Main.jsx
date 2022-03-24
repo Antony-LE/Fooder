@@ -34,6 +34,9 @@ import dataDessert from '../../Datas/datas-dessert-sentences';
 import dataDrink from '../../Datas/datas-drink-sentences';
 
 function Main({ className }) {
+  // Hook pour la gestion de l'affichage des types de plats
+  const [typeOfFoodIsSelected, setTypeOfFoodIsSelected] = useState(false);
+
   // Hook pour la gestion des données de la card Starter
   const [starterTitle, setStarterTitle] = useState('');
   const [starterImage, setStarterImage] = useState('');
@@ -216,11 +219,15 @@ function Main({ className }) {
     <main className={className}>
       <Chatbox className="chatbox" sentence={chatboxSentence} />
       <CuisineCardList className="cuisine-card-list" />
-      <ButtonStarter className="button-starter" handleRandomStarter={handleClickButtonStarter} />
-      <ButtonMainCourse className="button-main-course" handleRandomMainCourse={handleClickButtonMainCourse} />
-      <ButtonDessert className="button-dessert" handleRandomDessert={handleClickButtonDessert} />
-      <ButtonDrink className="button-drink" handleRandomDrink={handleClickButtonDrink} />
-      <ButtonBill className="button-bill" handleDisplayBill={handleDisplayButtonBill} />
+      {typeOfFoodIsSelected ? (
+        <div>
+          <ButtonStarter className="button-starter" handleRandomStarter={handleClickButtonStarter} />
+          <ButtonMainCourse className="button-main-course" handleRandomMainCourse={handleClickButtonMainCourse} />
+          <ButtonDessert className="button-dessert" handleRandomDessert={handleClickButtonDessert} />
+          <ButtonDrink className="button-drink" handleRandomDrink={handleClickButtonDrink} />
+          <ButtonBill className="button-bill" handleDisplayBill={handleDisplayButtonBill} />
+        </div>
+      ) : ''}
       <br />
       {displayStarterCardList ? <CardListStarter className="cardlist-starter" handleStarterImage={starterImage} handleStarterTitle={starterTitle} handleStarterSummary={starterSummary} handleStarterPrice={starterPrice} handleStarterIngredients={seeStarterIngredients} handleStarterInstructions={seeStarterInstructions} handleStarterCookingTime={starterCookingTime} handleStarterServings={starterServings} handleStarterHealthscore={starterHealthscore} /> : '' }
       {displayMainCourseCardList ? <CardListMainCourse className="cardlist-main-course" handleMainCourseImage={mainCourseImage} handleMainCourseTitle={mainCourseTitle} handleMainCourseSummary={mainCourseSummary} handleMainCoursePrice={mainCoursePrice} handleMainCourseIngredients={seeMainCourseIngredients} handleMainCourseInstructions={seeMainCourseInstructions} handleMainCourseCookingTime={mainCourseCookingTime} handleMainCourseServings={mainCourseServings} handleMainCourseHealthscore={mainCourseHealthscore} /> : '' }

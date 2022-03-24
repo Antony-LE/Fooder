@@ -3,7 +3,7 @@
     font-style: italic;
     font-size: 2em;
     display: block;
-    margin: 1em;
+    margin-top: 1.5em;
     color: white;
     font-weight: bold;
     /* Animation Fade-in */
@@ -12,6 +12,10 @@
     -moz-animation: fadeIn 5s;
     -o-animation: fadeIn 5s;
     -ms-animation: fadeIn 5s;
+}
+
+.chatbox span {
+padding-top: 3em;
 }
 
 @keyframes fadeIn {
