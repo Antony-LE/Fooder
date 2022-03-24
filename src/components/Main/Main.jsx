@@ -89,7 +89,7 @@ function Main({ className }) {
   // Paramètres des requêtes Axios
   const apiKey = `${process.env.REACT_APP_API_KEY}`;
   // Endpoint pour une entrée aléatoire
-  const baseUrlStarter = `https://api.spoonacular.com/recipes/random?number=1&type=soup,salad&apiKey=${apiKey}`;
+  const baseUrlStarter = `https://api.spoonacular.com/recipes/random?number=1&tags=soup&salad&appetizer&fingerfood&apiKey=${apiKey}`;
   // Endpoint pour un plat principal aléatoire
   const baseUrlMainCourse = `https://api.spoonacular.com/recipes/random?number=1&tags=main%20course&apiKey=${apiKey}`;
   // Endpoint pour un dessert aléatoire
