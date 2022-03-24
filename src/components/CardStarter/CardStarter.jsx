@@ -100,9 +100,11 @@ function CardStarter({
         <ul className="instructions-list">
           {instructions.map((instruction) => (
             <li>
-              {`Step ${instruction.number} :`}
-              {' '}
-              {instruction.step}
+              <input type="checkbox" id="todo" name="todo" value="todo" />
+              <label htmlFor="todo" data-content={`Step ${instruction.number} :`}>
+                {`Step ${instruction.number} : `}
+                {instruction.step}
+              </label>
             </li>
           ))}
         </ul>
