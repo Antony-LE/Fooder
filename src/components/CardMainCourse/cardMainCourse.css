@@ -124,6 +124,11 @@ hr {
   width: 20px;
 }
 
+.ingredients-list li img {
+  position: relative;
+  top:1.5em;
+}
+
 /* handle instructions style on card */
 
 .instructions-list {
