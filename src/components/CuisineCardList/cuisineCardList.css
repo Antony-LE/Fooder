@@ -1,0 +1,24 @@
+.cuisine-card-list {
+    height: 30vh;
+    width: 80vw;
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.cuisine-card {
+    margin:1em;
+ }
+
+.cuisine-card span {
+   color: white;
+   display: block;
+}
+
+.cuisine-card img {
+    height: 6em;
+    width: 6em;
+    overflow: hidden; 
+    border-radius: 50%;
+}

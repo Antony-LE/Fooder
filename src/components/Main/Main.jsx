@@ -20,6 +20,7 @@ import CardListStarter from '../CardListStarter/CardListStarter';
 import CardListMainCourse from '../CardListMainCourse/CardListMainCourse';
 import CardListDessert from '../CardListDessert/CardListDessert';
 import CardListDrink from '../CardListDrink/CardListDrink';
+import CuisineCardList from '../CuisineCardList/CuisineCardList';
 
 // Import des éléments annexes
 import Footer from '../Footer/Footer';
@@ -27,10 +28,10 @@ import Chatbox from '../Chatbox/Chatbox';
 import Bill from '../Bill/Bill';
 
 // Import des datas en dur pour la génération aléatoires des phrases de la chatbox
-import dataStarter from '../Datas/datas-starter-sentences';
-import dataMainCourse from '../Datas/datas-mainCourse-sentences';
-import dataDessert from '../Datas/datas-dessert-sentences';
-import dataDrink from '../Datas/datas-drink-sentences';
+import dataStarter from '../../Datas/datas-starter-sentences';
+import dataMainCourse from '../../Datas/datas-mainCourse-sentences';
+import dataDessert from '../../Datas/datas-dessert-sentences';
+import dataDrink from '../../Datas/datas-drink-sentences';
 
 function Main({ className }) {
   // Hook pour la gestion des données de la card Starter
@@ -82,14 +83,14 @@ function Main({ className }) {
   const [seeDrinkInstructions, setSeeDrinkInstructions] = useState({});
 
   // Hook pour la gestion des données des élements annexes
-  const [chatboxSentence, setChatboxSentence] = useState('What would you like to eat today?');
+  const [chatboxSentence, setChatboxSentence] = useState('What kind of food would you like to eat today?');
   const [displayBill, setDisplayBill] = useState(false);
   const [footerTextContent, setFooterTextContent] = useState('Bon appétit !');
 
   // Paramètres des requêtes Axios
   const apiKey = `${process.env.REACT_APP_API_KEY}`;
   // Endpoint pour une entrée aléatoire
-  const baseUrlStarter = `https://api.spoonacular.com/recipes/random?number=1&tags=soup&salad&appetizer&fingerfood&apiKey=${apiKey}`;
+  const baseUrlStarter = `https://api.spoonacular.com/recipes/random?number=1&tags=soup&salad&appetizer&fingerfood&cuisine=japanese&apiKey=${apiKey}`;
   // Endpoint pour un plat principal aléatoire
   const baseUrlMainCourse = `https://api.spoonacular.com/recipes/random?number=1&tags=main%20course&apiKey=${apiKey}`;
   // Endpoint pour un dessert aléatoire
@@ -214,6 +215,7 @@ function Main({ className }) {
   return (
     <main className={className}>
       <Chatbox className="chatbox" sentence={chatboxSentence} />
+      <CuisineCardList className="cuisine-card-list" />
       <ButtonStarter className="button-starter" handleRandomStarter={handleClickButtonStarter} />
       <ButtonMainCourse className="button-main-course" handleRandomMainCourse={handleClickButtonMainCourse} />
       <ButtonDessert className="button-dessert" handleRandomDessert={handleClickButtonDessert} />
