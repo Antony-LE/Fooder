@@ -39,8 +39,8 @@ function Main({ className }) {
   const [typeOfFoodIsSelected, setTypeOfFoodIsSelected] = useState(false);
 
   // Fonction à passer au composant enfant CuisineCardLIst
-  function handleChangeCuisine() {
-    setTypeOfFoodIsSelected(true);
+  function handleChangeCuisine(newValue) {
+    setTypeOfFoodIsSelected(newValue);
   }
 
   // Hook pour la gestion des données de la card Starter
@@ -92,20 +92,25 @@ function Main({ className }) {
   const [seeDrinkInstructions, setSeeDrinkInstructions] = useState({});
 
   // Hook pour la gestion des données des élements annexes
-  const [chatboxSentence, setChatboxSentence] = useState('What kind of food would you like to eat today?');
+  const [chatboxSentence, setChatboxSentence] = useState('What kind of food would you like to cook?');
   const [displayBill, setDisplayBill] = useState(false);
   const [footerTextContent, setFooterTextContent] = useState('Bon appétit !');
+
+  // Récupération du type de cuisine dans le sessionStorage
+  // Remise à zéro du sessionStorage
+  window.sessionStorage.setItem('cuisine-type', '');
+  const cuisineType = sessionStorage.getItem('cuisine-type').toLowerCase().replace(/"/g, '');
 
   // Paramètres des requêtes Axios
   const apiKey = `${process.env.REACT_APP_API_KEY}`;
   // Endpoint pour une entrée aléatoire
-  const baseUrlStarter = `https://api.spoonacular.com/recipes/random?number=1&tags=soup&salad&appetizer&fingerfood&cuisine=japanese&apiKey=${apiKey}`;
+  const baseUrlStarter = `https://api.spoonacular.com/recipes/random?number=1&tags=${cuisineType},starter&apiKey=${apiKey}`;
   // Endpoint pour un plat principal aléatoire
-  const baseUrlMainCourse = `https://api.spoonacular.com/recipes/random?number=1&tags=main%20course&apiKey=${apiKey}`;
+  const baseUrlMainCourse = `https://api.spoonacular.com/recipes/random?number=1&tags=${cuisineType},lunch&apiKey=${apiKey}`;
   // Endpoint pour un dessert aléatoire
-  const baseUrlDessert = `https://api.spoonacular.com/recipes/random?number=1&tags=dessert&apiKey=${apiKey}`;
+  const baseUrlDessert = `https://api.spoonacular.com/recipes/random?number=1&tags=${cuisineType},dessert&apiKey=${apiKey}`;
   // Endpoint pour une boisson aléatoire
-  const baseUrlDrink = `https://api.spoonacular.com/recipes/random?number=1&tags=drink&apiKey=${apiKey}`;
+  const baseUrlDrink = `https://api.spoonacular.com/recipes/random?number=1&tags=${cuisineType},drink&apiKey=${apiKey}`;
   // Endpoint pour une blague aléatoire
   const baseUrlJoke = `https://api.spoonacular.com/food/jokes/random?&apiKey=${apiKey}`;
 

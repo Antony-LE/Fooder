@@ -24,12 +24,11 @@ function CuisineCardList({ className, onClick }) {
   // Handle the only one element selected from a map
   const handleClick = (id) => {
     setSelectElement(id);
-    console.log(selectElement);
   };
 
   // Réception de l'état de sélection de la cuisine provenant de l'élément parent main afin d'afficher les boutons de recettes
   function handleChangeClickCuisine() {
-    // Here, we invoke the callback with the new value
+    // Callback changeant l'état typeOfFoodIsSelected du composant parent Main
     onClick(true);
   }
 

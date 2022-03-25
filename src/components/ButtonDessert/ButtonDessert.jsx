@@ -8,7 +8,7 @@ function ButtonDessert({ className, handleRandomDessert }) {
   // timer pour display différé du composant au chargement de la page uniquement
   useEffect(
     () => {
-      setTimeout(() => setShow(true), 3700);
+      setTimeout(() => setShow(true), 0);
     },
     [],
   );

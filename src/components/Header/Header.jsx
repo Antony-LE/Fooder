@@ -19,7 +19,7 @@ function Header({ className }) {
         FOODER
       </h1>
       <span id="citation">
-        Don't know what to eat ? Build your own menu !
+        Don't know what to cook ? Build your own menu !
       </span>
     </div>
   ) : '';

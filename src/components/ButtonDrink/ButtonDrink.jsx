@@ -7,7 +7,7 @@ function ButtonDrink({ className, handleRandomDrink }) {
   // timer pour display différé du composant au chargement de la page uniquement
   useEffect(
     () => {
-      setTimeout(() => setShow(true), 3800);
+      setTimeout(() => setShow(true), 0);
     },
     [],
   );

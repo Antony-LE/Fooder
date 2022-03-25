@@ -1,8 +1,8 @@
 const cuisineListItems = [
   {
     id: 1,
-    name: 'African',
-    picture: 'african-food.webp',
+    name: 'Korean',
+    picture: 'korean-food.webp',
   },
   {
     id: 2,
