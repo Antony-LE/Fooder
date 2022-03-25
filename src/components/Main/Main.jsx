@@ -1,3 +1,4 @@
+/* eslint-disable react/jsx-no-bind */
 /* eslint-disable max-len */
 /* eslint-disable no-empty */
 /* eslint-disable no-nested-ternary */
@@ -36,6 +37,11 @@ import dataDrink from '../../Datas/datas-drink-sentences';
 function Main({ className }) {
   // Hook pour la gestion de l'affichage des types de plats
   const [typeOfFoodIsSelected, setTypeOfFoodIsSelected] = useState(false);
+
+  // Fonction à passer au composant enfant CuisineCardLIst
+  function handleChangeCuisine() {
+    setTypeOfFoodIsSelected(true);
+  }
 
   // Hook pour la gestion des données de la card Starter
   const [starterTitle, setStarterTitle] = useState('');
@@ -218,7 +224,7 @@ function Main({ className }) {
   return (
     <main className={className}>
       <Chatbox className="chatbox" sentence={chatboxSentence} />
-      <CuisineCardList className="cuisine-card-list" />
+      <CuisineCardList className="cuisine-card-list" typeOfCuisine={typeOfFoodIsSelected} onClick={handleChangeCuisine} />
       {typeOfFoodIsSelected ? (
         <div>
           <ButtonStarter className="button-starter" handleRandomStarter={handleClickButtonStarter} />
