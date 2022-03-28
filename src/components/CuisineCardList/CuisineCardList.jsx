@@ -10,7 +10,7 @@ import PropTypes from 'prop-types';
 import './cuisineCardList.css';
 import cuisineListItems from '../../Datas/datas-cuisine-list';
 
-function CuisineCardList({ className, onClick }) {
+function CuisineCardList({ className, cuisineChoice }) {
   const [show, setShow] = useState(false);
   const [selectElement, setSelectElement] = useState(0);
   // timer pour display différé du composant au chargement de la page uniquement
@@ -29,7 +29,7 @@ function CuisineCardList({ className, onClick }) {
   // Réception de l'état de sélection de la cuisine provenant de l'élément parent main afin d'afficher les boutons de recettes
   function handleChangeClickCuisine() {
     // Callback changeant l'état typeOfFoodIsSelected du composant parent Main
-    onClick(true);
+    cuisineChoice(true);
   }
 
   return show ? (
@@ -37,7 +37,7 @@ function CuisineCardList({ className, onClick }) {
       {cuisineListItems.map((cuisineListItem, i) => (
         <div className="cuisine-card" key={i}>
           <img
-            onClick={() => { handleClick(cuisineListItem.id); handleChangeClickCuisine(); { window.sessionStorage.setItem('cuisine-type', JSON.stringify(cuisineListItem.name)); } }}
+            onClick={() => { { window.sessionStorage.setItem('cuisine-type', JSON.stringify(cuisineListItem.name)); }handleClick(cuisineListItem.id); handleChangeClickCuisine(); }}
             src={require(`../../images/${cuisineListItem.picture}`)}
             alt={cuisineListItem.name}
             className={selectElement === cuisineListItem.id ? 'cuisine-card-focus' : ''}
@@ -51,12 +51,12 @@ function CuisineCardList({ className, onClick }) {
 
 CuisineCardList.propTypes = {
   className: PropTypes.string,
-  onClick: PropTypes.func,
+  cuisineChoice: PropTypes.func,
 };
 
 CuisineCardList.defaultProps = {
   className: '',
-  onClick: '',
+  cuisineChoice: '',
 };
 
 export default React.memo(CuisineCardList);

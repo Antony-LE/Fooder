@@ -37,8 +37,7 @@ import dataDrink from '../../Datas/datas-drink-sentences';
 function Main({ className }) {
   // Hook pour la gestion de l'affichage des types de plats
   const [typeOfFoodIsSelected, setTypeOfFoodIsSelected] = useState(false);
-
-  // Fonction à passer au composant enfant CuisineCardLIst
+  // Fonction passée au composant enfant CuisineCardLIst
   function handleChangeCuisine(newValue) {
     setTypeOfFoodIsSelected(newValue);
   }
@@ -96,101 +95,114 @@ function Main({ className }) {
   const [displayBill, setDisplayBill] = useState(false);
   const [footerTextContent, setFooterTextContent] = useState('Bon appétit !');
 
-  // Récupération du type de cuisine dans le sessionStorage
-  // Remise à zéro du sessionStorage
-  window.sessionStorage.setItem('cuisine-type', '');
-  const cuisineType = sessionStorage.getItem('cuisine-type').toLowerCase().replace(/"/g, '');
-
   // Paramètres des requêtes Axios
   const apiKey = `${process.env.REACT_APP_API_KEY}`;
-  // Endpoint pour une entrée aléatoire
-  const baseUrlStarter = `https://api.spoonacular.com/recipes/random?number=1&tags=${cuisineType},starter&apiKey=${apiKey}`;
-  // Endpoint pour un plat principal aléatoire
-  const baseUrlMainCourse = `https://api.spoonacular.com/recipes/random?number=1&tags=${cuisineType},lunch&apiKey=${apiKey}`;
-  // Endpoint pour un dessert aléatoire
-  const baseUrlDessert = `https://api.spoonacular.com/recipes/random?number=1&tags=${cuisineType},dessert&apiKey=${apiKey}`;
-  // Endpoint pour une boisson aléatoire
-  const baseUrlDrink = `https://api.spoonacular.com/recipes/random?number=1&tags=${cuisineType},drink&apiKey=${apiKey}`;
-  // Endpoint pour une blague aléatoire
-  const baseUrlJoke = `https://api.spoonacular.com/food/jokes/random?&apiKey=${apiKey}`;
 
   // Gestion des datas liées aux composants CardStarter et ButtonCardStarter
-  const handleClickButtonStarter = () => {
-    axios.get(baseUrlStarter).then((response) => {
-      setStarterTitle(response.data.recipes[0].title);
-      setStarterImage(response.data.recipes[0].image);
-      setStarterSummary(response.data.recipes[0].summary);
-      setStarterPrice(response.data.recipes[0].pricePerServing);
-      setStarterCookingTime(response.data.recipes[0].readyInMinutes);
-      setStarterServings(response.data.recipes[0].servings);
-      setStarterHealthscore(response.data.recipes[0].healthScore);
-      setSeeStarterIngredients(response.data.recipes[0].extendedIngredients);
-      setSeeStarterInstructions(response.data.recipes[0].analyzedInstructions[0].steps);
-      setDisplayStarterCardList(!displayStarterCardList);
-      setDisplayStarterCardList(true);
-      setChatboxSentence(dataStarter[Math.floor(Math.random() * dataStarter.length)]);
-      setDisplayBill(false);
-      setFooterTextContent('Bon Appétit !');
+  function handleClickButtonStarter() {
+    const cuisineType = window.sessionStorage.getItem('cuisine-type').toLowerCase().replace(/"/g, '');
+    // Endpoint pour une entrée aléatoire
+    axios.get(`https://api.spoonacular.com/recipes/random?number=1&tags=${cuisineType},starter&apiKey=${apiKey}`).then((response) => {
+      if (response.data.recipes.length === 0) {
+        setChatboxSentence(`Sorry, there is no ${cuisineType} starter in our database yet!`);
+        setDisplayStarterCardList(false);
+      } else {
+        setStarterTitle(response.data.recipes[0].title);
+        setStarterImage(response.data.recipes[0].image);
+        setStarterSummary(response.data.recipes[0].summary);
+        setStarterPrice(response.data.recipes[0].pricePerServing);
+        setStarterCookingTime(response.data.recipes[0].readyInMinutes);
+        setStarterServings(response.data.recipes[0].servings);
+        setStarterHealthscore(response.data.recipes[0].healthScore);
+        setSeeStarterIngredients(response.data.recipes[0].extendedIngredients);
+        setSeeStarterInstructions(response.data.recipes[0].analyzedInstructions[0].steps);
+        setDisplayStarterCardList(true);
+        setDisplayStarterCardList(true);
+        setChatboxSentence(dataStarter[Math.floor(Math.random() * dataStarter.length)]);
+        setDisplayBill(false);
+        setFooterTextContent('Bon Appétit !');
+      }
     });
-  };
+  }
 
   // Gestion des datas liées aux composantss CardMainCourse et ButtonCardMainCourse
-  const handleClickButtonMainCourse = () => {
-    axios.get(baseUrlMainCourse).then((response) => {
-      setMainCourseTitle(response.data.recipes[0].title);
-      setMainCourseImage(response.data.recipes[0].image);
-      setMainCourseSummary(response.data.recipes[0].summary);
-      setMainCoursePrice(response.data.recipes[0].pricePerServing);
-      setMainCourseCookingTime(response.data.recipes[0].readyInMinutes);
-      setMainCourseServings(response.data.recipes[0].servings);
-      setMainCourseHealthscore(response.data.recipes[0].healthScore);
-      setSeeMainCourseIngredients(response.data.recipes[0].extendedIngredients);
-      setSeeMainCourseInstructions(response.data.recipes[0].analyzedInstructions[0].steps);
-      setDisplayMainCourseCardList(!displayMainCourseCardList);
-      setDisplayMainCourseCardList(true);
-      setChatboxSentence(dataMainCourse[Math.floor(Math.random() * dataMainCourse.length)]);
-      setDisplayBill(false);
-      setFooterTextContent('Bon Appétit !');
+  function handleClickButtonMainCourse() {
+    const cuisineType = window.sessionStorage.getItem('cuisine-type').toLowerCase().replace(/"/g, '');
+    // Endpoint pour un plat principal aléatoire
+    axios.get(`https://api.spoonacular.com/recipes/random?number=1&tags=${cuisineType},lunch&apiKey=${apiKey}`).then((response) => {
+      if (response.data.recipes.length === 0) {
+        setChatboxSentence(`Sorry, there is no ${cuisineType} main-course in our database yet!`);
+        setDisplayStarterCardList(false);
+      } else {
+        setMainCourseTitle(response.data.recipes[0].title);
+        setMainCourseImage(response.data.recipes[0].image);
+        setMainCourseSummary(response.data.recipes[0].summary);
+        setMainCoursePrice(response.data.recipes[0].pricePerServing);
+        setMainCourseCookingTime(response.data.recipes[0].readyInMinutes);
+        setMainCourseServings(response.data.recipes[0].servings);
+        setMainCourseHealthscore(response.data.recipes[0].healthScore);
+        setSeeMainCourseIngredients(response.data.recipes[0].extendedIngredients);
+        setSeeMainCourseInstructions(response.data.recipes[0].analyzedInstructions[0].steps);
+        setDisplayMainCourseCardList(!displayMainCourseCardList);
+        setDisplayMainCourseCardList(true);
+        setChatboxSentence(dataMainCourse[Math.floor(Math.random() * dataMainCourse.length)]);
+        setDisplayBill(false);
+        setFooterTextContent('Bon Appétit !');
+      }
     });
-  };
+  }
 
   // Gestion des datas liées aux composants CardDessert et ButtonCardDessert
   const handleClickButtonDessert = () => {
-    axios.get(baseUrlDessert).then((response) => {
-      setDessertTitle(response.data.recipes[0].title);
-      setDessertImage(response.data.recipes[0].image);
-      setDessertSummary(response.data.recipes[0].summary);
-      setDessertPrice(response.data.recipes[0].pricePerServing);
-      setDessertCookingTime(response.data.recipes[0].readyInMinutes);
-      setDessertServings(response.data.recipes[0].servings);
-      setDessertHealthscore(response.data.recipes[0].healthScore);
-      setSeeDessertIngredients(response.data.recipes[0].extendedIngredients);
-      setSeeDessertInstructions(response.data.recipes[0].analyzedInstructions[0].steps);
-      setDisplayDessertCardList(!displayDessertCardList);
-      setDisplayDessertCardList(true);
-      setChatboxSentence(dataDessert[Math.floor(Math.random() * dataDessert.length)]);
-      setDisplayBill(false);
-      setFooterTextContent('Bon Appétit !');
+    const cuisineType = window.sessionStorage.getItem('cuisine-type').toLowerCase().replace(/"/g, '');
+    axios.get(`https://api.spoonacular.com/recipes/random?number=1&tags=${cuisineType},dessert&apiKey=${apiKey}`).then((response) => {
+      // Endpoint pour un dessert aléatoire
+      if (response.data.recipes.length === 0) {
+        setChatboxSentence(`Sorry, there is no ${cuisineType} dessert in our database yet!`);
+        setDisplayStarterCardList(false);
+      } else {
+        setDessertTitle(response.data.recipes[0].title);
+        setDessertImage(response.data.recipes[0].image);
+        setDessertSummary(response.data.recipes[0].summary);
+        setDessertPrice(response.data.recipes[0].pricePerServing);
+        setDessertCookingTime(response.data.recipes[0].readyInMinutes);
+        setDessertServings(response.data.recipes[0].servings);
+        setDessertHealthscore(response.data.recipes[0].healthScore);
+        setSeeDessertIngredients(response.data.recipes[0].extendedIngredients);
+        setSeeDessertInstructions(response.data.recipes[0].analyzedInstructions[0].steps);
+        setDisplayDessertCardList(!displayDessertCardList);
+        setDisplayDessertCardList(true);
+        setChatboxSentence(dataDessert[Math.floor(Math.random() * dataDessert.length)]);
+        setDisplayBill(false);
+        setFooterTextContent('Bon Appétit !');
+      }
     });
   };
 
   // Gestion des datas liées aux composants CardDrink et ButtonCardDrink
   const handleClickButtonDrink = () => {
-    axios.get(baseUrlDrink).then((response) => {
-      setDrinkTitle(response.data.recipes[0].title);
-      setDrinkImage(response.data.recipes[0].image);
-      setDrinkSummary(response.data.recipes[0].summary);
-      setDrinkPrice(response.data.recipes[0].pricePerServing);
-      setDrinkCookingTime(response.data.recipes[0].readyInMinutes);
-      setDrinkServings(response.data.recipes[0].servings);
-      setDrinkHealthscore(response.data.recipes[0].healthScore);
-      setSeeDrinkIngredients(response.data.recipes[0].extendedIngredients);
-      setSeeDrinkInstructions(response.data.recipes[0].analyzedInstructions[0].steps);
-      setDisplayDrinkCardList(!displayDrinkCardList);
-      setDisplayDrinkCardList(true);
-      setChatboxSentence(dataDrink[Math.floor(Math.random() * dataDrink.length)]);
-      setDisplayBill(false);
-      setFooterTextContent('Bon Appétit !');
+    const cuisineType = window.sessionStorage.getItem('cuisine-type').toLowerCase().replace(/"/g, '');
+    // Endpoint pour une boisson aléatoire
+    axios.get(`https://api.spoonacular.com/recipes/random?number=1&tags=${cuisineType},drink&apiKey=${apiKey}`).then((response) => {
+      if (response.data.recipes.length === 0) {
+        setChatboxSentence(`Sorry, there is no ${cuisineType} drink in our database yet!`);
+        setDisplayStarterCardList(false);
+      } else {
+        setDrinkTitle(response.data.recipes[0].title);
+        setDrinkImage(response.data.recipes[0].image);
+        setDrinkSummary(response.data.recipes[0].summary);
+        setDrinkPrice(response.data.recipes[0].pricePerServing);
+        setDrinkCookingTime(response.data.recipes[0].readyInMinutes);
+        setDrinkServings(response.data.recipes[0].servings);
+        setDrinkHealthscore(response.data.recipes[0].healthScore);
+        setSeeDrinkIngredients(response.data.recipes[0].extendedIngredients);
+        setSeeDrinkInstructions(response.data.recipes[0].analyzedInstructions[0].steps);
+        setDisplayDrinkCardList(!displayDrinkCardList);
+        setDisplayDrinkCardList(true);
+        setChatboxSentence(dataDrink[Math.floor(Math.random() * dataDrink.length)]);
+        setDisplayBill(false);
+        setFooterTextContent('Bon Appétit !');
+      }
     });
   };
 
@@ -209,7 +221,8 @@ function Main({ className }) {
 
   // Gestion des datas liées au composant ButtonJoke
   const handleClickButtonJoke = () => {
-    axios.get(baseUrlJoke).then((response) => {
+    // Endpoint pour une blague aléatoire
+    axios.get(`https://api.spoonacular.com/food/jokes/random?&apiKey=${apiKey}`).then((response) => {
       Swal.fire({
         title: response.data.text,
         width: 600,
@@ -229,7 +242,7 @@ function Main({ className }) {
   return (
     <main className={className}>
       <Chatbox className="chatbox" sentence={chatboxSentence} />
-      <CuisineCardList className="cuisine-card-list" typeOfCuisine={typeOfFoodIsSelected} onClick={handleChangeCuisine} />
+      <CuisineCardList className="cuisine-card-list" typeOfCuisine={typeOfFoodIsSelected} cuisineChoice={handleChangeCuisine} />
       {typeOfFoodIsSelected ? (
         <div>
           <ButtonStarter className="button-starter" handleRandomStarter={handleClickButtonStarter} />

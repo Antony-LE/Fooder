@@ -5,14 +5,7 @@ import './buttonStarter.css';
 
 function ButtonStarter({ className, handleRandomStarter }) {
   const [show, setShow] = useState(false);
-  const [cuisineType, setCuisineType] = useState(sessionStorage.getItem('cuisine-type'));
 
-  useEffect(
-    () => {
-      setCuisineType(sessionStorage.getItem('cuisine-type'));
-    },
-    [cuisineType],
-  );
   // timer pour display différé du composant au chargement de la page uniquement
   useEffect(
     () => {
@@ -22,11 +15,7 @@ function ButtonStarter({ className, handleRandomStarter }) {
   );
   return show ? (
     <a href="#starter-ancre" className={className} type="button" onClick={handleRandomStarter}>
-      Cook a
-      {' '}
-      {cuisineType}
-      {' '}
-      starter
+      Cook a starter
     </a>
   ) : '';
 }
