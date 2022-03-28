@@ -190,6 +190,8 @@ input {
   display: inline-block;
   margin-bottom: 3em;
   margin-left: 1em;
+  width: 7vw;
+  font-size: 0.63em;
 }
 
 .card-main-course button:hover {

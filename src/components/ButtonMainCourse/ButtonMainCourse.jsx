@@ -12,7 +12,7 @@ function buttonMainCourse({ className, handleRandomMainCourse }) {
     [],
   );
   return show ? (
-    <a href="#maincourse-ancre" className={className} onClick={handleRandomMainCourse} type="button">Get a main course </a>
+    <a href="#maincourse-ancre" className={className} onClick={handleRandomMainCourse} type="button">Cook a main course </a>
   ) : '';
 }
 

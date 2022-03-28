@@ -68,12 +68,12 @@ function CardDessert({
         : <span className="card-dessert-readMore" dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(purifiedSummary) }} /> }
       <button type="button" className="readmore" onClick={handleReadMore}>
         {' '}
-        {readMore === false ? 'Read more...' : 'Read less' }
+        {readMore === false ? 'Read more' : 'Read less' }
       </button>
       {/* Gestion du bouton ingredient */}
       <button type="button" className="ingredients" onClick={handleReadIngredients}>
         {' '}
-        {seeIngredients === false ? 'See Ingredients...' : 'Hide ingredients' }
+        {seeIngredients === false ? 'See Ingredients' : 'Hide ingredients' }
       </button>
       <button type="button" className="instructions" onClick={handleReadInstructions}>
         {' '}

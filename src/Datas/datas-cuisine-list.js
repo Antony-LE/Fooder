@@ -39,6 +39,27 @@ const cuisineListItems = [
     name: 'Vietnamese',
     picture: 'vietnamese-food.webp',
   },
+  // {
+  //   id: 9,
+  //   name: 'Greek',
+  //   picture: 'greek-food.webp',
+  // },
+  // {
+  //   id: 10,
+  //   name: 'Italian',
+  //   picture: 'italian-food.webp',
+  // },
+  // {
+  //   id: 11,
+  //   name: 'Spanish',
+  //   picture: 'spanish-food.webp',
+  // },
+
+  // {
+  //   id: 12,
+  //   name: 'Thai',
+  //   picture: 'thai-food.webp',
+  // },
 
 ];
 

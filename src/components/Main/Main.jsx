@@ -122,6 +122,12 @@ function Main({ className }) {
         setDisplayBill(false);
         setFooterTextContent('Bon Appétit !');
       }
+    }).catch((error) => {
+      if (error.response) {
+        setChatboxSentence('Oops server error, try again later !');
+        setDisplayStarterCardList(false);
+      }
+      console.log(error.response.data);
     });
   }
 
@@ -149,6 +155,12 @@ function Main({ className }) {
         setDisplayBill(false);
         setFooterTextContent('Bon Appétit !');
       }
+    }).catch((error) => {
+      if (error.response) {
+        setChatboxSentence('Oops server error, try again later !');
+        setDisplayStarterCardList(false);
+      }
+      console.log(error.response.data);
     });
   }
 
@@ -176,6 +188,12 @@ function Main({ className }) {
         setDisplayBill(false);
         setFooterTextContent('Bon Appétit !');
       }
+    }).catch((error) => {
+      if (error.response) {
+        setChatboxSentence('Oops server error, try again later !');
+        setDisplayStarterCardList(false);
+      }
+      console.log(error.response.data);
     });
   };
 
@@ -183,7 +201,7 @@ function Main({ className }) {
   const handleClickButtonDrink = () => {
     const cuisineType = window.sessionStorage.getItem('cuisine-type').toLowerCase().replace(/"/g, '');
     // Endpoint pour une boisson aléatoire
-    axios.get(`https://api.spoonacular.com/recipes/random?number=1&tags=${cuisineType},drink&apiKey=${apiKey}`).then((response) => {
+    axios.get(`https://api.spoonacular.com/recipes/random?number=1&tags=beverage&apiKey=${apiKey}`).then((response) => {
       if (response.data.recipes.length === 0) {
         setChatboxSentence(`Sorry, there is no ${cuisineType} drink in our database yet!`);
         setDisplayStarterCardList(false);
@@ -203,6 +221,12 @@ function Main({ className }) {
         setDisplayBill(false);
         setFooterTextContent('Bon Appétit !');
       }
+    }).catch((error) => {
+      if (error.response) {
+        setChatboxSentence('Oops server error, try again later !');
+        setDisplayStarterCardList(false);
+      }
+      console.log(error.response.data);
     });
   };
 
