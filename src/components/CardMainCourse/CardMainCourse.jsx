@@ -40,7 +40,7 @@ function CardMainCourse({
       <h2>Main Course</h2>
       <img className="main-picture-main-course" src={sourcePix} alt="food dishes" />
       <h3>{title}</h3>
-      <div className="recipe-stats">
+      <div className="main-course-recipe-stats">
         <span className="main-course-cooking-time">
           🕐
           {' '}
@@ -88,18 +88,27 @@ function CardMainCourse({
         {seeInstructions === false ? 'Cook it !' : 'Hide instructions' }
       </button>
       {seeIngredients === true ? (
-        <ul className="ingredients-list">
-          {ingredients.map((ingredient) => (
-            <li>
-              <img src={`https://spoonacular.com/cdn/ingredients_100x100/${ingredient.image}`} alt={ingredient.name} className="ingredient-image" />
-              {ingredient.original}
-            </li>
-          ))}
-        </ul>
+        <>
+          <span className="ingredients-subtitle">Ingredients:</span>
+          <span className="ingredients-items-number">
+            {ingredients.length}
+            {' '}
+            items
+          </span>
+          <ul className="main-course-ingredients-list">
+            {ingredients.map((ingredient) => (
+              <li>
+                <img src={`https://spoonacular.com/cdn/ingredients_100x100/${ingredient.image}`} alt={ingredient.name} className="ingredient-image" />
+                {ingredient.original}
+              </li>
+            ))}
+          </ul>
+
+        </>
       ) : ''}
       {/* Gestion du bouton instructions */}
       {seeInstructions === true ? (
-        <ul className="instructions-list">
+        <ul className="main-course-instructions-list">
           {instructions.map((instruction) => (
             <li>
               <input type="checkbox" id="todo" name="todo" value="todo" />
@@ -111,7 +120,6 @@ function CardMainCourse({
           ))}
         </ul>
       ) : ''}
-      <hr />
     </div>
   );
 }
