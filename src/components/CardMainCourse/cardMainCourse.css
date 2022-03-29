@@ -49,12 +49,12 @@
     100% {opacity:1;}
   }
 
-  .card-main-course h2 {
-    font-family: 'Roboto', sans-serif;
-    font-size: 3em;
-    color:#D2AA74;
-    font-weight: lighter;
-    margin-bottom: 0.5em;
+.card-main-course h2 {
+  font-family: 'Roboto', sans-serif;
+  font-size: 3em;
+  color:#D2AA74;
+  font-weight: lighter;
+  margin-bottom: 0.5em;
 }
 
 .card-main-course h3 {
@@ -140,7 +140,7 @@
   top:1.5em;
 }
 
-.ingredients-subtitle {
+.main-course-ingredients-subtitle {
   color:white;
   text-align: left;
   display: inline-block;
@@ -148,7 +148,7 @@
   text-decoration: underline;
 }
 
-.ingredients-items-number {
+.main-course-ingredients-items-number {
   color: white;
   display: inline-block;
   text-align: right;

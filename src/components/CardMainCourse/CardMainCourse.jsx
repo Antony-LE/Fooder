@@ -89,8 +89,8 @@ function CardMainCourse({
       </button>
       {seeIngredients === true ? (
         <>
-          <span className="ingredients-subtitle">Ingredients:</span>
-          <span className="ingredients-items-number">
+          <span className="main-course-ingredients-subtitle">Ingredients:</span>
+          <span className="main-course-ingredients-items-number">
             {ingredients.length}
             {' '}
             items
