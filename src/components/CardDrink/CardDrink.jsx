@@ -39,7 +39,6 @@ function CardDrink({
   return (
     <div className={className}>
       <h2>Drink</h2>
-      <h3>{title}</h3>
       <img className="main-picture-drink" src={sourcePix} alt="food dishes" />
       <h3>{title}</h3>
       <div className="drink-recipe-stats">
@@ -60,15 +59,14 @@ function CardDrink({
         <span className="drink-healthscore">
           {healthscore < 50 ? '☹️' : '😀' }
           {' '}
-          Healthscore
+          Score
           {' '}
           {healthscore}
         </span>
         <span className="drink-price">
           💲
           {(drinkPrice / 100).toFixed(2)}
-          {' '}
-          / serving
+          /serving
         </span>
       </div>
       {/* Gestion du bouton readmore */}

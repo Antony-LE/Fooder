@@ -91,7 +91,7 @@ function Main({ className }) {
   const [seeDrinkInstructions, setSeeDrinkInstructions] = useState({});
 
   // Hook pour la gestion des données des élements annexes
-  const [chatboxSentence, setChatboxSentence] = useState('What kind of food would you like to cook?');
+  const [chatboxSentence, setChatboxSentence] = useState('Please select a dish type above !');
   const [displayBill, setDisplayBill] = useState(false);
   const [footerTextContent, setFooterTextContent] = useState('Bon appétit !');
 
@@ -238,7 +238,7 @@ function Main({ className }) {
     } else {
       setDisplayBill(!displayBill);
       setChatboxSentence('We hope that you enjoyed your meal!');
-      setFooterTextContent('Thank you, hope to see you soon !');
+      setFooterTextContent('That wasn\'t too expensive !');
       console.log(starterPrice);
     }
   };
@@ -265,7 +265,6 @@ function Main({ className }) {
 
   return (
     <main className={className}>
-      <Chatbox className="chatbox" sentence={chatboxSentence} />
       <CuisineCardList className="cuisine-card-list" typeOfCuisine={typeOfFoodIsSelected} cuisineChoice={handleChangeCuisine} />
       {typeOfFoodIsSelected ? (
         <div className="button-list">
@@ -274,7 +273,7 @@ function Main({ className }) {
           <ButtonDessert className="button-dessert" handleRandomDessert={handleClickButtonDessert} />
           <ButtonDrink className="button-drink" handleRandomDrink={handleClickButtonDrink} />
           <ButtonBill className="button-bill" handleDisplayBill={handleDisplayButtonBill} />
-          <hr />
+          <Chatbox className="chatbox" sentence={chatboxSentence} />
         </div>
       ) : ''}
       <br />

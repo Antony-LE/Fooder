@@ -13,16 +13,19 @@ function Header({ className }) {
     },
     [],
   );
-  return show ? (
+  return (
     <div className={className}>
       <h1>
         FOODER
       </h1>
-      <span id="citation">
-        Don't know what to cook ? Build your own menu !
-      </span>
+      {show ? (
+        <span id="citation">
+          Don't know what to cook ? Build your own menu !
+        </span>
+      ) : <span>What kind of food do you want to cook today ? </span> }
+
     </div>
-  ) : '';
+  );
 }
 
 Header.propTypes = {

@@ -70,8 +70,7 @@ function CardStarter({
         <span className="starter-price">
           💲
           {(starterPrice / 100).toFixed(2)}
-          {' '}
-          / serving
+          /serving
         </span>
       </div>
       {/* Gestion du bouton readmore */}

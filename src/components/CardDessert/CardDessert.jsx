@@ -65,8 +65,7 @@ function CardDessert({
         <span className="dessert-price">
           💲
           {(dessertPrice / 100).toFixed(2)}
-          {' '}
-          / serving
+          /serving
         </span>
       </div>
       {/* Gestion du bouton readmore */}

@@ -5,8 +5,9 @@
 
 .main hr {
   width: 20em;
-  margin: 3em;
-  border-color: #D2AA74;
+  border:none; 
+  border-top:1px #D2AA74 solid; height: 1px;
+  margin-top: 3em;
   display: block;
 }
 
@@ -32,7 +33,9 @@
 .cardLists-container {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-evenly;
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 @keyframes fadeIn {

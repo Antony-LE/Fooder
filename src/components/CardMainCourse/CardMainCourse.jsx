@@ -65,8 +65,7 @@ function CardMainCourse({
         <span className="main-course-price">
           💲
           {(mainCoursePrice / 100).toFixed(2)}
-          {' '}
-          / serving
+          /serving
         </span>
       </div>
       {/* Gestion du bouton readmore */}

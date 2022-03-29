@@ -17,6 +17,7 @@ function Bill({
   const totalPrice = (((handleStarterPrice === null || undefined ? 0 : handleStarterPrice) + (handleMainCoursePrice === null || undefined ? 0 : handleMainCoursePrice) + (handleDessertPrice === null || undefined ? 0 : handleDessertPrice) + (handleDrinkPrice === null || undefined ? 0 : handleDrinkPrice)) / 100).toFixed(2);
   return (
     <div id="bill-ancre" className={className}>
+      <hr className="separation-price" />
       <span className="receipt">Your receipt</span>
       <ul>
         {handleStarterPrice ? (
