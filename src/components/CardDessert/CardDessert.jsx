@@ -37,30 +37,38 @@ function CardDessert({
   const purifiedSummary = summary;
   return (
     <div className={className}>
-      <h2>Your Dessert :</h2>
-      <h3>{title}</h3>
+      <h2>Dessert</h2>
       <img className="main-picture-dessert" src={sourcePix} alt="food dishes" />
-      <span className="dessert-cooking-time">
-        🕐
-        {' '}
-        {cookingTime}
-        {' '}
-        mins
-      </span>
-      <span className="dessert-serving">
-        🍽️
-        {' '}
-        {servings}
-        {' '}
-        servings
-      </span>
-      <span className="dessert-healthscore">
-        {healthscore < 50 ? '☹️' : '😀' }
-        {' '}
-        Healthscore
-        {' '}
-        {healthscore}
-      </span>
+      <h3>{title}</h3>
+      <div className="dessert-recipe-stats">
+        <span className="dessert-cooking-time">
+          🕐
+          {' '}
+          {cookingTime}
+          {' '}
+          mins
+        </span>
+        <span className="dessert-serving">
+          🍽️
+          {' '}
+          {servings}
+          {' '}
+          servings
+        </span>
+        <span className="dessert-healthscore">
+          {healthscore < 50 ? '☹️' : '😀' }
+          {' '}
+          Score
+          {' '}
+          {healthscore}
+        </span>
+        <span className="dessert-price">
+          💲
+          {(dessertPrice / 100).toFixed(2)}
+          {' '}
+          / serving
+        </span>
+      </div>
       {/* Gestion du bouton readmore */}
       {readMore === false ? (
         <span className="card-dessert-readLess" dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(purifiedSummary) }} />
@@ -80,18 +88,27 @@ function CardDessert({
         {seeInstructions === false ? 'Cook it !' : 'Hide instructions' }
       </button>
       {seeIngredients === true ? (
-        <ul className="ingredients-list">
-          {ingredients.map((ingredient) => (
-            <li>
-              <img src={`https://spoonacular.com/cdn/ingredients_100x100/${ingredient.image}`} alt={ingredient.name} className="ingredient-image" />
-              {ingredient.original}
-            </li>
-          ))}
-        </ul>
+        <>
+          <span className="dessert-ingredients-subtitle">Ingredients:</span>
+          <span className="dessert-ingredients-items-number">
+            {ingredients.length}
+            {' '}
+            items
+          </span>
+          <ul className="dessert-ingredients-list">
+            {ingredients.map((ingredient) => (
+              <li>
+                <img src={`https://spoonacular.com/cdn/ingredients_100x100/${ingredient.image}`} alt={ingredient.name} className="ingredient-image" />
+                {ingredient.original}
+              </li>
+            ))}
+          </ul>
+
+        </>
       ) : ''}
       {/* Gestion du bouton instructions */}
       {seeInstructions === true ? (
-        <ul className="instructions-list">
+        <ul className="dessert-instructions-list">
           {instructions.map((instruction) => (
             <li>
               <input type="checkbox" id="todo" name="todo" value="todo" />
@@ -103,13 +120,6 @@ function CardDessert({
           ))}
         </ul>
       ) : ''}
-      <span className="dessert-price">
-        $
-        {(dessertPrice / 100).toFixed(2)}
-        {' '}
-        / serving
-      </span>
-      <hr />
     </div>
   );
 }
