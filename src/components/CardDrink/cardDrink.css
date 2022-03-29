@@ -1,21 +1,27 @@
 .card-drink {
-    margin-bottom: 5em;
+  margin-top: 1em;
+  border: #D2AA74 1px solid;
+  border-radius: 20px;
+  overflow: auto;
+  height: fit-content;
+  width: 17vw;
+  padding: 2.5em;
 }
 
 .main-picture-drink {
-    display: inline-block;
-    width: 200px; 
-    height: 200px; 
-    overflow: hidden; 
-    border-radius: 50%;
-    margin-bottom: 1em;
-    border:#D2AA74 1px solid;
-     /* Animation Fade-in */
-     animation: fadeIn 5s;
-     -webkit-animation: fadeIn 5s;
-     -moz-animation: fadeIn 5s;
-     -o-animation: fadeIn 5s;
-     -ms-animation: fadeIn 5s;
+  display: inline-block;
+  width: 14em; 
+  height: 14em; 
+  overflow: hidden; 
+  border-radius: 50%;
+  margin-bottom: 1em;
+  border:#D2AA74 1px solid;
+  /* Animation Fade-in */
+  animation: fadeIn 5s;
+  -webkit-animation: fadeIn 5s;
+  -moz-animation: fadeIn 5s;
+  -o-animation: fadeIn 5s;
+  -ms-animation: fadeIn 5s;
 }
 
 @keyframes fadeIn {
@@ -45,18 +51,17 @@
 
   .card-drink h2 {
     font-family: 'Roboto', sans-serif;
-    font-size: 2.5em;
-    color:#D2AA74;
-    font-weight: lighter;
-    margin-top: 1em;
-    margin-bottom: 0.5em;
+  font-size: 3em;
+  color:#D2AA74;
+  font-weight: lighter;
+  margin-bottom: 0.5em;
 }
 
 .card-drink h3 {
-    font-family: 'Roboto', sans-serif ;
-    font-size: 1.2em;
-    margin: 1em;
-    color: white;
+  font-family: 'Roboto', sans-serif ;
+  font-size: 1.5em;
+  margin-bottom: 1em;
+  color: white;
 }
 
 .card-drink a {
@@ -64,17 +69,35 @@
   color : #D2AA74;
 }
 
+.drink-recipe-stats {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  border: #D2AA74 1px solid;
+  padding: 1em;
+  width: 13em;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 2em;
+}
+
+.drink-price {
+  display: inline-block;
+  font-family: 'Roboto', sans-serif;
+  font-size: 0.9em;
+  color:#D2AA74;
+  text-align: center;
+}
+
 .drink-cooking-time {
-  display: block;
+  display: inline-block;
   color: #D2AA74;
-  margin-bottom: 1em;
   font-size: 0.9em;
 }
 
 .drink-serving {
   display: inline-block;
   color: #D2AA74;
-  margin-bottom: 2em;
   font-size: 0.9em;
   margin-right: 1em;
 }
@@ -82,56 +105,71 @@
 .drink-healthscore {
   display: inline-block;
   color: #D2AA74;
-  margin-bottom: 2em;
   font-size: 0.9em;
-}
-
-.drink-price {
-  display: inline-block;
-  color: #D2AA74;
-  margin-bottom: 2em;
-  font-size: 0.9em;
+  margin-right: 1em;
 }
 
 /* handle ingredients style on card */
 
-.ingredients-list {
+.drink-ingredients-list {
   color: #D2AA74;
   text-align: left;
-  font-size: 0.6em;
-  margin-bottom: 5em;
+  font-size: 0.8em;
+  margin-bottom: 2em;
+  display: block;
 }
 
-.ingredients-list img {
+.drink-ingredients-list ul {
+  width: fit-content;
+}
+
+.drink-ingredients-list img {
   margin-top: 1em;
   margin-right: 1em;
-  width: 4em;
-  height: 4em;
+  width: 3.5em;
+  height: 3.5em;
 }
 
-.ingredient-image {
-  overflow: hidden; 
-  border-radius: 50%;
-  height: 20px;
-  width: 20px;
+.drink-ingredients-list li {
+  width: fit-content;
+  margin: 0;
 }
 
-.ingredients-list li img {
+.drink-ingredients-list li img {
   position: relative;
   top:1.5em;
 }
 
+.drink-ingredients-subtitle {
+  color:white;
+  text-align: left;
+  display: inline-block;
+  width: 45%;
+  text-decoration: underline;
+}
+
+.drink-ingredients-items-number {
+  color: white;
+  display: inline-block;
+  text-align: right;
+  width: 45%;
+}
+
 /* handle instructions style on card */
 
-.instructions-list {
+.drink-instructions-list {
   color: #D2AA74;
   text-align: left;
   font-size: 1em;
-  margin-bottom: 5em;
+  margin-bottom: 1em;
 }
 
-.instructions-list li {
+.drink-instructions-list li {
+  width: 15vw;
+  font-size: 0.8em;
   margin-bottom: 1em;
+  margin-left: auto;
+  margin-right: auto;
   text-align: justify;
   list-style-type: none;
   position: relative;
@@ -149,27 +187,30 @@ input {
 /* handle readmore style on card */
 
 .card-drink-readLess{
-  display: inline-block;
+  display: block;
   font-family: 'Roboto', sans-serif;
   font-size: 1em;
   color:#D2AA74;
-  width: 25.5vw;
+  width: 17vw;
   height: 3.6em;
   text-align: justify;
-  vertical-align: 2.5em;
   overflow: hidden;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 2em;
 }
 
 .card-drink-readMore {
-  display: inline-block;
+  display: block;
   font-family: 'Roboto', sans-serif;
   font-size: 0.7em;
   color:#D2AA74;
-  width: 25vw;
-  height: 6em;
+  width: 17vw;
+  height: fit-content;
   text-align: justify;
-  vertical-align: 2.5em;
-  padding-right: 2em;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 1em;
 }
 
 .card-drink button {
@@ -182,8 +223,8 @@ input {
   display: inline-block;
   margin-bottom: 3em;
   margin-left: 1em;
-  width: 7vw;
-  font-size: 0.63em;
+  width: 5vw;
+  font-size: 0.65em;
 }
 
 .card-drink button:hover {
