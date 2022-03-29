@@ -2,7 +2,7 @@
     margin-bottom: 5em;
 }
 
-.main-picture {
+.main-picture-drink {
     display: inline-block;
     width: 200px; 
     height: 200px; 
@@ -70,23 +70,14 @@ hr {
   width: 20vw;
 }
 
-#drinkPrice {
-  display: inline-block;
-  font-family: 'Roboto', sans-serif;
-  font-size: 1.7em;
-  height: 1.5em;
-  color:#D2AA74;
-  text-align: center;
-}
-
-.cooking-time {
+.drink-cooking-time {
   display: block;
   color: #D2AA74;
   margin-bottom: 1em;
   font-size: 0.9em;
 }
 
-.serving {
+.drink-serving {
   display: inline-block;
   color: #D2AA74;
   margin-bottom: 2em;
@@ -94,7 +85,14 @@ hr {
   margin-right: 1em;
 }
 
-.healthscore {
+.drink-healthscore {
+  display: inline-block;
+  color: #D2AA74;
+  margin-bottom: 2em;
+  font-size: 0.9em;
+}
+
+.drink-price {
   display: inline-block;
   color: #D2AA74;
   margin-bottom: 2em;

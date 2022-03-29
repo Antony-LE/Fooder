@@ -1,15 +1,14 @@
 .card-main-course {
     margin-bottom: 5em;
+    width: 20em; 
+    height: 44em; 
 }
 
-.main-picture {
+.main-picture-main-course {
     display: inline-block;
-    width: 200px; 
-    height: 200px; 
-    overflow: hidden; 
-    border-radius: 50%;
-    margin-bottom: 1em;
-    border:#D2AA74 1px solid;
+    width: 15em; 
+    height: 10em;  
+    border-radius: 10px;
     /* Animation Fade-in */
     animation: fadeIn 5s;
     -webkit-animation: fadeIn 5s;
@@ -43,9 +42,9 @@
     100% {opacity:1;}
   }
 
-  .card-main-course h2 {
+.card-main-course h2 {
     font-family: 'Roboto', sans-serif;
-    font-size: 2.5em;
+    font-size: 1em;
     color:#D2AA74;
     font-weight: lighter;
     margin-top: 1em;
@@ -54,8 +53,7 @@
 
 .card-main-course h3 {
   font-family: 'Roboto', sans-serif ;
-  font-size: 1.2em;
-  margin: 1em;
+  font-size: 1em;
   color: white;
 }
 
@@ -70,36 +68,50 @@ hr {
   width: 20vw;
 }
 
-#main-course-price {
-  display: inline-block;
-  font-family: 'Roboto', sans-serif;
-  font-size: 1.7em;
-  height: 1.5em;
-  color:#D2AA74;
-  text-align: center;
+.recipe-stats {
+  border: #D2AA74 1px solid;
+  border-radius: 10px;
+  width: 15em;
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 1em;
 }
 
-.cooking-time {
+.recipe-stats span {
+  padding-top: 2em;
+  padding-bottom: 2em;
+}
+
+.main-course-cooking-time {
   display: block;
   color: #D2AA74;
-  margin-bottom: 1em;
-  font-size: 0.9em;
+  font-size: 0.5em;
+  margin-right: 1em;
+  margin-left: 1em;
 }
 
-.serving {
+.main-course-serving {
   display: inline-block;
   color: #D2AA74;
-  margin-bottom: 2em;
-  font-size: 0.9em;
+  font-size: 0.5em;
   margin-right: 1em;
 }
 
-.healthscore {
+.main-course-healthscore {
   display: inline-block;
   color: #D2AA74;
-  margin-bottom: 2em;
-  font-size: 0.9em;
+  font-size: 0.5em;
+  margin-right: 1em;
 }
+
+.main-course-price {
+  display: inline-block;
+  color: #D2AA74;
+  font-size: 0.5em;
+}
+
 
 /* handle ingredients style on card */
 
@@ -157,15 +169,17 @@ input {
 /* handle readmore style on card */
 
 .card-main-course-readLess{
-  display: inline-block;
+  display: block;
   font-family: 'Roboto', sans-serif;
-  font-size: 1em;
+  font-size: 0.7em;
   color:#D2AA74;
-  width: 25.5vw;
+  width: 20em;
   height: 3.6em;
   text-align: justify;
   vertical-align: 2.5em;
   overflow: hidden;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .card-main-course-readMore {

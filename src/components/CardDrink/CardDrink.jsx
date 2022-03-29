@@ -40,22 +40,22 @@ function CardDrink({
     <div className={className}>
       <h2>Your Drink</h2>
       <h3>{title}</h3>
-      <img className="main-picture" src={sourcePix} alt="food dishes" />
-      <span className="cooking-time">
+      <img className="main-picture-drink" src={sourcePix} alt="food dishes" />
+      <span className="drink-cooking-time">
         🕐
         {' '}
         {cookingTime}
         {' '}
         mins
       </span>
-      <span className="serving">
+      <span className="drink-serving">
         🍽️
         {' '}
         {servings}
         {' '}
         servings
       </span>
-      <span className="healthscore">
+      <span className="drink-healthscore">
         {healthscore < 50 ? '☹️' : '😀' }
         {' '}
         Healthscore
@@ -104,7 +104,7 @@ function CardDrink({
           ))}
         </ul>
       ) : ''}
-      <span id="drinkPrice">
+      <span className="drink-price">
         $
         {(drinkPrice / 100).toFixed(2)}
         {' '}

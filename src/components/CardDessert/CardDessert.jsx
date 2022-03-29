@@ -39,22 +39,22 @@ function CardDessert({
     <div className={className}>
       <h2>Your Dessert :</h2>
       <h3>{title}</h3>
-      <img className="main-picture" src={sourcePix} alt="food dishes" />
-      <span className="cooking-time">
+      <img className="main-picture-dessert" src={sourcePix} alt="food dishes" />
+      <span className="dessert-cooking-time">
         🕐
         {' '}
         {cookingTime}
         {' '}
         mins
       </span>
-      <span className="serving">
+      <span className="dessert-serving">
         🍽️
         {' '}
         {servings}
         {' '}
         servings
       </span>
-      <span className="healthscore">
+      <span className="dessert-healthscore">
         {healthscore < 50 ? '☹️' : '😀' }
         {' '}
         Healthscore
@@ -103,7 +103,7 @@ function CardDessert({
           ))}
         </ul>
       ) : ''}
-      <span id="dessertPrice">
+      <span className="dessert-price">
         $
         {(dessertPrice / 100).toFixed(2)}
         {' '}

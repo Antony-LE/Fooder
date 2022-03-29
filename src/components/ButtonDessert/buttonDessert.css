@@ -1,4 +1,5 @@
 .button-dessert {
+  display: block;
   color: #D2AA74;
   border: 1px solid #D2AA74;
   padding: 0.6em;

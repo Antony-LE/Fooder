@@ -37,30 +37,38 @@ function CardMainCourse({
   const purifiedSummary = summary;
   return (
     <div className={className}>
-      <h2>Your Main Course</h2>
+      <h2>Main Course</h2>
+      <img className="main-picture-main-course" src={sourcePix} alt="food dishes" />
       <h3>{title}</h3>
-      <img className="main-picture" src={sourcePix} alt="food dishes" />
-      <span className="cooking-time">
-        🕐
-        {' '}
-        {cookingTime}
-        {' '}
-        mins
-      </span>
-      <span className="serving">
-        🍽️
-        {' '}
-        {servings}
-        {' '}
-        servings
-      </span>
-      <span className="healthscore">
-        {healthscore < 50 ? '☹️' : '😀' }
-        {' '}
-        Healthscore
-        {' '}
-        {healthscore}
-      </span>
+      <div className="recipe-stats">
+        <span className="main-course-cooking-time">
+          🕐
+          {' '}
+          {cookingTime}
+          {' '}
+          mins
+        </span>
+        <span className="main-course-serving">
+          🍽️
+          {' '}
+          {servings}
+          {' '}
+          servings
+        </span>
+        <span className="main-course-healthscore">
+          {healthscore < 50 ? '☹️' : '😀' }
+          {' '}
+          Score
+          {' '}
+          {healthscore}
+        </span>
+        <span className="main-course-price">
+          💲
+          {(mainCoursePrice / 100).toFixed(2)}
+          {' '}
+          / serving
+        </span>
+      </div>
       {/* Gestion du bouton readmore */}
       {readMore === false ? (
         <span className="card-main-course-readLess" dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(purifiedSummary) }} />
@@ -103,12 +111,6 @@ function CardMainCourse({
           ))}
         </ul>
       ) : ''}
-      <span id="main-course-price">
-        $
-        {(mainCoursePrice / 100).toFixed(2)}
-        {' '}
-        / serving
-      </span>
       <hr />
     </div>
   );

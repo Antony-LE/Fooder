@@ -268,7 +268,7 @@ function Main({ className }) {
       <Chatbox className="chatbox" sentence={chatboxSentence} />
       <CuisineCardList className="cuisine-card-list" typeOfCuisine={typeOfFoodIsSelected} cuisineChoice={handleChangeCuisine} />
       {typeOfFoodIsSelected ? (
-        <div>
+        <div className="button-list">
           <ButtonStarter className="button-starter" handleRandomStarter={handleClickButtonStarter} />
           <ButtonMainCourse className="button-main-course" handleRandomMainCourse={handleClickButtonMainCourse} />
           <ButtonDessert className="button-dessert" handleRandomDessert={handleClickButtonDessert} />

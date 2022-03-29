@@ -1,4 +1,4 @@
-.main-picture {
+.main-picture-starter {
     display: inline-block;
     width: 200px; 
     height: 200px; 
@@ -68,23 +68,14 @@ hr {
   display: inline-block;
 }
 
-#starterPrice {
-  display: block;
-  font-family: 'Roboto', sans-serif;
-  font-size: 1.7em;
-  height: 1.5em;
-  color:#D2AA74;
-  text-align: center;
-}
-
-.cooking-time {
+.starter-cooking-time {
   display: block;
   color: #D2AA74;
   margin-bottom: 1em;
   font-size: 0.9em;
 }
 
-.serving {
+.starter-serving {
   display: inline-block;
   color: #D2AA74;
   margin-bottom: 2em;
@@ -92,7 +83,14 @@ hr {
   margin-right: 1em;
 }
 
-.healthscore {
+.starter-healthscore {
+  display: inline-block;
+  color: #D2AA74;
+  margin-bottom: 2em;
+  font-size: 0.9em;
+}
+
+.starte-price {
   display: inline-block;
   color: #D2AA74;
   margin-bottom: 2em;

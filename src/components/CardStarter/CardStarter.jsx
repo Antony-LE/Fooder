@@ -45,22 +45,22 @@ function CardStarter({
       <hr />
       <h2>Your Starter</h2>
       <h3>{title}</h3>
-      <img className="main-picture" src={sourcePix} alt="food dishes" />
-      <span className="cooking-time">
+      <img className="main-picture-starter" src={sourcePix} alt="food dishes" />
+      <span className="starter-cooking-time">
         🕐
         {' '}
         {cookingTime}
         {' '}
         mins
       </span>
-      <span className="serving">
+      <span className="starter-serving">
         🍽️
         {' '}
         {servings}
         {' '}
         servings
       </span>
-      <span className="healthscore">
+      <span className="starter-healthscore">
         {healthscore < 50 ? '☹️' : '😀' }
         {' '}
         Healthscore
@@ -110,7 +110,7 @@ function CardStarter({
         </ul>
       ) : ''}
 
-      <span id="starterPrice">
+      <span className="starter-price">
         $
         {(starterPrice / 100).toFixed(2)}
         {' '}
