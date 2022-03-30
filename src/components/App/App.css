@@ -4,6 +4,9 @@
   margin:1em;
   font-family: 'Roboto', sans-serif;
   margin-top: none;
+  background: url("../../images/main-background.webp") no-repeat center center fixed;
+  background-size: 100%;
+  text-shadow: 5px 5px 5px black;
 }
 
 html {

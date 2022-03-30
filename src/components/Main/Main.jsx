@@ -105,7 +105,6 @@ function Main({ className }) {
     axios.get(`https://api.spoonacular.com/recipes/random?number=1&tags=${cuisineType},starter&apiKey=${apiKey}`).then((response) => {
       if (response.data.recipes.length === 0) {
         setChatboxSentence(`Sorry, there is no ${cuisineType} starter in our database yet!`);
-        setDisplayStarterCardList(false);
       } else {
         setStarterTitle(response.data.recipes[0].title);
         setStarterImage(response.data.recipes[0].image);
@@ -125,7 +124,6 @@ function Main({ className }) {
     }).catch((error) => {
       if (error.response) {
         setChatboxSentence('Oops server error, try again later !');
-        setDisplayStarterCardList(false);
       }
       console.log(error.response.data);
     });
@@ -138,7 +136,6 @@ function Main({ className }) {
     axios.get(`https://api.spoonacular.com/recipes/random?number=1&tags=${cuisineType},lunch&apiKey=${apiKey}`).then((response) => {
       if (response.data.recipes.length === 0) {
         setChatboxSentence(`Sorry, there is no ${cuisineType} main-course in our database yet!`);
-        setDisplayStarterCardList(false);
       } else {
         setMainCourseTitle(response.data.recipes[0].title);
         setMainCourseImage(response.data.recipes[0].image);
@@ -158,7 +155,6 @@ function Main({ className }) {
     }).catch((error) => {
       if (error.response) {
         setChatboxSentence('Oops server error, try again later !');
-        setDisplayStarterCardList(false);
       }
       console.log(error.response.data);
     });
@@ -171,7 +167,6 @@ function Main({ className }) {
       // Endpoint pour un dessert aléatoire
       if (response.data.recipes.length === 0) {
         setChatboxSentence(`Sorry, there is no ${cuisineType} dessert in our database yet!`);
-        setDisplayStarterCardList(false);
       } else {
         setDessertTitle(response.data.recipes[0].title);
         setDessertImage(response.data.recipes[0].image);
@@ -191,7 +186,6 @@ function Main({ className }) {
     }).catch((error) => {
       if (error.response) {
         setChatboxSentence('Oops server error, try again later !');
-        setDisplayStarterCardList(false);
       }
       console.log(error.response.data);
     });
@@ -204,7 +198,6 @@ function Main({ className }) {
     axios.get(`https://api.spoonacular.com/recipes/random?number=1&tags=beverage&apiKey=${apiKey}`).then((response) => {
       if (response.data.recipes.length === 0) {
         setChatboxSentence(`Sorry, there is no ${cuisineType} drink in our database yet!`);
-        setDisplayStarterCardList(false);
       } else {
         setDrinkTitle(response.data.recipes[0].title);
         setDrinkImage(response.data.recipes[0].image);
@@ -224,7 +217,6 @@ function Main({ className }) {
     }).catch((error) => {
       if (error.response) {
         setChatboxSentence('Oops server error, try again later !');
-        setDisplayStarterCardList(false);
       }
       console.log(error.response.data);
     });

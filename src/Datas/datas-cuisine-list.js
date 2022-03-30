@@ -1,10 +1,5 @@
 const cuisineListItems = [
   {
-    id: 1,
-    name: 'Korean',
-    picture: 'korean-food.webp',
-  },
-  {
     id: 2,
     name: 'American',
     picture: 'american-food.webp',
@@ -13,6 +8,11 @@ const cuisineListItems = [
     id: 3,
     name: 'Chinese',
     picture: 'chinese-food.webp',
+  },
+  {
+    id: 1,
+    name: 'Korean',
+    picture: 'korean-food.webp',
   },
   {
     id: 4,
