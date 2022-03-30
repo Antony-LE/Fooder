@@ -1,15 +1,50 @@
+* {
+  margin: 0;
+  padding: 0;
+  }
+
 .App {
   text-align: center;
   border: solid 1px #D2AA74;
-  margin:1em;
+  margin: 1em;
   font-family: 'Roboto', sans-serif;
-  margin-top: none;
-  background: url("../../images/main-background.webp") no-repeat center center fixed;
-  background-size: 100%;
   text-shadow: 5px 5px 5px black;
 }
 
 html {
-  scroll-behavior:smooth;
-  background-color: #211D17;
+  scroll-behavior: smooth;
+  background: url("../../images/main-background.webp") no-repeat center center fixed;
+  background-size: cover;
 }
+
+  /* responsive settings */
+
+  @media screen and (max-width: 1024px) {
+  }
+  
+  @media screen and (max-width: 768px) {
+  }
+  
+  @media screen and (max-width: 415px) {
+    .App {
+      border: none;
+    }
+  }
+  
+  @media screen and (max-width: 430px) {
+    .App {
+      border: none;
+    }
+  }
+  
+  @media screen and (max-width: 360px) {
+    .App {
+      border: none;
+    }
+  }
+  
+  @media screen and (max-width: 320px) {
+   .App {
+     border: none;
+   }
+  }

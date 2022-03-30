@@ -1,5 +1,5 @@
 .cuisine-card-list {
-  margin-left: 2em;
+    margin-left: 2em;
     height: 20vh;
     width: 90vw;
     display: flex;
@@ -65,4 +65,318 @@
 
 .cuisine-card-focus{
    box-shadow:2px 12px 22px 1px #D2AA74;
+}
+
+/* responsive settings */
+
+@media screen and (max-width: 1920px) {
+  .cuisine-card {
+    margin-bottom: 2em;
+    margin-right: 0.5em;
+    height: fit-content;
+   }
+   .cuisine-card img {
+     height: 5em;
+     width: 5em;
+     border-radius: 50%;
+     margin-top: 0.1em;
+     margin-bottom: 0.5em;
+     cursor: pointer;
+     animation: fadeIn 8s;
+     -webkit-animation: fadeIn 5s;
+     -moz-animation: fadeIn 5s;
+     -o-animation: fadeIn 5s;
+     -ms-animation: fadeIn 5s;
+ }
+ 
+ .cuisine-card-list {
+     max-width: 80vw;
+     justify-content: space-evenly;
+     margin-left: auto;
+     margin-right: auto;
+     overflow-x: scroll;
+     height: 30vh;
+     margin-top: 2em;
+     margin-bottom: 1.5em;
+     text-align: center;
+ }
+ 
+ .cuisine-card span {
+   color: white;
+   display: block;
+   font-size: 0.7em;
+   animation: fadeIn 7s;
+    -webkit-animation: fadeIn 5s;
+    -moz-animation: fadeIn 5s;
+    -o-animation: fadeIn 5s;
+    -ms-animation: fadeIn 5s;
+ }
+
+}
+
+@media screen and (max-width: 1080px) {
+  .cuisine-card {
+    margin-bottom: 2em;
+    margin-right: 0.5em;
+    height: fit-content;
+   }
+   .cuisine-card img {
+     height: 5em;
+     width: 5em;
+     border-radius: 50%;
+     margin-top: 0.1em;
+     margin-bottom: 0.5em;
+     cursor: pointer;
+     animation: fadeIn 8s;
+     -webkit-animation: fadeIn 5s;
+     -moz-animation: fadeIn 5s;
+     -o-animation: fadeIn 5s;
+     -ms-animation: fadeIn 5s;
+ }
+ 
+ .cuisine-card-list {
+     max-width: 80vw;
+     justify-content: space-evenly;
+     margin-left: auto;
+     margin-right: auto;
+     overflow-x: scroll;
+     height: 21vh;
+     margin-top: 2em;
+     margin-bottom: 1.5em;
+     text-align: center;
+ }
+ 
+ .cuisine-card span {
+   color: white;
+   display: block;
+   font-size: 0.7em;
+   animation: fadeIn 7s;
+    -webkit-animation: fadeIn 5s;
+    -moz-animation: fadeIn 5s;
+    -o-animation: fadeIn 5s;
+    -ms-animation: fadeIn 5s;
+ }
+}
+
+@media screen and (max-width: 768px) {
+  .cuisine-card {
+    margin-bottom: 2em;
+    margin-right: 0.5em;
+    height: fit-content;
+   }
+   .cuisine-card img {
+     height: 3.6em;
+     width: 3.6em;
+     border-radius: 50%;
+     margin-top: 0.1em;
+     margin-bottom: 0.5em;
+     cursor: pointer;
+     animation: fadeIn 8s;
+     -webkit-animation: fadeIn 5s;
+     -moz-animation: fadeIn 5s;
+     -o-animation: fadeIn 5s;
+     -ms-animation: fadeIn 5s;
+ }
+ 
+ .cuisine-card-list {
+     max-width: 80vw;
+     justify-content: space-evenly;
+     margin-left: auto;
+     margin-right: auto;
+     overflow-x: scroll;
+     height: 20vh;
+     margin-top: 2em;
+     margin-bottom: 1.5em;
+     text-align: center;
+ }
+ 
+ .cuisine-card span {
+   color: white;
+   display: block;
+   font-size: 0.7em;
+   animation: fadeIn 7s;
+    -webkit-animation: fadeIn 5s;
+    -moz-animation: fadeIn 5s;
+    -o-animation: fadeIn 5s;
+    -ms-animation: fadeIn 5s;
+ }
+}
+
+@media screen and (max-width: 430px) {
+  .cuisine-card {
+    margin-bottom: 0.5em;
+    margin-right: 0.7em;
+    height: fit-content;
+   }
+   .cuisine-card img {
+     height: 3.6em;
+     width: 3.6em;
+     border-radius: 50%;
+     margin-top: 0.1em;
+     margin-bottom: 0.2em;
+     cursor: pointer;
+     animation: fadeIn 8s;
+     -webkit-animation: fadeIn 5s;
+     -moz-animation: fadeIn 5s;
+     -o-animation: fadeIn 5s;
+     -ms-animation: fadeIn 5s;
+ }
+ 
+ .cuisine-card-list {
+     max-width: 80vw;
+     justify-content: space-evenly;
+     margin-left: auto;
+     margin-right: auto;
+     overflow-x: scroll;
+     height: 19vh;
+     margin-top: 2em;
+     margin-bottom: 1em;
+     text-align: center;
+ }
+ 
+ .cuisine-card span {
+   color: white;
+   display: block;
+   font-size: 0.6em;
+   margin-bottom: 1em;
+   animation: fadeIn 7s;
+    -webkit-animation: fadeIn 5s;
+    -moz-animation: fadeIn 5s;
+    -o-animation: fadeIn 5s;
+    -ms-animation: fadeIn 5s;
+ }
+}
+
+@media screen and (max-width: 415px) {
+  .cuisine-card {
+    margin-bottom: 2em;
+    margin-right: 0.5em;
+    height: fit-content;
+   }
+   .cuisine-card img {
+     height: 3.5em;
+     width: 3.5em;
+     border-radius: 50%;
+     margin-top: 0.1em;
+     margin-bottom:0.2em;
+     cursor: pointer;
+     animation: fadeIn 8s;
+     -webkit-animation: fadeIn 5s;
+     -moz-animation: fadeIn 5s;
+     -o-animation: fadeIn 5s;
+     -ms-animation: fadeIn 5s;
+ }
+ 
+ .cuisine-card-list {
+     max-width: 80vw;
+     justify-content: space-evenly;
+     margin-left: auto;
+     margin-right: auto;
+     overflow-x: scroll;
+     height: 17vh;
+     margin-top: 2em;
+     margin-bottom: 1.5em;
+     text-align: center;
+ }
+ 
+ .cuisine-card span {
+   color: white;
+   display: block;
+   font-size: 0.7em;
+   animation: fadeIn 7s;
+    -webkit-animation: fadeIn 5s;
+    -moz-animation: fadeIn 5s;
+    -o-animation: fadeIn 5s;
+    -ms-animation: fadeIn 5s;
+ }
+}
+
+
+@media screen and (max-width: 360px) {
+  .cuisine-card {
+    margin-bottom: 0;
+    margin-right: 0.5em;
+    height: fit-content;
+   }
+   .cuisine-card img {
+     height: 2.5em;
+     width: 2.5em;
+     border-radius: 50%;
+     margin-top: 0.1em;
+     margin-bottom: 0.1em;
+     cursor: pointer;
+     animation: fadeIn 8s;
+     -webkit-animation: fadeIn 5s;
+     -moz-animation: fadeIn 5s;
+     -o-animation: fadeIn 5s;
+     -ms-animation: fadeIn 5s;
+ }
+ 
+ .cuisine-card-list {
+     max-width: 80vw;
+     justify-content: space-evenly;
+     margin-left: auto;
+     margin-right: auto;
+     overflow-x: scroll;
+     height: 12.5vh;
+     margin-top: 2em;
+     margin-bottom: 1em;
+     text-align: center;
+ }
+ 
+ .cuisine-card span {
+   color: white;
+   display: block;
+   font-size: 0.6em;
+   animation: fadeIn 7s;
+    -webkit-animation: fadeIn 5s;
+    -moz-animation: fadeIn 5s;
+    -o-animation: fadeIn 5s;
+    -ms-animation: fadeIn 5s;
+ }
+}
+
+@media screen and (max-width: 320px) {
+
+  .cuisine-card {
+   margin-bottom: 0;
+   margin-right: 0.5em;
+   height: fit-content;
+  }
+  .cuisine-card img {
+    height: 2.5em;
+    width: 2.5em;
+    border-radius: 50%;
+    margin-top: 0.1em;
+    margin-bottom: 0.1em;
+    cursor: pointer;
+    animation: fadeIn 8s;
+    -webkit-animation: fadeIn 5s;
+    -moz-animation: fadeIn 5s;
+    -o-animation: fadeIn 5s;
+    -ms-animation: fadeIn 5s;
+}
+
+.cuisine-card-list {
+    max-width: 80vw;
+    justify-content: space-evenly;
+    margin-left: auto;
+    margin-right: auto;
+    overflow-x: scroll;
+    height: 12.5vh;
+    margin-top: 2em;
+    margin-bottom: 1em;
+    text-align: center;
+}
+
+.cuisine-card span {
+  color: white;
+  display: block;
+  font-size: 0.6em;
+  animation: fadeIn 7s;
+   -webkit-animation: fadeIn 5s;
+   -moz-animation: fadeIn 5s;
+   -o-animation: fadeIn 5s;
+   -ms-animation: fadeIn 5s;
+}
 }
