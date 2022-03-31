@@ -65,6 +65,32 @@
 
   /* responsive settings */
 
+  @media screen and (max-width: 1920px) {
+    .button-list {
+      margin-top: 1.5em;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      width: fit-content;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  
+    .button-list a {
+      padding: 0.5em;
+      font-size: 1em;
+      margin-top: 1em;
+      margin-top: 1em;
+     }
+  
+     .cardLists-container {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    }
+  }
+
 @media screen and (max-width: 1050px) {
   .button-list {
     margin-top: 2em;
@@ -79,28 +105,50 @@
   .button-list a {
     padding: 0.5em;
     font-size: 0.8em;
-    margin-top: 0.5em;
+    margin-top: 1em;
+    margin-top: 1em;
    }
 
    .cardLists-container {
     display: flex;
     flex-wrap: wrap;
-    flex-direction: column;
-    width: fit-content;
-    margin-left:1.5em;
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 
 @media screen and (max-width: 768px) {
+  .button-list {
+    margin-top: 0em;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .button-list a {
+    padding: 0.5em;
+    font-size: 0.8em;
+    margin-top: 1em;
+    margin-top: 1em;
+   }
+
+   .cardLists-container {
+    display: flex;
+    flex-wrap: wrap;
+    width: fit-content;
+  }
 }
 
 @media screen and (max-width: 430px) {
   .button-list {
-    margin-top: 2em;
+    margin-top: 0em;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    width: 70vw;
+    width: fit-content;
     margin-left: auto;
     margin-right: auto;
   }
@@ -115,23 +163,28 @@
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
-    width: fit-content;
-    margin-left:1.5em;
+    justify-content: center;
   }
 }
 
 
 @media screen and (max-width: 415px) {
+  .cardLists-container {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+  }
   
   }
 
 @media screen and (max-width: 360px) {
   .button-list {
-    margin-top: 2em;
+    margin-top: 0;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    width: 70vw;
+    width: fit-content;
     margin-left: auto;
     margin-right: auto;
   }
@@ -140,25 +193,25 @@
     padding: 0.5em;
     font-size: 0.6em;
     margin-top: 0.5em;
+  
    }
 
    .cardLists-container {
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
-    width: fit-content;
-    margin-left:1.5em;
+    justify-content: center;
   }
   
 }
 
 @media screen and (max-width: 320px) {
   .button-list {
-    margin-top: 2em;
+    margin-top: 0;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    width: 70vw;
+    width: fit-content;
     margin-left: auto;
     margin-right: auto;
   }
@@ -173,8 +226,7 @@
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
-    width: fit-content;
-    margin-left:1.5em;
+    justify-content: center;
   }
 }
 

@@ -259,14 +259,16 @@ function Main({ className }) {
     <main className={className}>
       <CuisineCardList className="cuisine-card-list" typeOfCuisine={typeOfFoodIsSelected} cuisineChoice={handleChangeCuisine} />
       {typeOfFoodIsSelected ? (
-        <div className="button-list">
-          <ButtonStarter className="button-starter" handleRandomStarter={handleClickButtonStarter} />
-          <ButtonMainCourse className="button-main-course" handleRandomMainCourse={handleClickButtonMainCourse} />
-          <ButtonDessert className="button-dessert" handleRandomDessert={handleClickButtonDessert} />
-          <ButtonDrink className="button-drink" handleRandomDrink={handleClickButtonDrink} />
-          <ButtonBill className="button-bill" handleDisplayBill={handleDisplayButtonBill} />
+        <>
+          <div className="button-list">
+            <ButtonStarter className="button-starter" handleRandomStarter={handleClickButtonStarter} />
+            <ButtonMainCourse className="button-main-course" handleRandomMainCourse={handleClickButtonMainCourse} />
+            <ButtonDessert className="button-dessert" handleRandomDessert={handleClickButtonDessert} />
+            <ButtonDrink className="button-drink" handleRandomDrink={handleClickButtonDrink} />
+            <ButtonBill className="button-bill" handleDisplayBill={handleDisplayButtonBill} />
+          </div>
           <Chatbox className="chatbox" sentence={chatboxSentence} />
-        </div>
+        </>
       ) : ''}
       <br />
       <div className="cardLists-container">
