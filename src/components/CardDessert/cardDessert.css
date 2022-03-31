@@ -235,200 +235,613 @@ input {
   color: #D2AA74;
 }
 
- /* responsive settings */
+@media screen and (max-width: 1920px) {
+  .card-dessert {
+    margin-right: 1em;
+    margin-top: 1em;
+    border: #D2AA74 1px solid;
+    border-radius: 20px;
+    width: 23vw;
+    padding: 0.5em;
+}
+.main-picture-dessert {
+  width: 9em; 
+  height: 9em; 
+  margin-bottom: 0;
+}
 
- @media screen and (max-width: 1024px) {
+.card-dessert h3 {
+  font-size: 1.5em;
+  height: fit-content;
+  margin-bottom: 0;
+  padding: 1em 0em;
+}
+
+.card-dessert h2 {
+  margin-top: 1em;
+  font-size: 2.5em;
+  margin-bottom: 0.5em;
+}
+.dessert-recipe-stats {
+  width: fit-content;
+  font-size: 0.8em;
+  margin-bottom: 0.5em;
+  padding: 1em;
+}
+
+.card-dessert-readLess{
+  font-size: 0.8em;
+  width:22vw;
+  height: 3.4em;
+  margin-top: 2em;
+  margin-bottom: 2em;
+}
+
+.card-dessert-readMore {
+  margin-top: 1em;
+  font-size: 0.8em;
+  width: 20vw;
+  padding: 0;
+}
+
+.card-dessert button {
+  padding: 0.6em;
+  border-radius: 20px;
+  text-decoration: none;
+  display: inline-block;
+  margin-bottom: 3em;
+  margin-left: 1em;
+  width: 6.5vw;
+  font-size: 0.45em;
+}
+
+.dessert-ingredients-list {
+  font-size: 0.8em;
+  width: 20vw;
+}
+
+.dessert-ingredients-list li {
+  margin-left: 2em;
+  width: 20vw;
+}
+
+.dessert-ingredients-list img {
+  width: 2em;
+  height: 2em;
+  margin-bottom: 1em;
+}
+
+.dessert-ingredients-subtitle {
+  font-size: 0.8em;
+  width: 35%;
+}
+
+.dessert-ingredients-items-number {
+  font-size: 0.8em;
+  width: 35%;
+}
+
+.dessert-ingredients-list {
+  font-size: 0.7em;
+  margin-left: 2em;
+  margin-right: 0;
+  margin-left: 0;
+}
+
+.dessert-instructions-list {
+  width: 20vw;
+  font-size: 1.1em;
+  padding-left: 1.5em;
+}
+
+.dessert-instructions-list li {
+  width: 90%;
+  font-size: 0.7em;
+}
+}
+
+@media screen and (max-width: 1080px) {
+  .card-dessert {
+    margin-right: 2em;
+    margin-top: 1em;
+    border: #D2AA74 1px solid;
+    border-radius: 20px;
+    width: 40vw;
+    padding: 0.5em;
+}
+.main-picture-dessert {
+  width: 9em; 
+  height: 9em; 
+  margin-bottom: 0;
+}
+
+.card-dessert h3 {
+  font-size: 1.5em;
+  height: fit-content;
+  margin-bottom: 0;
+  padding: 1em 0em;
+}
+
+.card-dessert h2 {
+  margin-top: 1em;
+  font-size: 2.5em;
+  margin-bottom: 0.5em;
+}
+.dessert-recipe-stats {
+  width: fit-content;
+  font-size: 0.8em;
+  margin-bottom: 0.5em;
+  padding: 1em;
+}
+
+.card-dessert-readLess{
+  font-size: 0.8em;
+  width:35vw;
+  height: 3.4em;
+  margin-top: 2em;
+  margin-bottom: 2em;
+}
+
+.card-dessert-readMore {
+  margin-top: 1em;
+  font-size: 0.8em;
+  width: 35vw;
+  padding: 0;
+}
+
+.card-dessert button {
+  padding: 0.6em;
+  border-radius: 20px;
+  text-decoration: none;
+  display: inline-block;
+  margin-bottom: 3em;
+  margin-left: 1em;
+  width: 10vw;
+  font-size: 0.6em;
+}
+
+.dessert-ingredients-list {
+  font-size: 0.8em;
+  width: 50vw;
+}
+
+.dessert-ingredients-list li {
+  margin-left: 5em;
+  width: 30vw;
+}
+
+.dessert-ingredients-list img {
+  width: 2.5em;
+  height: 2.5em;
+  margin-bottom: 1em;
+}
+
+.dessert-ingredients-subtitle {
+  font-size: 1em;
+  width: 30%;
+}
+
+.dessert-ingredients-items-number {
+  font-size: 1em;
+  width: 30%;
+}
+
+.dessert-ingredients-list {
+  margin-left: 2em;
+  margin-right: 0;
+  margin-left: 0;
+}
+
+.dessert-instructions-list {
+  width: 30vw;
+  font-size: 1.1em;
+  padding-left: 2.5em;
+}
+
+.dessert-instructions-list li {
+  width: 90%;
+  font-size: 0.7em;
+}
 }
 
 @media screen and (max-width: 768px) {
-}
-
-@media screen and (max-width: 430px) {
-}
-
-@media screen and (max-width: 415px) {
   .card-dessert {
     margin-top: 1em;
     border: #D2AA74 1px solid;
     border-radius: 20px;
-    width: 80vw;
+    width: fit-content;
     padding: 0.5em;
-  }
-  .main-picture-dessert {
-    width: 8em; 
-    height: 8em; 
-  }
-  .card-dessert h3 {
-    font-size: 1.5em;
-    height: fit-content;
-    margin-bottom: 1em;
-  }
+}
+.main-picture-dessert {
+  width: 9em; 
+  height: 9em; 
+  margin-bottom: 0;
+}
 
-  .card-dessert h2 {
-    font-size: 2.5em;
-  }
-  .dessert-recipe-stats {
-    width: 65vw;
-    font-size: 0.7em;
-  }
+.card-dessert h3 {
+  font-size: 1.5em;
+  height: fit-content;
+  margin-bottom: 0;
+  padding: 1em 0em;
+}
 
-  .card-dessert-readLess{
-    font-size: 0.7em;
-    width: 65vw;
-    height: 3.5em;
-    text-align: justify;
-  }
+.card-dessert h2 {
+  margin-top: 1em;
+  font-size: 2.5em;
+  margin-bottom: 0.5em;
+}
+.dessert-recipe-stats {
+  width: fit-content;
+  font-size: 0.8em;
+  margin-bottom: 0.5em;
+  padding: 1em;
+}
 
-  .card-dessert button {
-    padding: 0.6em;
+.card-dessert-readLess{
+  font-size: 0.8em;
+  width:70vw;
+  height: 3.4em;
+  margin-top: 2em;
+  margin-bottom: 2em;
+}
+
+.card-dessert-readMore {
+  margin-top: 1em;
+  font-size: 0.8em;
+  width: 70vw;
+  padding: 0;
+}
+
+.card-dessert button {
+  padding: 0.6em;
+  border-radius: 20px;
+  text-decoration: none;
+  display: inline-block;
+  margin-bottom: 3em;
+  margin-left: 1em;
+  width: 22vw;
+  font-size: 0.6em;
+}
+
+.dessert-ingredients-list {
+  font-size: 0.8em;
+  width: 50vw;
+}
+
+.dessert-ingredients-list li {
+  margin-left: 5em;
+}
+
+.dessert-ingredients-list img {
+  width: 2em;
+  height: 2em;
+  margin-bottom: 1em;
+}
+
+.dessert-ingredients-subtitle {
+  font-size: 1em;
+  width: 30%;
+}
+
+.dessert-ingredients-items-number {
+  font-size: 1em;
+  width: 30%;
+}
+
+.dessert-ingredients-list {
+  margin-left: 2em;
+  margin-right: 0;
+  margin-left: 0;
+}
+
+.dessert-instructions-list {
+  width: 75vw;
+  font-size: 1em;
+  padding-left: 2.5em;
+}
+
+.dessert-instructions-list li {
+  width: 90%;
+  font-size: 0.7em;
+}
+}
+
+@media screen and (max-width: 430px) {
+  .card-dessert {
+    margin-top: 1em;
+    border: #D2AA74 1px solid;
     border-radius: 20px;
-    text-decoration: none;
-    display: inline-block;
-    margin-bottom: 3em;
-    margin-left: 1em;
-    width: 22vw;
-    font-size: 0.60em;
-  }
-  .card-dessert-readMore {
-    font-size: 0.7em;
-    width: 65vw;
-  }
+    width: fit-content;
+    padding: 0.5em;
+}
+.main-picture-dessert {
+  width: 9em; 
+  height: 9em; 
+  margin-bottom: 0;
+}
 
-  .dessert-ingredients-list {
-    font-size: 0.7em;
-  }
+.card-dessert h3 {
+  font-size: 1.2em;
+  height: fit-content;
+  margin-bottom: 0;
+  padding: 1em 0em;
+}
 
-  .dessert-ingredients-list li {
-    margin-left: 2.5em;
-  }
+.card-dessert h2 {
+  margin-top: 1em;
+  font-size: 2.5em;
+  margin-bottom: 0.5em;
+}
+.dessert-recipe-stats {
+  width: 70vw;
+  font-size: 0.75em;
+  margin-bottom: 0.5em;
+  padding: 1em;
+}
 
-  .dessert-ingredients-list img {
-    width: 3em;
-    height: 3em;
-    margin-bottom: 1em;
-  }
+.card-dessert-readLess{
+  font-size: 0.8em;
+  width: 70vw;
+  height: 3.4em;
+  margin-top: 2em;
+    margin-bottom: 2em;
+}
 
-  .dessert-ingredients-subtitle {
-    font-size: 0.9em;
-    width: 43%;
-  }
+.card-dessert-readMore {
+  margin-top: 1em;
+  font-size: 0.8em;
+  width: 70vw;
+}
 
-  .dessert-ingredients-items-number {
-    font-size: 0.9em;
-    width: 43%;
-  }
+.card-dessert button {
+  padding: 0.6em;
+  border-radius: 20px;
+  text-decoration: none;
+  display: inline-block;
+  margin-bottom: 3em;
+  margin-left: 1em;
+  width: 23vw;
+  font-size: 0.65em;
+}
 
-  .dessert-ingredients-list {
-    width: 80vw;
-  }
+.dessert-ingredients-list {
+  font-size: 0.8em;
+}
 
-  .dessert-instructions-list {
-    width: 65vw;
-    font-size: 1em;
-    padding-left: 2.5em;
-  }
-  
-  .dessert-instructions-list li {
-    width: 90%;
-    font-size: 0.7em;
-  }
-  }
+.dessert-ingredients-list li {
+  margin-left: 3em;
+}
 
-  @media screen and (max-width: 360px) {
-    .card-dessert {
-      margin-top: 1em;
-      border: #D2AA74 1px solid;
-      border-radius: 20px;
-      width: 75vw;
-      padding: 0.5em;
-  }
-  .main-picture-dessert {
-    width: 7em; 
-    height: 7em; 
-  }
+.dessert-ingredients-list img {
+  width: 3.5em;
+  height: 3.5em;
+  margin-bottom: 1em;
+}
 
-  .card-dessert h3 {
-    font-size: 1.5em;
-    height: fit-content;
-    margin-bottom: 1em;
-  }
+.dessert-ingredients-subtitle {
+  font-size: 1em;
+  width: 35%;
+}
 
-  .card-dessert h2 {
-    font-size: 2.5em;
-  }
-  .dessert-recipe-stats {
-    width: 65vw;
-    font-size: 0.60em;
-  }
+.dessert-ingredients-items-number {
+  font-size: 1em;
+  width: 35%;
+}
 
-  .card-dessert-readLess{
-    font-size: 0.7em;
-    width: 65vw;
-    height: 3.5em;
-    text-align: justify;
-  }
+.dessert-ingredients-list {
+  width: 80vw;
+}
 
-  .card-dessert button {
-    padding: 0.6em;
+.dessert-instructions-list {
+  width: 75vw;
+  font-size: 1em;
+  padding-left: 2.5em;
+}
+
+.dessert-instructions-list li {
+  width: 90%;
+  font-size: 0.7em;
+}
+}
+
+@media screen and (max-width: 415px) {
+.card-dessert {
+  margin-top: 1em;
+  border: #D2AA74 1px solid;
+  border-radius: 20px;
+  width: 80vw;
+  padding: 0.5em;
+}
+.main-picture-dessert {
+  width: 8em; 
+  height: 8em; 
+  margin-bottom: 0;
+}
+.card-dessert h3 {
+  font-size: 1.1em;
+  height: fit-content;
+  padding: 1.5em;
+  margin-bottom: 0;
+}
+
+.card-dessert h2 {
+  margin-top: 1em;
+  font-size: 2.5em;
+}
+.dessert-recipe-stats {
+  width: 70vw;
+  font-size: 0.7em;
+  margin-bottom: 0em;
+}
+
+.card-dessert-readLess{
+  font-size: 0.7em;
+  width: 70vw;
+  height: 3.5em;
+  text-align: justify;
+  margin-top: 2em;
+  margin-bottom: 2em;
+}
+
+.card-dessert button {
+  padding: 0.6em;
+  border-radius: 20px;
+  text-decoration: none;
+  display: inline-block;
+  margin-bottom: 3em;
+  margin-left: 1em;
+  width: 22vw;
+  font-size: 0.60em;
+}
+.card-dessert-readMore {
+  font-size: 0.7em;
+  width: 65vw;
+}
+
+.dessert-ingredients-list {
+  font-size: 0.7em;
+}
+
+.dessert-ingredients-list li {
+  margin-left: 2.5em;
+}
+
+.dessert-ingredients-list img {
+  width: 3em;
+  height: 3em;
+  margin-bottom: 1em;
+}
+
+.dessert-ingredients-subtitle {
+  font-size: 0.9em;
+  width: 43%;
+}
+
+.dessert-ingredients-items-number {
+  font-size: 0.9em;
+  width: 43%;
+}
+
+.dessert-ingredients-list {
+  width: 80vw;
+}
+
+.dessert-instructions-list {
+  width: 65vw;
+  font-size: 1em;
+  padding-left: 2.5em;
+}
+
+.dessert-instructions-list li {
+  width: 90%;
+  font-size: 0.7em;
+}
+}
+
+@media screen and (max-width: 360px) {
+  .card-dessert {
+    margin-top: 1em;
+    border: #D2AA74 1px solid;
     border-radius: 20px;
-    text-decoration: none;
-    display: inline-block;
-    margin-bottom: 3em;
-    margin-left: 1em;
-    width: 22vw;
-    font-size: 0.55em;
-  }
-  .card-dessert-readMore {
-    font-size: 0.7em;
-    width: 65vw;
-  }
+    width: fit-content;
+    padding: 0.5em;
+}
+.main-picture-dessert {
+  width: 6.5em; 
+  height: 6.5em; 
+}
 
-  .dessert-ingredients-list {
-    font-size: 0.7em;
-  }
+.card-dessert h3 {
+  font-size: 1em;
+  height: fit-content;
+  padding-bottom: 1em;
+  padding-top: 0em;
+  margin-bottom: 0em;
+}
 
-  .dessert-ingredients-list li {
-    margin-left: 2em;
-    width: 65vw;
-  }
+.card-dessert h2 {
+  margin-top: 1em;
+  font-size: 2em;
+}
+.dessert-recipe-stats {
+  width: 70vw;
+  font-size: 0.6em;
+  padding: 0.5em;
+  margin-bottom: 0;
+}
 
-  .dessert-ingredients-list img {
-    width: 2.5em;
-    height: 2.5em;
-    margin-bottom: 1em;
-  }
+.card-dessert-readLess{
+  font-size: 0.7em;
+  width: fit-content;
+  height: 3.5em;
+  text-align: justify;
+  margin-top: 2em;
+  margin-bottom: 2em;
+}
 
-  .dessert-ingredients-subtitle {
-    font-size: 0.85em;
-    width: 41%;
-  }
+.card-dessert-readMore {
+  padding-top: 1em;
+  font-size: 0.7em;
+  width: 65vw;
+}
 
-  .dessert-ingredients-items-number {
-    font-size: 0.85em;
-    width: 41%;
-  }
+.card-dessert button {
+  padding: 0.6em;
+  border-radius: 20px;
+  text-decoration: none;
+  display: inline-block;
+  margin-bottom: 3em;
+  margin-left: 1em;
+  width: 23vw;
+  font-size: 0.55em;
+}
 
-  .dessert-ingredients-list {
-    width: 80vw;
-  }
+.dessert-ingredients-list {
+  font-size: 0.7em;
+}
 
-  .dessert-instructions-list {
-    width: 65vw;
-    font-size: 0.7em;
-    padding-left: 2.5em;
-  }
-  
-  .dessert-instructions-list li {
-    width: 90%;
-    font-size: 1em;
-  }
-  }
+.dessert-ingredients-list li {
+  margin-left: 2em;
+}
+
+.dessert-ingredients-list img {
+  width: 2.5em;
+  height: 2.5em;
+  margin-bottom: 1em;
+}
+
+.dessert-ingredients-subtitle {
+  font-size: 0.9em;
+  width: 35%;
+}
+
+.dessert-ingredients-items-number {
+  font-size: 0.9em;
+  width: 35%;
+}
+
+.dessert-ingredients-list {
+  width: 80vw;
+}
+
+.dessert-instructions-list {
+  width: 65vw;
+  font-size: 1em;
+  padding-left: 2.5em;
+}
+
+.dessert-instructions-list li {
+  width: 90%;
+  font-size: 0.7em;
+}
+}
+
 @media screen and (max-width: 320px) {
   .card-dessert {
       margin-top: 1em;
       border: #D2AA74 1px solid;
       border-radius: 20px;
-      width: 70vw;
+      width: fit-content;
       padding: 0.5em;
   }
   .main-picture-dessert {
@@ -437,24 +850,34 @@ input {
   }
 
   .card-dessert h3 {
-    font-size: 1em;
+    font-size: 0.8em;
     height: fit-content;
-    margin-bottom: 1em;
+    margin-bottom: 0;
   }
 
   .card-dessert h2 {
+    margin-top: 1em;
     font-size: 2em;
   }
   .dessert-recipe-stats {
-    width: 60vw;
-    font-size: 0.5em;
+    width: 70vw;
+    font-size: 0.6em;
+    margin-bottom: 0;
   }
 
   .card-dessert-readLess{
-    font-size: 0.5em;
-    width: 60vw;
-    height: 3.5em;
+    font-size: 0.6em;
+    width: fit-content;
+    height: 3.3em;
     text-align: justify;
+    padding: 1.5em;
+    margin-top: 2em;
+    margin-bottom: 2em;
+  }
+
+  .card-dessert-readMore {
+    font-size: 0.6em;
+    width: 65vw;
   }
 
   .card-dessert button {
@@ -464,13 +887,10 @@ input {
     display: inline-block;
     margin-bottom: 3em;
     margin-left: 1em;
-    width: 20vw;
+    width: 23vw;
     font-size: 0.45em;
   }
-  .card-dessert-readMore {
-    font-size: 0.5em;
-    width: 60vw;
-  }
+
 
   .dessert-ingredients-list {
     font-size: 0.6em;
@@ -481,8 +901,8 @@ input {
   }
 
   .dessert-ingredients-list img {
-    width: 2em;
-    height: 2em;
+    width: 3em;
+    height: 3em;
     margin-bottom: 1em;
   }
 
@@ -501,8 +921,8 @@ input {
   }
 
   .dessert-instructions-list {
-    width: 60vw;
-    font-size: 0.7em;
+    width: 65vw;
+    font-size: 0.75em;
     padding-left: 2.5em;
   }
   
@@ -511,3 +931,5 @@ input {
     font-size: 0.7em;
   }
 }
+
+

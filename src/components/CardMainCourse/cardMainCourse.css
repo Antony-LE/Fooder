@@ -234,202 +234,617 @@ input {
   color: #D2AA74;
 }
 
- /* responsive settings */
+/* responsive settings */
 
- @media screen and (max-width: 1024px) {
+@media screen and (max-width: 1920px) {
+  .card-main-course {
+    margin-right: 1em;
+    margin-top: 1em;
+    border: #D2AA74 1px solid;
+    border-radius: 20px;
+    width: 23vw;
+    padding: 0.5em;
 }
+.main-picture-main-course {
+  width: 9em; 
+  height: 9em; 
+  margin-bottom: 0;
+}
+
+.card-main-course h3 {
+  font-size: 1.5em;
+  height: fit-content;
+  margin-bottom: 0;
+  padding: 1em 0em;
+}
+
+.card-main-course h2 {
+  margin-top: 1em;
+  font-size: 2.5em;
+  margin-bottom: 0.5em;
+}
+.main-course-recipe-stats {
+  width: fit-content;
+  font-size: 0.8em;
+  margin-bottom: 0.5em;
+  padding: 1em;
+}
+
+.card-main-course-readLess{
+  font-size: 0.8em;
+  width:22vw;
+  height: 3.4em;
+  margin-top: 2em;
+  margin-bottom: 2em;
+}
+
+.card-main-course-readMore {
+  margin-top: 1em;
+  font-size: 0.8em;
+  width: 20vw;
+  padding: 0;
+}
+
+.card-main-course button {
+  padding: 0.6em;
+  border-radius: 20px;
+  text-decoration: none;
+  display: inline-block;
+  margin-bottom: 3em;
+  margin-left: 1em;
+  width: 6.5vw;
+  font-size: 0.45em;
+}
+
+.main-course-ingredients-list {
+  font-size: 0.8em;
+  width: 20vw;
+}
+
+.main-course-ingredients-list li {
+  margin-left: 2em;
+  width: 20vw;
+}
+
+.main-course-ingredients-list img {
+  width: 2em;
+  height: 2em;
+  margin-bottom: 1em;
+}
+
+.main-course-ingredients-subtitle {
+  font-size: 0.8em;
+  width: 35%;
+}
+
+.main-course-ingredients-items-number {
+  font-size: 0.8em;
+  width: 35%;
+}
+
+.main-course-ingredients-list {
+  font-size: 0.7em;
+  margin-left: 2em;
+  margin-right: 0;
+  margin-left: 0;
+}
+
+.main-course-instructions-list {
+  width: 20vw;
+  font-size: 1.1em;
+  padding-left: 1.5em;
+}
+
+.main-course-instructions-list li {
+  width: 90%;
+  font-size: 0.7em;
+}
+}
+
+@media screen and (max-width: 1080px) {
+  .card-main-course {
+    margin-right: 2em;
+    margin-top: 1em;
+    border: #D2AA74 1px solid;
+    border-radius: 20px;
+    width: 40vw;
+    padding: 0.5em;
+}
+.main-picture-main-course {
+  width: 9em; 
+  height: 9em; 
+  margin-bottom: 0;
+}
+
+.card-main-course h3 {
+  font-size: 1.5em;
+  height: fit-content;
+  margin-bottom: 0;
+  padding: 1em 0em;
+}
+
+.card-main-course h2 {
+  margin-top: 1em;
+  font-size: 2.5em;
+  margin-bottom: 0.5em;
+}
+.main-course-recipe-stats {
+  width: fit-content;
+  font-size: 0.8em;
+  margin-bottom: 0.5em;
+  padding: 1em;
+}
+
+.card-main-course-readLess{
+  font-size: 0.8em;
+  width:35vw;
+  height: 3.4em;
+  margin-top: 2em;
+  margin-bottom: 2em;
+}
+
+.card-main-course-readMore {
+  margin-top: 1em;
+  font-size: 0.8em;
+  width: 35vw;
+  padding: 0;
+}
+
+.card-main-course button {
+  padding: 0.6em;
+  border-radius: 20px;
+  text-decoration: none;
+  display: inline-block;
+  margin-bottom: 3em;
+  margin-left: 1em;
+  width: 10vw;
+  font-size: 0.6em;
+}
+
+.main-course-ingredients-list {
+  font-size: 0.8em;
+  width: 50vw;
+}
+
+.main-course-ingredients-list li {
+  margin-left: 5em;
+  width: 30vw;
+}
+
+.main-course-ingredients-list img {
+  width: 2.5em;
+  height: 2.5em;
+  margin-bottom: 1em;
+}
+
+.main-course-ingredients-subtitle {
+  font-size: 1em;
+  width: 30%;
+}
+
+.main-course-ingredients-items-number {
+  font-size: 1em;
+  width: 30%;
+}
+
+.main-course-ingredients-list {
+  margin-left: 2em;
+  margin-right: 0;
+  margin-left: 0;
+}
+
+.main-course-instructions-list {
+  width: 30vw;
+  font-size: 1.1em;
+  padding-left: 2.5em;
+}
+
+.main-course-instructions-list li {
+  width: 90%;
+  font-size: 0.7em;
+}
+}
+
 
 @media screen and (max-width: 768px) {
-}
-
-
-@media screen and (max-width: 430px) {
-}
-
-@media screen and (max-width: 415px) {
   .card-main-course {
     margin-top: 1em;
     border: #D2AA74 1px solid;
     border-radius: 20px;
-    width: 80vw;
+    width: fit-content;
     padding: 0.5em;
-  }
-  .main-picture-main-course {
-    width: 8em; 
-    height: 8em; 
-  }
-  .card-main-course h3 {
-    font-size: 1.5em;
-    height: fit-content;
-    margin-bottom: 1em;
-  }
+}
+.main-picture-main-course {
+  width: 9em; 
+  height: 9em; 
+  margin-bottom: 0;
+}
 
-  .card-main-course h2 {
-    font-size: 2.5em;
-  }
-  .main-course-recipe-stats {
-    width: 65vw;
-    font-size: 0.65em;
-  }
+.card-main-course h3 {
+  font-size: 1.5em;
+  height: fit-content;
+  margin-bottom: 0;
+  padding: 1em 0em;
+}
 
-  .card-main-course-readLess{
-    font-size: 0.7em;
-    width: 65vw;
-    height: 3.5em;
-    text-align: justify;
-  }
+.card-main-course h2 {
+  margin-top: 1em;
+  font-size: 2.5em;
+  margin-bottom: 0.5em;
+}
+.main-course-recipe-stats {
+  width: fit-content;
+  font-size: 0.8em;
+  margin-bottom: 0.5em;
+  padding: 1em;
+}
 
-  .card-main-course button {
-    padding: 0.6em;
+.card-main-course-readLess{
+  font-size: 0.8em;
+  width:70vw;
+  height: 3.4em;
+  margin-top: 2em;
+  margin-bottom: 2em;
+}
+
+.card-main-course-readMore {
+  margin-top: 1em;
+  font-size: 0.8em;
+  width: 70vw;
+  padding: 0;
+}
+
+.card-main-course button {
+  padding: 0.6em;
+  border-radius: 20px;
+  text-decoration: none;
+  display: inline-block;
+  margin-bottom: 3em;
+  margin-left: 1em;
+  width: 22vw;
+  font-size: 0.6em;
+}
+
+.main-course-ingredients-list {
+  font-size: 0.8em;
+  width: 50vw;
+}
+
+.main-course-ingredients-list li {
+  margin-left: 5em;
+}
+
+.main-course-ingredients-list img {
+  width: 2em;
+  height: 2em;
+  margin-bottom: 1em;
+}
+
+.main-course-ingredients-subtitle {
+  font-size: 1em;
+  width: 30%;
+}
+
+.main-course-ingredients-items-number {
+  font-size: 1em;
+  width: 30%;
+}
+
+.main-course-ingredients-list {
+  margin-left: 2em;
+  margin-right: 0;
+  margin-left: 0;
+}
+
+.main-course-instructions-list {
+  width: 75vw;
+  font-size: 1em;
+  padding-left: 2.5em;
+}
+
+.main-course-instructions-list li {
+  width: 90%;
+  font-size: 0.7em;
+}
+}
+
+@media screen and (max-width: 430px) {
+  .card-main-course {
+    margin-top: 1em;
+    border: #D2AA74 1px solid;
     border-radius: 20px;
-    text-decoration: none;
-    display: inline-block;
-    margin-bottom: 3em;
-    margin-left: 1em;
-    width: 22vw;
-    font-size: 0.60em;
-  }
-  .card-main-course-readMore {
-    font-size: 0.7em;
-    width: 65vw;
-  }
+    width: fit-content;
+    padding: 0.5em;
+}
+.main-picture-main-course {
+  width: 9em; 
+  height: 9em; 
+  margin-bottom: 0;
+}
 
-  .main-course-ingredients-list {
-    font-size: 0.7em;
-  }
+.card-main-course h3 {
+  font-size: 1.2em;
+  height: fit-content;
+  margin-bottom: 0;
+  padding: 1em 0em;
+}
 
-  .main-course-ingredients-list li {
-    margin-left: 2.5em;
-  }
+.card-main-course h2 {
+  margin-top: 1em;
+  font-size: 2.5em;
+  margin-bottom: 0.5em;
+}
+.main-course-recipe-stats {
+  width: 70vw;
+  font-size: 0.75em;
+  margin-bottom: 0.5em;
+  padding: 1em;
+}
 
-  .main-course-ingredients-list img {
-    width: 3em;
-    height: 3em;
-    margin-bottom: 1em;
-  }
+.card-main-course-readLess{
+  font-size: 0.8em;
+  width: 70vw;
+  height: 3.4em;
+  margin-top: 2em;
+  margin-bottom: 2em;
+}
 
-  .main-course-ingredients-subtitle {
-    font-size: 0.9em;
-    width: 43%;
-  }
+.card-main-course-readMore {
+  margin-top: 1em;
+  font-size: 0.8em;
+  width: 70vw;
+}
 
-  .main-course-ingredients-items-number {
-    font-size: 0.9em;
-    width: 43%;
-  }
+.card-main-course button {
+  padding: 0.6em;
+  border-radius: 20px;
+  text-decoration: none;
+  display: inline-block;
+  margin-bottom: 3em;
+  margin-left: 1em;
+  width: 23vw;
+  font-size: 0.65em;
+}
 
-  .main-course-ingredients-list {
-    width: 80vw;
-  }
+.main-course-ingredients-list {
+  font-size: 0.8em;
+}
 
-  .main-course-instructions-list {
-    width: 65vw;
-    font-size: 1em;
-    padding-left: 2.5em;
-  }
-  
-  .main-course-instructions-list li {
-    width: 90%;
-    font-size: 0.7em;
-  }
-  }
+.main-course-ingredients-list li {
+  margin-left: 3em;
+}
 
-  @media screen and (max-width: 360px) {
-    .card-main-course {
-      margin-top: 1em;
-      border: #D2AA74 1px solid;
-      border-radius: 20px;
-      width: 75vw;
-      padding: 0.5em;
-  }
-  .main-picture-main-course {
-    width: 7em; 
-    height: 7em; 
-  }
+.main-course-ingredients-list img {
+  width: 3.5em;
+  height: 3.5em;
+  margin-bottom: 1em;
+}
 
-  .card-main-course h3 {
-    font-size: 1.5em;
-    height: fit-content;
-    margin-bottom: 1em;
-  }
+.main-course-ingredients-subtitle {
+  font-size: 1em;
+  width: 35%;
+}
 
-  .card-main-course h2 {
-    font-size: 2.5em;
-  }
-  .main-course-recipe-stats {
-    width: 65vw;
-    font-size: 0.60em;
-  }
+.main-course-ingredients-items-number {
+  font-size: 1em;
+  width: 35%;
+}
 
-  .card-main-course-readLess{
-    font-size: 0.7em;
-    width: 65vw;
-    height: 3.5em;
-    text-align: justify;
-  }
+.main-course-ingredients-list {
+  width: 80vw;
+}
 
-  .card-main-course button {
-    padding: 0.6em;
+.main-course-instructions-list {
+  width: 75vw;
+  font-size: 1em;
+  padding-left: 2.5em;
+}
+
+.main-course-instructions-list li {
+  width: 90%;
+  font-size: 0.7em;
+}
+}
+
+@media screen and (max-width: 415px) {
+.card-main-course {
+  margin-top: 1em;
+  border: #D2AA74 1px solid;
+  border-radius: 20px;
+  width: 80vw;
+  padding: 0.5em;
+}
+.main-picture-main-course {
+  width: 8em; 
+  height: 8em; 
+  margin-bottom: 0;
+}
+.card-main-course h3 {
+  font-size: 1.1em;
+  height: fit-content;
+  padding: 1.5em;
+  margin-bottom: 0;
+}
+
+.card-main-course h2 {
+  margin-top: 1em;
+  font-size: 2.5em;
+}
+.main-course-recipe-stats {
+  width: 70vw;
+  font-size: 0.7em;
+  margin-bottom: 0em;
+}
+
+.card-main-course-readLess{
+  font-size: 0.7em;
+  width: 70vw;
+  height: 3.5em;
+  text-align: justify;
+  margin-top: 2em;
+  margin-bottom: 2em;
+
+}
+
+.card-main-course button {
+  padding: 0.6em;
+  border-radius: 20px;
+  text-decoration: none;
+  display: inline-block;
+  margin-bottom: 3em;
+  margin-left: 1em;
+  width: 22vw;
+  font-size: 0.60em;
+}
+.card-main-course-readMore {
+  font-size: 0.7em;
+  width: 65vw;
+}
+
+.main-course-ingredients-list {
+  font-size: 0.7em;
+}
+
+.main-course-ingredients-list li {
+  margin-left: 2.5em;
+}
+
+.main-course-ingredients-list img {
+  width: 3em;
+  height: 3em;
+  margin-bottom: 1em;
+}
+
+.main-course-ingredients-subtitle {
+  font-size: 0.9em;
+  width: 43%;
+}
+
+.main-course-ingredients-items-number {
+  font-size: 0.9em;
+  width: 43%;
+}
+
+.main-course-ingredients-list {
+  width: 80vw;
+}
+
+.main-course-instructions-list {
+  width: 65vw;
+  font-size: 1em;
+  padding-left: 2.5em;
+}
+
+.main-course-instructions-list li {
+  width: 90%;
+  font-size: 0.7em;
+}
+}
+
+@media screen and (max-width: 360px) {
+  .card-main-course {
+    margin-top: 1em;
+    border: #D2AA74 1px solid;
     border-radius: 20px;
-    text-decoration: none;
-    display: inline-block;
-    margin-bottom: 3em;
-    margin-left: 1em;
-    width: 22vw;
-    font-size: 0.55em;
-  }
-  .card-main-course-readMore {
-    font-size: 0.7em;
-    width: 65vw;
-  }
+    width: fit-content;
+    padding: 0.5em;
+}
+.main-picture-main-course {
+  width: 6.5em; 
+  height: 6.5em; 
+}
 
-  .main-course-ingredients-list {
-    font-size: 0.7em;
-  }
+.card-main-course h3 {
+  font-size: 1em;
+  height: fit-content;
+  padding-bottom: 1em;
+  padding-top: 0em;
+  margin-bottom: 0em;
+}
 
-  .main-course-ingredients-list li {
-    margin-left: 2em;
-    width: 65vw;
-  }
+.card-main-course h2 {
+  margin-top: 1em;
+  font-size: 2em;
+}
+.main-course-recipe-stats {
+  width: 70vw;
+  font-size: 0.6em;
+  padding: 0.5em;
+  margin-bottom: 0;
+}
 
-  .main-course-ingredients-list img {
-    width: 2.5em;
-    height: 2.5em;
-    margin-bottom: 1em;
-  }
+.card-main-course-readLess{
+  font-size: 0.7em;
+  width: fit-content;
+  height: 3.5em;
+  text-align: justify;
+  margin-top: 2em;
+  margin-bottom: 2em;
+}
 
-  .main-course-ingredients-subtitle {
-    font-size: 0.85em;
-    width: 41%;
-  }
+.card-main-course-readMore {
+  padding-top: 1em;
+  font-size: 0.7em;
+  width: 65vw;
+}
 
-  .main-course-ingredients-items-number {
-    font-size: 0.85em;
-    width: 41%;
-  }
+.card-main-course button {
+  padding: 0.6em;
+  border-radius: 20px;
+  text-decoration: none;
+  display: inline-block;
+  margin-bottom: 3em;
+  margin-left: 1em;
+  width: 23vw;
+  font-size: 0.55em;
+}
 
-  .main-course-ingredients-list {
-    width: 80vw;
-  }
+.main-course-ingredients-list {
+  font-size: 0.7em;
+}
 
-  .main-course-instructions-list {
-    width: 65vw;
-    font-size: 0.7em;
-    padding-left: 2.5em;
-  }
-  
-  .main-course-instructions-list li {
-    width: 90%;
-    font-size: 1em;
-  }
-  }
+.main-course-ingredients-list li {
+  margin-left: 2em;
+}
+
+.main-course-ingredients-list img {
+  width: 2.5em;
+  height: 2.5em;
+  margin-bottom: 1em;
+}
+
+.main-course-ingredients-subtitle {
+  font-size: 0.9em;
+  width: 35%;
+}
+
+.main-course-ingredients-items-number {
+  font-size: 0.9em;
+  width: 35%;
+}
+
+.main-course-ingredients-list {
+  width: 80vw;
+}
+
+.main-course-instructions-list {
+  width: 65vw;
+  font-size: 1em;
+  padding-left: 2.5em;
+}
+
+.main-course-instructions-list li {
+  width: 90%;
+  font-size: 0.7em;
+}
+}
 
 @media screen and (max-width: 320px) {
   .card-main-course {
       margin-top: 1em;
       border: #D2AA74 1px solid;
       border-radius: 20px;
-      width: 70vw;
+      width: fit-content;
       padding: 0.5em;
   }
   .main-picture-main-course {
@@ -438,24 +853,34 @@ input {
   }
 
   .card-main-course h3 {
-    font-size: 1em;
+    font-size: 0.8em;
     height: fit-content;
-    margin-bottom: 1em;
+    margin-bottom: 0;
   }
 
   .card-main-course h2 {
+    margin-top: 1em;
     font-size: 2em;
   }
   .main-course-recipe-stats {
-    width: 60vw;
-    font-size: 0.5em;
+    width: 70vw;
+    font-size: 0.6em;
+    margin-bottom: 0;
   }
 
   .card-main-course-readLess{
-    font-size: 0.5em;
-    width: 60vw;
-    height: 3.5em;
+    font-size: 0.6em;
+    width: fit-content;
+    height: 3.3em;
     text-align: justify;
+    padding: 1.5em;
+    margin-top: 2em;
+    margin-bottom: 2em;
+  }
+
+  .card-main-course-readMore {
+    font-size: 0.6em;
+    width: 65vw;
   }
 
   .card-main-course button {
@@ -465,13 +890,10 @@ input {
     display: inline-block;
     margin-bottom: 3em;
     margin-left: 1em;
-    width: 20vw;
+    width: 23vw;
     font-size: 0.45em;
   }
-  .card-main-course-readMore {
-    font-size: 0.5em;
-    width: 60vw;
-  }
+
 
   .main-course-ingredients-list {
     font-size: 0.6em;
@@ -482,8 +904,8 @@ input {
   }
 
   .main-course-ingredients-list img {
-    width: 2em;
-    height: 2em;
+    width: 3em;
+    height: 3em;
     margin-bottom: 1em;
   }
 
@@ -502,8 +924,8 @@ input {
   }
 
   .main-course-instructions-list {
-    width: 60vw;
-    font-size: 0.7em;
+    width: 65vw;
+    font-size: 0.75em;
     padding-left: 2.5em;
   }
   

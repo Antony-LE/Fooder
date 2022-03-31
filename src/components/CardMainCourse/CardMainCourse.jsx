@@ -102,7 +102,6 @@ function CardMainCourse({
               </li>
             ))}
           </ul>
-
         </>
       ) : ''}
       {/* Gestion du bouton instructions */}

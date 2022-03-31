@@ -83,11 +83,10 @@
       margin-top: 1em;
      }
   
-     .cardLists-container {
+  .cardLists-container {
     display: flex;
     flex-wrap: wrap;
-    flex-direction: column;
-    justify-content: center;
+    justify-content: space-around;
     }
   }
 
@@ -112,8 +111,7 @@
    .cardLists-container {
     display: flex;
     flex-wrap: wrap;
-    margin-left: auto;
-    margin-right: auto;
+    justify-content: space-evenly;
   }
 }
 
@@ -138,7 +136,8 @@
    .cardLists-container {
     display: flex;
     flex-wrap: wrap;
-    width: fit-content;
+    flex-direction: column;
+    justify-content: center;
   }
 }
 

@@ -234,201 +234,613 @@ input {
   color: #D2AA74;
 }
 
- /* responsive settings */
+@media screen and (max-width: 1920px) {
+  .card-drink {
+    margin-right: 1em;
+    margin-top: 1em;
+    border: #D2AA74 1px solid;
+    border-radius: 20px;
+    width: 23vw;
+    padding: 0.5em;
+}
+.main-picture-drink {
+  width: 9em; 
+  height: 9em; 
+  margin-bottom: 0;
+}
 
- @media screen and (max-width: 1024px) {
+.card-drink h3 {
+  font-size: 1.5em;
+  height: fit-content;
+  margin-bottom: 0;
+  padding: 1em 0em;
+}
+
+.card-drink h2 {
+  margin-top: 1em;
+  font-size: 2.5em;
+  margin-bottom: 0.5em;
+}
+.drink-recipe-stats {
+  width: fit-content;
+  font-size: 0.8em;
+  margin-bottom: 0.5em;
+  padding: 1em;
+}
+
+.card-drink-readLess{
+  font-size: 0.8em;
+  width:22vw;
+  height: 3.4em;
+  margin-top: 2em;
+  margin-bottom: 2em;
+}
+
+.card-drink-readMore {
+  margin-top: 1em;
+  font-size: 0.8em;
+  width: 20vw;
+  padding: 0;
+}
+
+.card-drink button {
+  padding: 0.6em;
+  border-radius: 20px;
+  text-decoration: none;
+  display: inline-block;
+  margin-bottom: 3em;
+  margin-left: 1em;
+  width: 6.5vw;
+  font-size: 0.45em;
+}
+
+.drink-ingredients-list {
+  font-size: 0.8em;
+  width: 20vw;
+}
+
+.drink-ingredients-list li {
+  margin-left: 2em;
+  width: 20vw;
+}
+
+.drink-ingredients-list img {
+  width: 2em;
+  height: 2em;
+  margin-bottom: 1em;
+}
+
+.drink-ingredients-subtitle {
+  font-size: 0.8em;
+  width: 35%;
+}
+
+.drink-ingredients-items-number {
+  font-size: 0.8em;
+  width: 35%;
+}
+
+.drink-ingredients-list {
+  font-size: 0.7em;
+  margin-left: 2em;
+  margin-right: 0;
+  margin-left: 0;
+}
+
+.drink-instructions-list {
+  width: 20vw;
+  font-size: 1.1em;
+  padding-left: 1.5em;
+}
+
+.drink-instructions-list li {
+  width: 90%;
+  font-size: 0.7em;
+}
+}
+
+@media screen and (max-width: 1080px) {
+  .card-drink {
+    margin-right: 2em;
+    margin-top: 1em;
+    border: #D2AA74 1px solid;
+    border-radius: 20px;
+    width: 40vw;
+    padding: 0.5em;
+}
+.main-picture-drink {
+  width: 9em; 
+  height: 9em; 
+  margin-bottom: 0;
+}
+
+.card-drink h3 {
+  font-size: 1.5em;
+  height: fit-content;
+  margin-bottom: 0;
+  padding: 1em 0em;
+}
+
+.card-drink h2 {
+  margin-top: 1em;
+  font-size: 2.5em;
+  margin-bottom: 0.5em;
+}
+.drink-recipe-stats {
+  width: fit-content;
+  font-size: 0.8em;
+  margin-bottom: 0.5em;
+  padding: 1em;
+}
+
+.card-drink-readLess{
+  font-size: 0.8em;
+  width:35vw;
+  height: 3.4em;
+  margin-top: 2em;
+  margin-bottom: 2em;
+}
+
+.card-drink-readMore {
+  margin-top: 1em;
+  font-size: 0.8em;
+  width: 35vw;
+  padding: 0;
+}
+
+.card-drink button {
+  padding: 0.6em;
+  border-radius: 20px;
+  text-decoration: none;
+  display: inline-block;
+  margin-bottom: 3em;
+  margin-left: 1em;
+  width: 10vw;
+  font-size: 0.6em;
+}
+
+.drink-ingredients-list {
+  font-size: 0.8em;
+  width: 50vw;
+}
+
+.drink-ingredients-list li {
+  margin-left: 5em;
+  width: 30vw;
+}
+
+.drink-ingredients-list img {
+  width: 2.5em;
+  height: 2.5em;
+  margin-bottom: 1em;
+}
+
+.drink-ingredients-subtitle {
+  font-size: 1em;
+  width: 30%;
+}
+
+.drink-ingredients-items-number {
+  font-size: 1em;
+  width: 30%;
+}
+
+.drink-ingredients-list {
+  margin-left: 2em;
+  margin-right: 0;
+  margin-left: 0;
+}
+
+.drink-instructions-list {
+  width: 30vw;
+  font-size: 1.1em;
+  padding-left: 2.5em;
+}
+
+.drink-instructions-list li {
+  width: 90%;
+  font-size: 0.7em;
+}
 }
 
 @media screen and (max-width: 768px) {
-}
-
-@media screen and (max-width: 430px) {
-}
-
-@media screen and (max-width: 415px) {
   .card-drink {
     margin-top: 1em;
     border: #D2AA74 1px solid;
     border-radius: 20px;
-    width: 80vw;
+    width: fit-content;
     padding: 0.5em;
-  }
-  .main-picture-drink {
-    width: 8em; 
-    height: 8em; 
-  }
-  .card-drink h3 {
-    font-size: 1.5em;
-    height: fit-content;
-    margin-bottom: 1em;
-  }
+}
+.main-picture-drink {
+  width: 9em; 
+  height: 9em; 
+  margin-bottom: 0;
+}
 
-  .card-drink h2 {
-    font-size: 2.5em;
-  }
-  .drink-recipe-stats {
-    width: 65vw;
-    font-size: 0.7em;
-  }
+.card-drink h3 {
+  font-size: 1.5em;
+  height: fit-content;
+  margin-bottom: 0;
+  padding: 1em 0em;
+}
 
-  .card-drink-readLess{
-    font-size: 0.7em;
-    width: 65vw;
-    height: 3.5em;
-    text-align: justify;
-  }
+.card-drink h2 {
+  margin-top: 1em;
+  font-size: 2.5em;
+  margin-bottom: 0.5em;
+}
+.drink-recipe-stats {
+  width: fit-content;
+  font-size: 0.8em;
+  margin-bottom: 0.5em;
+  padding: 1em;
+}
 
-  .card-drink button {
-    padding: 0.6em;
+.card-drink-readLess{
+  font-size: 0.8em;
+  width:70vw;
+  height: 3.4em;
+  margin-top: 2em;
+  margin-bottom: 2em;
+}
+
+.card-drink-readMore {
+  margin-top: 1em;
+  font-size: 0.8em;
+  width: 70vw;
+  padding: 0;
+}
+
+.card-drink button {
+  padding: 0.6em;
+  border-radius: 20px;
+  text-decoration: none;
+  display: inline-block;
+  margin-bottom: 3em;
+  margin-left: 1em;
+  width: 22vw;
+  font-size: 0.6em;
+}
+
+.drink-ingredients-list {
+  font-size: 0.8em;
+  width: 50vw;
+}
+
+.drink-ingredients-list li {
+  margin-left: 5em;
+}
+
+.drink-ingredients-list img {
+  width: 2em;
+  height: 2em;
+  margin-bottom: 1em;
+}
+
+.drink-ingredients-subtitle {
+  font-size: 1em;
+  width: 30%;
+}
+
+.drink-ingredients-items-number {
+  font-size: 1em;
+  width: 30%;
+}
+
+.drink-ingredients-list {
+  margin-left: 2em;
+  margin-right: 0;
+  margin-left: 0;
+}
+
+.drink-instructions-list {
+  width: 75vw;
+  font-size: 1em;
+  padding-left: 2.5em;
+}
+
+.drink-instructions-list li {
+  width: 90%;
+  font-size: 0.7em;
+}
+}
+
+@media screen and (max-width: 430px) {
+  .card-drink {
+    margin-top: 1em;
+    border: #D2AA74 1px solid;
     border-radius: 20px;
-    text-decoration: none;
-    display: inline-block;
-    margin-bottom: 3em;
-    margin-left: 1em;
-    width: 22vw;
-    font-size: 0.60em;
-  }
-  .card-drink-readMore {
-    font-size: 0.7em;
-    width: 65vw;
-  }
+    width: fit-content;
+    padding: 0.5em;
+}
+.main-picture-drink {
+  width: 9em; 
+  height: 9em; 
+  margin-bottom: 0;
+}
 
-  .drink-ingredients-list {
-    font-size: 0.7em;
-  }
+.card-drink h3 {
+  font-size: 1.2em;
+  height: fit-content;
+  margin-bottom: 0;
+  padding: 1em 0em;
+}
 
-  .drink-ingredients-list li {
-    margin-left: 2.5em;
-  }
+.card-drink h2 {
+  margin-top: 1em;
+  font-size: 2.5em;
+  margin-bottom: 0.5em;
+}
+.drink-recipe-stats {
+  width: 70vw;
+  font-size: 0.75em;
+  margin-bottom: 0.5em;
+  padding: 1em;
+}
 
-  .drink-ingredients-list img {
-    width: 3em;
-    height: 3em;
-    margin-bottom: 1em;
-  }
+.card-drink-readLess{
+  font-size: 0.8em;
+  width: 70vw;
+  height: 3.4em;
+  margin-top: 2em;
+  margin-bottom: 2em;
+}
 
-  .drink-ingredients-subtitle {
-    font-size: 0.9em;
-    width: 43%;
-  }
+.card-drink-readMore {
+  margin-top: 1em;
+  font-size: 0.8em;
+  width: 70vw;
+}
 
-  .drink-ingredients-items-number {
-    font-size: 0.9em;
-    width: 43%;
-  }
+.card-drink button {
+  padding: 0.6em;
+  border-radius: 20px;
+  text-decoration: none;
+  display: inline-block;
+  margin-bottom: 3em;
+  margin-left: 1em;
+  width: 23vw;
+  font-size: 0.65em;
+}
 
-  .drink-ingredients-list {
-    width: 80vw;
-  }
+.drink-ingredients-list {
+  font-size: 0.8em;
+}
 
-  .drink-instructions-list {
-    width: 65vw;
-    font-size: 1em;
-    padding-left: 2.5em;
-  }
-  
-  .drink-instructions-list li {
-    width: 90%;
-    font-size: 0.7em;
-  }
-  }
+.drink-ingredients-list li {
+  margin-left: 3em;
+}
 
-  @media screen and (max-width: 360px) {
-    .card-drink {
-      margin-top: 1em;
-      border: #D2AA74 1px solid;
-      border-radius: 20px;
-      width: 75vw;
-      padding: 0.5em;
-  }
-  .main-picture-drink {
-    width: 7em; 
-    height: 7em; 
-  }
+.drink-ingredients-list img {
+  width: 3.5em;
+  height: 3.5em;
+  margin-bottom: 1em;
+}
 
-  .card-drink h3 {
-    font-size: 1.5em;
-    height: fit-content;
-    margin-bottom: 1em;
-  }
+.drink-ingredients-subtitle {
+  font-size: 1em;
+  width: 35%;
+}
 
-  .card-drink h2 {
-    font-size: 2.5em;
-  }
-  .drink-recipe-stats {
-    width: 65vw;
-    font-size: 0.60em;
-  }
+.drink-ingredients-items-number {
+  font-size: 1em;
+  width: 35%;
+}
 
-  .card-drink-readLess{
-    font-size: 0.7em;
-    width: 65vw;
-    height: 3.5em;
-    text-align: justify;
-  }
+.drink-ingredients-list {
+  width: 80vw;
+}
 
-  .card-drink button {
-    padding: 0.6em;
+.drink-instructions-list {
+  width: 75vw;
+  font-size: 1em;
+  padding-left: 2.5em;
+}
+
+.drink-instructions-list li {
+  width: 90%;
+  font-size: 0.7em;
+}
+}
+
+@media screen and (max-width: 415px) {
+.card-drink {
+  margin-top: 1em;
+  border: #D2AA74 1px solid;
+  border-radius: 20px;
+  width: 80vw;
+  padding: 0.5em;
+}
+.main-picture-drink {
+  width: 8em; 
+  height: 8em; 
+  margin-bottom: 0;
+}
+.card-drink h3 {
+  font-size: 1.1em;
+  height: fit-content;
+  padding: 1.5em;
+  margin-bottom: 0;
+}
+
+.card-drink h2 {
+  margin-top: 1em;
+  font-size: 2.5em;
+}
+.drink-recipe-stats {
+  width: 70vw;
+  font-size: 0.7em;
+  margin-bottom: 0em;
+}
+
+.card-drink-readLess{
+  font-size: 0.7em;
+  width: 70vw;
+  height: 3.5em;
+  text-align: justify;
+  margin-top: 2em;
+  margin-bottom: 2em;
+}
+
+.card-drink button {
+  padding: 0.6em;
+  border-radius: 20px;
+  text-decoration: none;
+  display: inline-block;
+  margin-bottom: 3em;
+  margin-left: 1em;
+  width: 22vw;
+  font-size: 0.60em;
+}
+.card-drink-readMore {
+  font-size: 0.7em;
+  width: 65vw;
+}
+
+.drink-ingredients-list {
+  font-size: 0.7em;
+}
+
+.drink-ingredients-list li {
+  margin-left: 2.5em;
+}
+
+.drink-ingredients-list img {
+  width: 3em;
+  height: 3em;
+  margin-bottom: 1em;
+}
+
+.drink-ingredients-subtitle {
+  font-size: 0.9em;
+  width: 43%;
+}
+
+.drink-ingredients-items-number {
+  font-size: 0.9em;
+  width: 43%;
+}
+
+.drink-ingredients-list {
+  width: 80vw;
+}
+
+.drink-instructions-list {
+  width: 65vw;
+  font-size: 1em;
+  padding-left: 2.5em;
+}
+
+.drink-instructions-list li {
+  width: 90%;
+  font-size: 0.7em;
+}
+}
+
+@media screen and (max-width: 360px) {
+  .card-drink {
+    margin-top: 1em;
+    border: #D2AA74 1px solid;
     border-radius: 20px;
-    text-decoration: none;
-    display: inline-block;
-    margin-bottom: 3em;
-    margin-left: 1em;
-    width: 22vw;
-    font-size: 0.55em;
-  }
-  .card-drink-readMore {
-    font-size: 0.7em;
-    width: 65vw;
-  }
+    width: fit-content;
+    padding: 0.5em;
+}
+.main-picture-drink {
+  width: 6.5em; 
+  height: 6.5em; 
+}
 
-  .drink-ingredients-list {
-    font-size: 0.7em;
-  }
+.card-drink h3 {
+  font-size: 1em;
+  height: fit-content;
+  padding-bottom: 1em;
+  padding-top: 0em;
+  margin-bottom: 0em;
+}
 
-  .drink-ingredients-list li {
-    margin-left: 2em;
-    width: 65vw;
-  }
+.card-drink h2 {
+  margin-top: 1em;
+  font-size: 2em;
+}
+.drink-recipe-stats {
+  width: 70vw;
+  font-size: 0.6em;
+  padding: 0.5em;
+  margin-bottom: 0;
+}
 
-  .drink-ingredients-list img {
-    width: 2.5em;
-    height: 2.5em;
-    margin-bottom: 1em;
-  }
+.card-drink-readLess{
+  font-size: 0.7em;
+  width: fit-content;
+  height: 3.5em;
+  text-align: justify;
+  margin-top: 2em;
+  margin-bottom: 2em;
+}
 
-  .drink-ingredients-subtitle {
-    font-size: 0.85em;
-    width: 41%;
-  }
+.card-drink-readMore {
+  padding-top: 1em;
+  font-size: 0.7em;
+  width: 65vw;
+}
 
-  .drink-ingredients-items-number {
-    font-size: 0.85em;
-    width: 41%;
-  }
+.card-drink button {
+  padding: 0.6em;
+  border-radius: 20px;
+  text-decoration: none;
+  display: inline-block;
+  margin-bottom: 3em;
+  margin-left: 1em;
+  width: 23vw;
+  font-size: 0.55em;
+}
 
-  .drink-ingredients-list {
-    width: 80vw;
-  }
+.drink-ingredients-list {
+  font-size: 0.7em;
+}
 
-  .drink-instructions-list {
-    width: 65vw;
-    font-size: 0.7em;
-    padding-left: 2.5em;
-  }
-  
-  .drink-instructions-list li {
-    width: 90%;
-    font-size: 1em;
-  }
-  }
+.drink-ingredients-list li {
+  margin-left: 2em;
+}
+
+.drink-ingredients-list img {
+  width: 2.5em;
+  height: 2.5em;
+  margin-bottom: 1em;
+}
+
+.drink-ingredients-subtitle {
+  font-size: 0.9em;
+  width: 35%;
+}
+
+.drink-ingredients-items-number {
+  font-size: 0.9em;
+  width: 35%;
+}
+
+.drink-ingredients-list {
+  width: 80vw;
+}
+
+.drink-instructions-list {
+  width: 65vw;
+  font-size: 1em;
+  padding-left: 2.5em;
+}
+
+.drink-instructions-list li {
+  width: 90%;
+  font-size: 0.7em;
+}
+}
 
 @media screen and (max-width: 320px) {
   .card-drink {
       margin-top: 1em;
       border: #D2AA74 1px solid;
       border-radius: 20px;
-      width: 70vw;
+      width: fit-content;
       padding: 0.5em;
   }
   .main-picture-drink {
@@ -437,24 +849,34 @@ input {
   }
 
   .card-drink h3 {
-    font-size: 1em;
+    font-size: 0.8em;
     height: fit-content;
-    margin-bottom: 1em;
+    margin-bottom: 0;
   }
 
   .card-drink h2 {
+    margin-top: 1em;
     font-size: 2em;
   }
   .drink-recipe-stats {
-    width: 60vw;
-    font-size: 0.5em;
+    width: 70vw;
+    font-size: 0.6em;
+    margin-bottom: 0;
   }
 
   .card-drink-readLess{
-    font-size: 0.5em;
-    width: 60vw;
-    height: 3.5em;
+    font-size: 0.6em;
+    width: fit-content;
+    height: 3.3em;
     text-align: justify;
+    padding: 1.5em;
+    margin-top: 2em;
+    margin-bottom: 2em;
+  }
+
+  .card-drink-readMore {
+    font-size: 0.6em;
+    width: 65vw;
   }
 
   .card-drink button {
@@ -464,13 +886,10 @@ input {
     display: inline-block;
     margin-bottom: 3em;
     margin-left: 1em;
-    width: 20vw;
+    width: 23vw;
     font-size: 0.45em;
   }
-  .card-drink-readMore {
-    font-size: 0.5em;
-    width: 60vw;
-  }
+
 
   .drink-ingredients-list {
     font-size: 0.6em;
@@ -481,8 +900,8 @@ input {
   }
 
   .drink-ingredients-list img {
-    width: 2em;
-    height: 2em;
+    width: 3em;
+    height: 3em;
     margin-bottom: 1em;
   }
 
@@ -501,8 +920,8 @@ input {
   }
 
   .drink-instructions-list {
-    width: 60vw;
-    font-size: 0.7em;
+    width: 65vw;
+    font-size: 0.75em;
     padding-left: 2.5em;
   }
   
@@ -511,3 +930,4 @@ input {
     font-size: 0.7em;
   }
 }
+

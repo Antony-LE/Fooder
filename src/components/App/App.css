@@ -5,8 +5,7 @@
 
 .App {
   text-align: center;
-  border: solid 1px #D2AA74;
-  margin: 1em;
+  /* border: solid 1px #D2AA74; */
   font-family: 'Roboto', sans-serif;
   text-shadow: 5px 5px 5px black;
 }
@@ -19,10 +18,22 @@ html {
 
   /* responsive settings */
 
-  @media screen and (max-width: 1024px) {
+  @media screen and (max-width: 1920px) {
+    .App {
+      border: none;
+    }
+  }
+
+  @media screen and (max-width: 1080px) {
+    .App {
+      border: none;
+    }
   }
   
   @media screen and (max-width: 768px) {
+    .App {
+      border: none;
+    }
   }
   
   @media screen and (max-width: 415px) {

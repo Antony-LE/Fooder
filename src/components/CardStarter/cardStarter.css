@@ -238,40 +238,51 @@ input {
 
   @media screen and (max-width: 1920px) {
     .card-starter {
+      margin-right: 1em;
       margin-top: 1em;
       border: #D2AA74 1px solid;
       border-radius: 20px;
-      width: fit-content;
+      width: 23vw;
       padding: 0.5em;
   }
   .main-picture-starter {
-    width: 6em; 
-    height: 6em; 
-  }
-
-  .card-starter h3 {
-    font-size: 1em;
-    height: fit-content;
-    padding: 1.5em;
+    width: 9em; 
+    height: 9em; 
     margin-bottom: 0;
   }
 
+  .card-starter h3 {
+    font-size: 1.5em;
+    height: fit-content;
+    margin-bottom: 0;
+    padding: 1em 0em;
+  }
+
   .card-starter h2 {
-    font-size: 2em;
+    margin-top: 1em;
+    font-size: 2.5em;
+    margin-bottom: 0.5em;
   }
   .starter-recipe-stats {
-   width: fit-content;
-    font-size: 0.7em;
+    width: fit-content;
+    font-size: 0.8em;
     margin-bottom: 0.5em;
     padding: 1em;
   }
 
   .card-starter-readLess{
-    font-size: 0.5em;
-    width: 60vw;
-    height: 3.5em;
-    text-align: justify;
-    padding: 1.5em;
+    font-size: 0.8em;
+    width:22vw;
+    height: 3.4em;
+    margin-top: 2em;
+    margin-bottom: 2em;
+  }
+
+  .card-starter-readMore {
+    margin-top: 1em;
+    font-size: 0.8em;
+    width: 20vw;
+    padding: 0;
   }
 
   .card-starter button {
@@ -281,20 +292,18 @@ input {
     display: inline-block;
     margin-bottom: 3em;
     margin-left: 1em;
-    width: 20vw;
+    width: 6.5vw;
     font-size: 0.45em;
-  }
-  .card-starter-readMore {
-    font-size: 0.5em;
-    width: 60vw;
   }
 
   .starter-ingredients-list {
-    font-size: 0.6em;
+    font-size: 0.8em;
+    width: 20vw;
   }
 
   .starter-ingredients-list li {
     margin-left: 2em;
+    width: 20vw;
   }
 
   .starter-ingredients-list img {
@@ -304,23 +313,26 @@ input {
   }
 
   .starter-ingredients-subtitle {
-    font-size: 0.7em;
+    font-size: 0.8em;
     width: 35%;
   }
 
   .starter-ingredients-items-number {
-    font-size: 0.7em;
+    font-size: 0.8em;
     width: 35%;
   }
 
   .starter-ingredients-list {
-    width: 80vw;
+    font-size: 0.7em;
+    margin-left: 2em;
+    margin-right: 0;
+    margin-left: 0;
   }
 
   .starter-instructions-list {
-    width: 60vw;
-    font-size: 0.7em;
-    padding-left: 2.5em;
+    width: 20vw;
+    font-size: 1.1em;
+    padding-left: 1.5em;
   }
   
   .starter-instructions-list li {
@@ -331,40 +343,51 @@ input {
 
   @media screen and (max-width: 1080px) {
     .card-starter {
+      margin-right: 2em;
       margin-top: 1em;
       border: #D2AA74 1px solid;
       border-radius: 20px;
-      width: fit-content;
+      width: 40vw;
       padding: 0.5em;
   }
   .main-picture-starter {
-    width: 6em; 
-    height: 6em; 
-  }
-
-  .card-starter h3 {
-    font-size: 1em;
-    height: fit-content;
-    padding: 1.5em;
+    width: 9em; 
+    height: 9em; 
     margin-bottom: 0;
   }
 
+  .card-starter h3 {
+    font-size: 1.5em;
+    height: fit-content;
+    margin-bottom: 0;
+    padding: 1em 0em;
+  }
+
   .card-starter h2 {
-    font-size: 2em;
+    margin-top: 1em;
+    font-size: 2.5em;
+    margin-bottom: 0.5em;
   }
   .starter-recipe-stats {
-   width: fit-content;
-    font-size: 0.7em;
+    width: fit-content;
+    font-size: 0.8em;
     margin-bottom: 0.5em;
     padding: 1em;
   }
 
   .card-starter-readLess{
-    font-size: 0.5em;
-    width: 60vw;
-    height: 3.5em;
-    text-align: justify;
-    padding: 1.5em;
+    font-size: 0.8em;
+    width:35vw;
+    height: 3.4em;
+    margin-top: 2em;
+    margin-bottom: 2em;
+  }
+
+  .card-starter-readMore {
+    margin-top: 1em;
+    font-size: 0.8em;
+    width: 35vw;
+    padding: 0;
   }
 
   .card-starter button {
@@ -374,45 +397,45 @@ input {
     display: inline-block;
     margin-bottom: 3em;
     margin-left: 1em;
-    width: 20vw;
-    font-size: 0.45em;
-  }
-  .card-starter-readMore {
-    font-size: 0.5em;
-    width: 60vw;
-  }
-
-  .starter-ingredients-list {
+    width: 10vw;
     font-size: 0.6em;
   }
 
+  .starter-ingredients-list {
+    font-size: 0.8em;
+    width: 50vw;
+  }
+
   .starter-ingredients-list li {
-    margin-left: 2em;
+    margin-left: 5em;
+    width: 30vw;
   }
 
   .starter-ingredients-list img {
-    width: 2em;
-    height: 2em;
+    width: 2.5em;
+    height: 2.5em;
     margin-bottom: 1em;
   }
 
   .starter-ingredients-subtitle {
-    font-size: 0.7em;
-    width: 35%;
+    font-size: 1em;
+    width: 30%;
   }
 
   .starter-ingredients-items-number {
-    font-size: 0.7em;
-    width: 35%;
+    font-size: 1em;
+    width: 30%;
   }
 
   .starter-ingredients-list {
-    width: 80vw;
+    margin-left: 2em;
+    margin-right: 0;
+    margin-left: 0;
   }
 
   .starter-instructions-list {
-    width: 60vw;
-    font-size: 0.7em;
+    width: 30vw;
+    font-size: 1.1em;
     padding-left: 2.5em;
   }
   
@@ -431,33 +454,43 @@ input {
       padding: 0.5em;
   }
   .main-picture-starter {
-    width: 6em; 
-    height: 6em; 
-  }
-
-  .card-starter h3 {
-    font-size: 1em;
-    height: fit-content;
-    padding: 1.5em;
+    width: 9em; 
+    height: 9em; 
     margin-bottom: 0;
   }
 
+  .card-starter h3 {
+    font-size: 1.5em;
+    height: fit-content;
+    margin-bottom: 0;
+    padding: 1em 0em;
+  }
+
   .card-starter h2 {
-    font-size: 2em;
+    margin-top: 1em;
+    font-size: 2.5em;
+    margin-bottom: 0.5em;
   }
   .starter-recipe-stats {
-   width: fit-content;
-    font-size: 0.7em;
-    margin-bottom: 1em;
+    width: fit-content;
+    font-size: 0.8em;
+    margin-bottom: 0.5em;
     padding: 1em;
   }
 
   .card-starter-readLess{
-    font-size: 0.7em;
-    width: 65vw;
-    height: 3.6em;
-    text-align: justify;
-    padding: 1.5em;
+    font-size: 0.8em;
+    width:70vw;
+    height: 3.4em;
+    margin-top: 2em;
+    margin-bottom: 2em;
+  }
+
+  .card-starter-readMore {
+    margin-top: 1em;
+    font-size: 0.8em;
+    width: 70vw;
+    padding: 0;
   }
 
   .card-starter button {
@@ -467,20 +500,17 @@ input {
     display: inline-block;
     margin-bottom: 3em;
     margin-left: 1em;
-    width: 20vw;
-    font-size: 0.45em;
-  }
-  .card-starter-readMore {
-    font-size: 0.5em;
-    width: 60vw;
-  }
-
-  .starter-ingredients-list {
+    width: 22vw;
     font-size: 0.6em;
   }
 
+  .starter-ingredients-list {
+    font-size: 0.8em;
+    width: 50vw;
+  }
+
   .starter-ingredients-list li {
-    margin-left: 2em;
+    margin-left: 5em;
   }
 
   .starter-ingredients-list img {
@@ -490,22 +520,24 @@ input {
   }
 
   .starter-ingredients-subtitle {
-    font-size: 0.7em;
-    width: 35%;
+    font-size: 1em;
+    width: 30%;
   }
 
   .starter-ingredients-items-number {
-    font-size: 0.7em;
-    width: 35%;
+    font-size: 1em;
+    width: 30%;
   }
 
   .starter-ingredients-list {
-    width: 80vw;
+    margin-left: 2em;
+    margin-right: 0;
+    margin-left: 0;
   }
 
   .starter-instructions-list {
-    width: 60vw;
-    font-size: 0.7em;
+    width: 75vw;
+    font-size: 1em;
     padding-left: 2.5em;
   }
   
@@ -524,33 +556,42 @@ input {
       padding: 0.5em;
   }
   .main-picture-starter {
-    width: 6em; 
-    height: 6em; 
-  }
-
-  .card-starter h3 {
-    font-size: 1em;
-    height: fit-content;
-    padding: 1.5em;
+    width: 9em; 
+    height: 9em; 
     margin-bottom: 0;
   }
 
+  .card-starter h3 {
+    font-size: 1.2em;
+    height: fit-content;
+    margin-bottom: 0;
+    padding: 1em 0em;
+  }
+
   .card-starter h2 {
-    font-size: 2em;
+    margin-top: 1em;
+    font-size: 2.5em;
+    margin-bottom: 0.5em;
   }
   .starter-recipe-stats {
-   width: fit-content;
-    font-size: 0.7em;
+    width: 70vw;
+    font-size: 0.75em;
     margin-bottom: 0.5em;
     padding: 1em;
   }
 
   .card-starter-readLess{
-    font-size: 0.7em;
-    width: 65vw;
-    height: 3.5em;
-    text-align: justify;
-    padding: 1.5em;
+    font-size: 0.8em;
+    width: 70vw;
+    height: 3.4em;
+    margin-top: 2em;
+    margin-bottom: 2em;
+  }
+
+  .card-starter-readMore {
+    margin-top: 1em;
+    font-size: 0.8em;
+    width: 70vw;
   }
 
   .card-starter button {
@@ -560,35 +601,31 @@ input {
     display: inline-block;
     margin-bottom: 3em;
     margin-left: 1em;
-    width: 20vw;
-    font-size: 0.45em;
-  }
-  .card-starter-readMore {
-    font-size: 0.5em;
-    width: 60vw;
+    width: 23vw;
+    font-size: 0.65em;
   }
 
   .starter-ingredients-list {
-    font-size: 0.6em;
+    font-size: 0.8em;
   }
 
   .starter-ingredients-list li {
-    margin-left: 2em;
+    margin-left: 3em;
   }
 
   .starter-ingredients-list img {
-    width: 2em;
-    height: 2em;
+    width: 3.5em;
+    height: 3.5em;
     margin-bottom: 1em;
   }
 
   .starter-ingredients-subtitle {
-    font-size: 0.7em;
+    font-size: 1em;
     width: 35%;
   }
 
   .starter-ingredients-items-number {
-    font-size: 0.7em;
+    font-size: 1em;
     width: 35%;
   }
 
@@ -597,8 +634,8 @@ input {
   }
 
   .starter-instructions-list {
-    width: 60vw;
-    font-size: 0.7em;
+    width: 75vw;
+    font-size: 1em;
     padding-left: 2.5em;
   }
   
@@ -619,30 +656,32 @@ input {
   .main-picture-starter {
     width: 8em; 
     height: 8em; 
+    margin-bottom: 0;
   }
   .card-starter h3 {
-    font-size: 1em;
+    font-size: 1.1em;
     height: fit-content;
     padding: 1.5em;
     margin-bottom: 0;
   }
 
   .card-starter h2 {
+    margin-top: 1em;
     font-size: 2.5em;
   }
   .starter-recipe-stats {
-    width: fit-content;
+    width: 70vw;
     font-size: 0.7em;
-    margin-bottom: 1em;
-    padding: 1em;
+    margin-bottom: 0em;
   }
 
   .card-starter-readLess{
     font-size: 0.7em;
-    width: 65vw;
+    width: 70vw;
     height: 3.5em;
     text-align: justify;
-    padding: 1.5em;
+    margin-top: 2em;
+    margin-bottom: 2em;
   }
 
   .card-starter button {
@@ -709,33 +748,42 @@ input {
       padding: 0.5em;
   }
   .main-picture-starter {
-    width: 4em; 
-    height: 4em; 
+    width: 6.5em; 
+    height: 6.5em; 
   }
 
   .card-starter h3 {
-    font-size: 0.7em;
+    font-size: 1em;
     height: fit-content;
-    padding: 1.5em;
-    margin-bottom: 0;
+    padding-bottom: 1em;
+    padding-top: 0em;
+    margin-bottom: 0em;
   }
 
   .card-starter h2 {
+    margin-top: 1em;
     font-size: 2em;
   }
   .starter-recipe-stats {
-    width: fit-content;
+    width: 70vw;
     font-size: 0.6em;
-    margin-bottom: 1em;
     padding: 0.5em;
+    margin-bottom: 0;
   }
 
   .card-starter-readLess{
-    font-size: 0.5em;
+    font-size: 0.7em;
     width: fit-content;
-    height: 3.9em;
+    height: 3.5em;
     text-align: justify;
-    padding: 1.5em;
+    margin-top: 2em;
+    margin-bottom: 2em;
+  }
+
+  .card-starter-readMore {
+    padding-top: 1em;
+    font-size: 0.7em;
+    width: 65vw;
   }
 
   .card-starter button {
@@ -745,16 +793,12 @@ input {
     display: inline-block;
     margin-bottom: 3em;
     margin-left: 1em;
-    width: 20vw;
-    font-size: 0.4em;
-  }
-  .card-starter-readMore {
-    font-size: 0.5em;
-    width: 60vw;
+    width: 23vw;
+    font-size: 0.55em;
   }
 
   .starter-ingredients-list {
-    font-size: 0.6em;
+    font-size: 0.7em;
   }
 
   .starter-ingredients-list li {
@@ -762,18 +806,18 @@ input {
   }
 
   .starter-ingredients-list img {
-    width: 2em;
-    height: 2em;
+    width: 2.5em;
+    height: 2.5em;
     margin-bottom: 1em;
   }
 
   .starter-ingredients-subtitle {
-    font-size: 0.7em;
+    font-size: 0.9em;
     width: 35%;
   }
 
   .starter-ingredients-items-number {
-    font-size: 0.7em;
+    font-size: 0.9em;
     width: 35%;
   }
 
@@ -782,8 +826,8 @@ input {
   }
 
   .starter-instructions-list {
-    width: 60vw;
-    font-size: 0.7em;
+    width: 65vw;
+    font-size: 1em;
     padding-left: 2.5em;
   }
   
@@ -802,33 +846,39 @@ input {
         padding: 0.5em;
     }
     .main-picture-starter {
-      width: 4em; 
-      height: 4em; 
+      width: 6em; 
+      height: 6em; 
     }
 
     .card-starter h3 {
-      font-size: 0.7em;
+      font-size: 0.8em;
       height: fit-content;
-      padding: 1.5em;
       margin-bottom: 0;
     }
 
     .card-starter h2 {
+      margin-top: 1em;
       font-size: 2em;
     }
     .starter-recipe-stats {
-      width: fit-content;
+      width: 70vw;
       font-size: 0.6em;
-      margin-bottom: 1em;
-      padding: 0.5em;
+      margin-bottom: 0;
     }
 
     .card-starter-readLess{
-      font-size: 0.5em;
+      font-size: 0.6em;
       width: fit-content;
-      height: 3.9em;
+      height: 3.3em;
       text-align: justify;
       padding: 1.5em;
+      margin-top: 2em;
+      margin-bottom: 2em;
+    }
+
+    .card-starter-readMore {
+      font-size: 0.6em;
+      width: 65vw;
     }
 
     .card-starter button {
@@ -838,13 +888,10 @@ input {
       display: inline-block;
       margin-bottom: 3em;
       margin-left: 1em;
-      width: 20vw;
-      font-size: 0.4em;
+      width: 23vw;
+      font-size: 0.45em;
     }
-    .card-starter-readMore {
-      font-size: 0.5em;
-      width: 60vw;
-    }
+  
 
     .starter-ingredients-list {
       font-size: 0.6em;
@@ -855,8 +902,8 @@ input {
     }
 
     .starter-ingredients-list img {
-      width: 2em;
-      height: 2em;
+      width: 3em;
+      height: 3em;
       margin-bottom: 1em;
     }
 
@@ -875,8 +922,8 @@ input {
     }
 
     .starter-instructions-list {
-      width: 60vw;
-      font-size: 0.7em;
+      width: 65vw;
+      font-size: 0.75em;
       padding-left: 2.5em;
     }
     
