@@ -45,6 +45,7 @@
     width: fit-content;
     margin-left:auto;
     margin-right: auto;
+    width: 23vw;
   }
 }
 
@@ -54,6 +55,7 @@
     width: fit-content;
     margin-left:auto;
     margin-right: auto;
+    width: 45vw;
   }
 }
 
@@ -63,41 +65,35 @@
     width: fit-content;
     margin-left:auto;
     margin-right: auto;
+    width: 85vw;
   }
 }
 
 @media screen and (max-width: 415px) {
   .cardlist-dessert {
-    margin: 0;
-    width: fit-content;
     margin-left:auto;
     margin-right: auto;
+    width: 85vw;
   }
 }
 
 @media screen and (max-width: 430px) {
   .cardlist-dessert {
     margin: 0;
-    width: fit-content;
-    margin-left:auto;
-    margin-right: auto;
+    width: 85vw;
   }
 }
 
 @media screen and (max-width: 360px) {
   .cardlist-dessert {
     margin: 0;
-    width: fit-content;
-    margin-left:auto;
-    margin-right: auto;
+    width: 85vw;
   }
 }
 
 @media screen and (max-width: 320px) {
   .cardlist-dessert {
     margin: 0;
-    width: fit-content;
-    margin-left:auto;
-    margin-right: auto;
+    width: 85vw;
   }
 }

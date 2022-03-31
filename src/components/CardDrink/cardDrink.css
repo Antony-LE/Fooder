@@ -240,8 +240,10 @@ input {
     margin-top: 1em;
     border: #D2AA74 1px solid;
     border-radius: 20px;
-    width: 23vw;
+    width: 21vw;
     padding: 0.5em;
+    margin-right: auto;
+    margin-left: auto;
 }
 .main-picture-drink {
   width: 9em; 
@@ -270,7 +272,7 @@ input {
 
 .card-drink-readLess{
   font-size: 0.8em;
-  width:22vw;
+  width:21vw;
   height: 3.4em;
   margin-top: 2em;
   margin-bottom: 2em;
@@ -279,7 +281,7 @@ input {
 .card-drink-readMore {
   margin-top: 1em;
   font-size: 0.8em;
-  width: 20vw;
+  width: 21vw;
   padding: 0;
 }
 
@@ -290,18 +292,18 @@ input {
   display: inline-block;
   margin-bottom: 3em;
   margin-left: 1em;
-  width: 6.5vw;
+  width: 6vw;
   font-size: 0.45em;
 }
 
 .drink-ingredients-list {
   font-size: 0.8em;
-  width: 20vw;
+  width: 21vw;
 }
 
 .drink-ingredients-list li {
   margin-left: 2em;
-  width: 20vw;
+  width: 21vw;
 }
 
 .drink-ingredients-list img {
@@ -328,7 +330,7 @@ input {
 }
 
 .drink-instructions-list {
-  width: 20vw;
+  width: 21vw;
   font-size: 1.1em;
   padding-left: 1.5em;
 }
@@ -339,7 +341,7 @@ input {
 }
 }
 
-@media screen and (max-width: 1080px) {
+@media screen and (max-width: 1024px) {
   .card-drink {
     margin-right: 2em;
     margin-top: 1em;
@@ -347,6 +349,8 @@ input {
     border-radius: 20px;
     width: 40vw;
     padding: 0.5em;
+    margin-right: auto;
+    margin-left: auto;
 }
 .main-picture-drink {
   width: 9em; 
@@ -450,6 +454,8 @@ input {
     border-radius: 20px;
     width: fit-content;
     padding: 0.5em;
+    margin-right: auto;
+    margin-left: auto;
 }
 .main-picture-drink {
   width: 9em; 
@@ -552,6 +558,8 @@ input {
     border-radius: 20px;
     width: fit-content;
     padding: 0.5em;
+    margin-right: auto;
+    margin-left: auto;
 }
 .main-picture-drink {
   width: 9em; 
@@ -650,6 +658,8 @@ input {
   border-radius: 20px;
   width: 80vw;
   padding: 0.5em;
+  margin-right: auto;
+  margin-left: auto;
 }
 .main-picture-drink {
   width: 8em; 
@@ -744,6 +754,8 @@ input {
     border-radius: 20px;
     width: fit-content;
     padding: 0.5em;
+    margin-right: auto;
+    margin-left: auto;
 }
 .main-picture-drink {
   width: 6.5em; 
@@ -842,6 +854,8 @@ input {
       border-radius: 20px;
       width: fit-content;
       padding: 0.5em;
+      margin-right: auto;
+      margin-left: auto;
   }
   .main-picture-drink {
     width: 6em; 

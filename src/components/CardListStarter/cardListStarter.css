@@ -45,6 +45,7 @@
     width: fit-content;
     margin-left:auto;
     margin-right: auto;
+    width: 23vw;
   }
 }
 
@@ -54,6 +55,7 @@
     width: fit-content;
     margin-left:auto;
     margin-right: auto;
+    width: 45vw;
   }
 }
 
@@ -63,6 +65,7 @@
     width: fit-content;
     margin-left:auto;
     margin-right: auto;
+    width: 85vw;
   }
 }
 
@@ -70,27 +73,27 @@
   .cardlist-starter {
     margin-left:auto;
     margin-right: auto;
-    width: fit-content;
+    width: 85vw;
   }
 }
 
 @media screen and (max-width: 430px) {
   .cardlist-starter {
     margin: 0;
-    width: fit-content;
+    width: 85vw;
   }
 }
 
 @media screen and (max-width: 360px) {
   .cardlist-starter {
     margin: 0;
-    width: fit-content;
+    width: 85vw;
   }
 }
 
 @media screen and (max-width: 320px) {
   .cardlist-starter {
     margin: 0;
-    width: fit-content;
+    width: 85vw;
   }
 }
