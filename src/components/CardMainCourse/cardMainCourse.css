@@ -295,7 +295,7 @@ input {
   margin-bottom: 3em;
   margin-left: 1em;
   width: 6vw;
-  font-size: 0.45em;
+  font-size: 0.6em;
 }
 
 .main-course-ingredients-list {
@@ -402,7 +402,7 @@ input {
   margin-bottom: 3em;
   margin-left: 1em;
   width: 10vw;
-  font-size: 0.6em;
+  font-size: 0.55em;
 }
 
 .main-course-ingredients-list {
@@ -507,8 +507,8 @@ input {
   display: inline-block;
   margin-bottom: 3em;
   margin-left: 1em;
-  width: 22vw;
-  font-size: 0.6em;
+  width: 20vw;
+  font-size: 0.55em;
 }
 
 .main-course-ingredients-list {

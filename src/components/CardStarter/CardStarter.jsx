@@ -85,11 +85,11 @@ function CardStarter({
       {/* Gestion du bouton ingredient */}
       <button type="button" className="ingredients" onClick={handleReadIngredients}>
         {' '}
-        {seeIngredients === false ? 'See Ingredients' : 'Hide ingredients' }
+        {seeIngredients === false ? 'Ingredients' : '⛔ingredients' }
       </button>
       <button type="button" className="instructions" onClick={handleReadInstructions}>
         {' '}
-        {seeInstructions === false ? 'Cook it !' : 'Hide instructions' }
+        {seeInstructions === false ? 'Cook it !' : '⛔instructions' }
       </button>
       {seeIngredients === true ? (
         <>

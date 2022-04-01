@@ -13,7 +13,10 @@ function Chatbox({ className, sentence }) {
   );
 
   return show ? (
-    <span className={className}>{sentence}</span>
+    <span className={className}>
+      {sentence}
+      💬
+    </span>
   ) : '';
 }
 
