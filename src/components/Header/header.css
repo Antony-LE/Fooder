@@ -16,12 +16,11 @@
     margin-bottom: 0;
     color: #D2AA74;
     font-weight: lighter;
-    text-shadow: 2px 2px 2px #D2AA74 ;
 }
 
 .header span {
     font-family: 'Roboto', sans-serif;
-    font-size: 2.5em;
+    font-size: 3em;
     display: block;
     margin: 1em;
     color: white;

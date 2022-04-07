@@ -36,8 +36,10 @@
           "**/*.ts?(x)"
         ],
         "rules": {
-          "max-len": "warn"
+          "max-len": "warn",
+          "linebreak-style": 0
         }
+        
       }
     ]
   },
