@@ -12,7 +12,7 @@
 
 html {
   scroll-behavior: smooth;
-  background: url("../../images/main-background.webp") no-repeat center center fixed;
+  background: url("../../images/backgrounds/1920px-main-background.jpg") no-repeat center fixed;
   background-size: cover;
 }
 
@@ -22,11 +22,19 @@ html {
     .App {
       border: none;
     }
+    html {
+      background: url("../../images/backgrounds/1920px-main-background.jpg") no-repeat center fixed;
+      background-size: cover;
+    }
   }
 
   @media screen and (max-width: 1024px) {
     .App {
       border: none;
+    }
+    html {
+      background: url("../../images/backgrounds/1024px-main-background.jpg") no-repeat center fixed;
+      background-size: cover;
     }
   }
   
@@ -34,11 +42,19 @@ html {
     .App {
       border: none;
     }
+    html {
+      background: url("../../images/backgrounds/768px-main-background.jpg") no-repeat center fixed;
+      background-size: cover;
+    }
   }
   
   @media screen and (max-width: 415px) {
     .App {
       border: none;
+    }
+    html {
+      background: url("../../images/backgrounds/415px-main-background.jpg") no-repeat center fixed;
+      background-size: cover;
     }
   }
   
@@ -46,11 +62,19 @@ html {
     .App {
       border: none;
     }
+    html {
+      background: url("../../images/backgrounds/430px-main-background.jpg") no-repeat center fixed;
+      background-size: cover;
+    }
   }
   
   @media screen and (max-width: 360px) {
     .App {
       border: none;
+    }
+    html {
+      background: url("../../images/backgrounds/360px-main-background.jpg") no-repeat center fixed;
+      background-size: cover;
     }
   }
   
@@ -58,4 +82,9 @@ html {
    .App {
      border: none;
    }
+
+   html {
+    background: url("../../images/backgrounds/320px-main-background.jpg") no-repeat center fixed;
+    background-size: cover;
+  }
   }
